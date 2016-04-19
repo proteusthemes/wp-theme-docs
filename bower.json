@@ -1,0 +1,23 @@
+{
+  "name": "pt-docs",
+  "version": "1.0.0",
+  "authors": [
+    "Primoz Cigler <primoz@proteusnet.com>",
+    "Marko Prelec <marko.prelec@proteusnet.com>",
+    "Gregor Capuder <gregor.capuder@proteusnet.com>"
+  ],
+  "description": "Documentation for all newer ProteusThemes themes.",
+  "main": "src/index.html",
+  "keywords": [
+    "documentation, ProteusThemes, themes, WP"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.proteusthemes.com/",
+  "devDependencies": {
+    "requirejs": "~2.2.0",
+    "almond": "^0.3.0",
+    "bootstrap-sass-official": "^3.3.0",
+    "jquery": "~2.2.3",
+    "fastclick": "~1.0.1"
+  }
+}

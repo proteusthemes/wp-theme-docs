@@ -1,0 +1,13 @@
+/* Affix */
+.affix {
+	margin-top: -580px;
+	padding-right: 0;
+
+	@media (min-width: $screen-md-min) {
+	width: 160px;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		width: 210px;
+	}
+}

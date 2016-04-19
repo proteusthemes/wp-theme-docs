@@ -1,0 +1,25 @@
+{
+  "name": "pt-docs",
+  "version": "1.0.0",
+  "description": "Documentation for all newer ProteusThemes themes.",
+  "main": "src/index.html",
+  "author": "ProteusThemes",
+  "license": "GPL-2.0+",
+  "devDependencies": {
+    "assemble": "^0.4.0",
+    "grunt": "^1.0.0",
+    "grunt-autoprefixer": "*",
+    "grunt-concurrent": "^2.3.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-rev": "^0.1.0",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-usemin": "^3.1.1",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}

@@ -1,0 +1,10 @@
+	{{!-- This is needed because the usemin Grunt task does not work with the data-main attribute on <script> tag. --}}
+	{{#if production}}
+	<!-- build:js js/main.js -->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+	{{else}}
+	<script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+	{{/if}}
+	</body>
+</html>

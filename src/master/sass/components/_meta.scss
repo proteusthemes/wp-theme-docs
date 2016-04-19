@@ -1,0 +1,39 @@
+/* Meta */
+.meta {
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #aaaaaa;
+
+	li {
+		display: inline-block;
+		padding: 15px 10px;
+
+		@media (min-width: $screen-md-min) {
+			padding: 19.5px 10px;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			padding: 19.5px 15px;
+		}
+	}
+}
+
+.meta__link {
+	font-weight: bold;
+}
+
+.meta__focus {
+	color: #666666;
+	font-weight: bold;
+}
+
+.container--meta {
+	background-color: #f0f0f0;
+	margin-bottom: 30px;
+
+	@media (min-width: $screen-md-min) {
+		margin-bottom: 0;
+	}
+}
