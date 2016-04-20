@@ -1,31 +1,8 @@
 {{!-- General and Installation --}}
 {{> general}}
 {{!-- Demo Content --}}
-<section>
-	<h2 id="demo-content">2. Demo Content</h2>
-	<h3 id="one-click-demo-install">2.1. One Click Demo Install</h3>
-	<p>You can import demo content from our site (with blurred licensed images) with a single click of a button.</p>
-	<img src="images/one-click-demo-import.jpg" alt="One Click Demo Import" width="940" height="384">
-	<div class="warning">
-		Don't forget to activate all required plugins before importing demo data.
-	</div>
-	<h3 id="import-xml-file">2.2. Import XML File</h3>
-	<p>If you want to import the demo content the old-fashioned way, you can get a fresh copy of the <strong>XML file</strong> on our server at this URL: <code>http://artifacts.proteusthemes.com/xml-exports/auto-latest.xml</code>. All you have to do it save it as a XML file and use it for the import. Don't forget to activate all required plugins before importing demo data. To import the demo data go to <i>Tools » Import</i>, click on <i>WordPress</i> (install the <strong>WordPress Importer</strong> plugin if not already installed) and upload/import the previously saved xml file (don't forget to enable the <i>Download and import file attachments</i> checkbox to also import the images).</p>
-	<p><b>Demo Widgets</b><br>After you import the demo content, you can also import the widgets the old-fashioned way. The file for import is also located on our server: <code>http://artifacts.proteusthemes.com/json-widgets/auto.json</code>, save it as a <code>widgets.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <i>Tools » Widget Import/Export</i> and import the file.</p>
-	<p>
-		<b>After import setup</b><br>After you have imported the demo data and widgets, you should also setup these things:
-		<ul>
-			<li>go to <i>Settings » Reading</i>, set the the <strong>Front page displays</strong> to <strong>A static page</strong> and select the front page and the blog page in the appropriate dropdowns,</li>
-			<li>go to <i>Appearance » Menus</i>, select the main menu from the dropdown at the top and click on <strong>Select</strong>. Scroll to the bottom and set the <strong>Theme location</strong> to <strong>Main Menu</strong> (if there are more locations you can also assign other menus to those locations),</li>
-			<li>go to <i>Appearance » Widgets</i>, and set <strong>Custom menu</strong> widgets, by selecting the correct menu (in <i>footer</i> and <i>our services</i> sidebars).</li>
-			<li>set other things (like logo, colors, ...). These settings can be found in <i>Appearance » Customize</i></li>
-		</ul>
-	</p>
-	<p>If for some reason these URLs are not available, then all you need to do is download the <strong>All files & documentation</strong> zip from ThemeForest and you will find the <strong>content.xml</strong> and <strong>widgets.json</strong> file in the <strong>extras</strong> folder.</p>
-	<div class="warning">
-		Don't forget to activate all required plugins before importing demo data.
-	</div>
-</section>
+{{> demo-content}}
+
 {{!-- Header --}}
 <section>
 	<h2 id="header">3. Header</h2>
