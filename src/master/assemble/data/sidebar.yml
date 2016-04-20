@@ -1,0 +1,80 @@
+items:
+  - link: general-and-installation
+    name: General & Installation
+    subitems:
+    - link: few-words-on-start
+      name: Few Words on Start
+    - link: installation-and-updates
+      name: Installation & Updates
+    - link: customize-the-appearance
+      name: Customize the Appearance
+  - link: demo-content
+    name: Demo Content
+    subitems:
+    - link: import-xml-file
+      name: Import XML File
+  - link: header
+    name: Header
+    subitems:
+    - link: top-bar
+      name: Top Bar
+    - link: logo-and-favicon
+      name: Logo & Favicon
+    - link: header-widgets
+      name: Header Widgets
+    - link: main-menu
+      name: Main Menu
+  - link: pages
+    name: Pages
+    subitems:
+    - link: page-templates
+      name: Page Templates
+    - link: page-builder
+      name: Page Builder
+    - link: page-builder-widgets
+      name: Page Builder Widgets
+  - link: slider
+    name: Slider
+  - link: proteusthemes-options
+    name: ProteusThemes Options
+  - link: shortcodes
+    name: Shortcodes
+    subitems:
+    - link: buttons
+      name: Buttons
+    - link: icons-font-awesome
+      name: Icons - Font Awesome
+  - link: plugins
+    name: Plugins
+    subitems:
+    - link: contact-form-7
+      name: Contact Form 7
+    - link: woocommerce
+      name: WooCommerce
+    - link: visual-composer
+      name: Visual Composer
+  - link: footer
+    name: Footer
+    subitems:
+    - link: footer-widgets
+      name: Footer Widgets
+    - link: bottom-footer
+      name: Bottom Footer
+  - link: translations
+    name: Translations
+    subitems:
+    - link: wpml
+      name: WPML
+    - link: manual-translation
+      name: Manual Translation
+  - link: extras
+    name: Extras
+    subitems:
+    - link: demo-images
+      name: Demo Images
+    - link: customizations
+      name: Customizations
+    - link: changelog
+      name: Changelog
+    - link: support
+      name: Support

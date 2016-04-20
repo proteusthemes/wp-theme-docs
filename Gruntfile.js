@@ -36,6 +36,7 @@ module.exports = function(grunt) {
 				options: {
 					partials:   [ config.prepFolder + '/<%= theme %>/assemble/includes/*.hbs' ],
 					production: true,
+					data: config.prepFolder + '/<%= theme %>/assemble/data/*.yml'
 				},
 				files: [{
 					expand: true,
