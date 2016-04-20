@@ -1,8 +1,9 @@
 ---
-theme: Auto WordPress Theme Documentation
-themeText: Auto is a premium WordPress theme, available only on ThemeForest. It is specially designed for mechanics, repair and mechanic workshops, car repairs and handymen, but you can use it for any closely related businesses that will fit in. Auto WordPress theme has everything you need for a perfect website. Moreover, you'll be able to set it up and run with just a few clicks!
+theme: <%= themename %> WordPress Theme Documentation
+themeText: <%= themedescription %>
 themeImageSrc: images/header-cover.jpg
-themeImageAlt: Auto Cover
+themeImageAlt: <%= themename %> Cover
+themeChangelogURL: http://<%= tfurl %>#item-description__changelog
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@ themeImageAlt: Auto Cover
 		<meta name="author" content="ProteusNet">
 		<link rel="icon" type="image/ico" href="images/favicon.ico"/>
 
-		<title>Auto Online Documentation</title>
+		<title>{{header.theme}} Online Documentation</title>
 
 		<script type="text/javascript">
 			WebFontConfig = {
@@ -65,12 +66,12 @@ themeImageAlt: Auto Cover
 
 				<nav class="navbar  navbar-default" role="navigation">
 					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse  navbar-collapse" id="buildpress-docs-navbar-collapse">
+					<div class="collapse  navbar-collapse" id="docs-navbar-collapse">
 						<ul class="navigation">
 							<li><a href="http://support.proteusthemes.com/">Support</a></li>
 							<li><a href="https://www.youtube.com/user/ProteusNetCompany">Video Tutorials</a></li>
 							<li><a href="http://www.proteusthemes.com/themes.html">Our Themes</a></li>
-							<li><a href="#">Changelog</a></li>
+							<li><a href="{{ header.themeChangelogURL }}">Changelog</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</nav>
