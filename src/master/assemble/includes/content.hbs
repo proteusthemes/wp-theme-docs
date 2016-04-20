@@ -16,66 +16,9 @@
 {{!-- Theme Options --}}
 {{> theme-options}}
 
-
 {{!-- Shortcodes --}}
-<section>
-	<h2 id="shortcodes">7. Shortcodes</h2>
-	<h3 id="buttons">7.1. Buttons</h3>
-	<p>
-		For adding buttons you must use button shortcode which looks like this: <code>[button]Your Text[/button]</code><br>
-		There are 6 options with different attributes - <b>text</b>, <b>style</b>, <b>href</b>, <b>target</b> and <b>fa</b>.
-	</p>
-	<p>
-		<b>Text:</b> You can change the text of the button.<br>
-		Example: <code>[button]New Text[/button]</code>
-	</p>
-	<p>
-		<b>Style:</b> You can choose betwen few styles - <b>primary</b>, <b>secondary</b>,	<b>danger</b>, <b>success</b>, <b>info</b> or <b>default</b>.<br>
-		Example: <code>[button style="primary"]Your Text[/button]</code>
-	</p>
-	<p>
-		<b>Href:</b> You can add URL to the button.<br>
-		Example: <code>[button href="http://www.proteusthemes.com"]Your Text[/button]</code>
-	</p>
-	<p>
-		<b>Target:</b> You can choose if you want to open link in the same - <b>"_self"</b> or new - <b>"_blank"</b> window.<br>
-		Example: <code>[button target="_blank"]Your Text[/button]</code>
-	</p>
-	<p>
-		<b>Font Awesome icon:</b> You can add a font awesome icon to the button.<br>
-		Example: <code>[button fa="fa-phone"]Your Text[/button]</code>
-	</p>
-	<p>
-		<b>Cornes:</b> You can change corners of your button to be <b>rounded</b>.<br>
-		Example: <code>[button corners="rounded"]Your Text[/button]</code>
-	</p>
+{{> shortcodes}}
 
-	<h3 id="icons-font-awesome">7.2. Icons - Font Awesome</h3>
-	<p>
-		Shortcode for Font Awesome is very simillar to the buttons shortcode. It looks like this: <code>[fa]</code><br>
-		There are 3 options with different attributes - <b>icon</b>, <b>href</b> and <b>target</b>.
-	</p>
-	<p>
-		<b>Icon:</b> You can use any of <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank"> 519 FontAwesome icon</a>. To set the selected icon, just get the title of the icon, for example "fa-phone".<br>
-		Example: <code>[fa icon="fa-phone"]</code>
-	</p>
-	<p>
-		<b>Href:</b> You can add URL to the icon.<br>
-		Example: <code>[fa href="http://www.proteusthemes.com"]</code>
-	</p>
-	<p>
-		<b>Target:</b> You can choose if you want to open link in the same - <b>"_self"</b> or new - <b>"_blank"</b> window.<br>
-		Example: <code>[fa target="_blank"]</code>
-	</p>
-	<p>
-		So a Font Awesome icon shortcode with a home icon, linking to a page and opening in a new window/tab would look like this:
-		<code>[fa icon="fa-home" href="http://www.proteusthemes.com" target="_blank"]</code>
-	</p>
-	<p>
-		<b>Color:</b> You can set custom color to your icon.<br>
-		Example: <code>[fa color="ff00ff"]</code>
-	</p>
-</section>
 {{!-- Plugins --}}
 <section>
 	<h2 id="plugins">8. Plugins</h2>
