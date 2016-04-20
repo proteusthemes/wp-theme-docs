@@ -5,15 +5,27 @@ module.exports = function(grunt) {
 	require( 'load-grunt-tasks' )( grunt, { pattern: ['grunt-*', 'assemble'] } );
 
 	var config = {
-		themes: [ 'buildpress', 'mentalpress', 'cargopress' ],
 		prepFolder: 'prep',
-		buildFolder: 'build'
+		buildFolder: 'build',
+		themes:
+		[
+			{
+				name: 'buildpress',
+				themename: 'BuildPress',
+				creationdate: 'March 4, 2015',
+				tfurl: 'www.proteusthemes.com/#buildpress',
+			},
+			{
+				name: 'auto',
+				themename: 'Auto',
+				creationdate: 'April 12, 2016',
+				tfurl: 'www.proteusthemes.com/#auto',
+			}
+		]
 	};
 
 	// Project configuration.
 	grunt.initConfig( {
-
-		themes: config.themes,
 
 		// Assemble convert .hbs to .html.
 		// https://github.com/assemble/assemble/
@@ -167,10 +179,10 @@ module.exports = function(grunt) {
 		var themes = config.themes;
 		grunt.log.writeln( "copying master folder to the following theme folders in prep folder:" );
 		for (var i = 0; i < themes.length; i++) {
-			grunt.log.writeln( themes[i] );
+			grunt.log.writeln( themes[i].name );
 
 			grunt.task.run([
-				'copyFromTo:src/master:**:' + config.prepFolder + '/' + themes[i]
+				'copyFromTo:src/master:**:' + config.prepFolder + '/' + themes[i].name
 			]);
 		}
 	});
@@ -180,10 +192,10 @@ module.exports = function(grunt) {
 		var themes = config.themes;
 		grunt.log.writeln( "copying theme folders from src to the theme folders in prep folder:" );
 		for (var i = 0; i < themes.length; i++) {
-			grunt.log.writeln( themes[i] );
+			grunt.log.writeln( themes[i].name );
 
 			grunt.task.run([
-				'copyFromTo:src/' + themes[i] + ':**:' + config.prepFolder + '/' + themes[i]
+				'copyFromTo:src/' + themes[i].name + ':**:' + config.prepFolder + '/' + themes[i].name
 			]);
 		}
 	});
@@ -194,7 +206,7 @@ module.exports = function(grunt) {
 		grunt.log.writeln( "copying images from prep folder to the build folder..." );
 		for (var i = 0; i < themes.length; i++) {
 			grunt.task.run([
-				'copyFromTo:prep/' + themes[i] + '/images:**/*.{png,gif,jpg,jpeg,ico}:' + config.buildFolder + '/' + themes[i] + '/images'
+				'copyFromTo:prep/' + themes[i].name + '/images:**/*.{png,gif,jpg,jpeg,ico}:' + config.buildFolder + '/' + themes[i].name + '/images'
 			]);
 		}
 	});
@@ -205,17 +217,20 @@ module.exports = function(grunt) {
 		grunt.log.writeln( "copying fonts from prep folder to the build folder..." );
 		for (var i = 0; i < themes.length; i++) {
 			grunt.task.run([
-				'copyFromTo:prep/' + themes[i] + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + themes[i] + '/bower_components'
+				'copyFromTo:prep/' + themes[i].name + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + themes[i].name + '/bower_components'
 			]);
 		}
 	});
 
 	// Build docs for single theme. Run multiple tasks (theme is given as a parameter).
-	grunt.registerTask( 'buildTheme', 'build docs files for a single theme', function( theme ) {
+	grunt.registerTask( 'buildTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl ) {
 		if ( arguments.length < 1 ) {
 			grunt.log.writeln( this.name + ", missing parameter (theme name)" );
 		} else {
-			grunt.config.set( 'theme', theme );
+			grunt.config.set( 'theme', name );
+			grunt.config.set( 'page.meta.themename', themename );
+			grunt.config.set( 'page.meta.creationdate', creationdate );
+			grunt.config.set( 'page.meta.tfurl', tfurl );
 			grunt.task.run([
 				'assemble:build',
 				'compass:build',
@@ -236,7 +251,7 @@ module.exports = function(grunt) {
 		grunt.log.writeln( "building files for all themes..." );
 		for (var i = 0; i < themes.length; i++) {
 			grunt.task.run([
-				'buildTheme:' + themes[i]
+				'buildTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl
 			]);
 		}
 	});
