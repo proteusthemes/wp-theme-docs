@@ -8,72 +8,15 @@
 {{> theme-header}}
 
 {{!-- Pages --}}
-<section>
-	<h2 id="pages">4. Pages</h2>
-	<p><b>wp-admin » Pages</b> is the area where you will spend most time when building a site. We added few tools in that process so you can create your pages easier and faster.</p>
-	<h3 id="page-templates">4.1. Page Templates</h3>
-	<img class="alignright" src="images/page-templates.jpg" alt="Page Template" width="390" height="448">
-	<p>You can choose between 3 different Templates - <b>Default Template</b>, <b>Front Page with Slider</b> and <b>Front Page With Layer/Revolution Slider</b>.</p>
-	<p><b>Default Template</b>: Just default template for simple layouts and Page Builder. First you must choose Page Builder option under the title and you are ready to go. You can add our widgets here, choose different visual styles and much more. More about that in chapter 4.2.</p>
-	<p><b>Front Page with Slider</b>: This is unique template which adds option for slider in the page options. It can be used with Page Builder. More about that in chapter 5.</p>
-	<p><b>Front Page with Layer/Revolution Slider</b>: We don't include this two sliders with the theme but we make sure they work since we know our customers want to use them. When you activate this template there is a new field in which you can put alias from Layer/Revolution Slider and that's it.</p>
-	<h3 id="page-builder">4.2. Page Builder</h3>
-	<p>Page Builder is very powerfull tool for making pages. Here is one example from our demo Home Page:</p>
-	<img src="images/page-builder-example.png" alt="Auto Page Builder">
-	<p>You can make any kind of grid with adding new rows and inside them you put widgets. When you are finished with adding widgets you can also move whole rows up and down.</p>
-	<p>For more information on how to use Page Builder please visit <a href="https://siteorigin.com/page-builder/documentation/" target="_blank">Page Builder by SiteOrigin documentation page</a>.</p>
-	<h4 id="page-builder-row-style">4.2.1. Page Builder Row Style</h4>
-	<p>Let's take a look at how we can style Page Builder rows. In this example we will take a look at how to configure the row settings to style the background for the testimonial widget.</p>
-	<p>To start of we have to click on "Edit Row" for the row that we want to style as shown on the image above. An "Edit Row" window will open, and on the right, there are three setting tabs <b>Attributes</b>, <b>Layout</b> and <b>Design</b>. Here you can customize different things for this particular row.</p>
-	<p>To achieve the same design for the testimonial widget as on our demo page you have to click on <b>Layout</b> tab and set the <b>Bottom Margin</b> to <b>60</b>px, <b>Padding</b> to <b>60</b>px and the <b>Row Layout</b> to <b>Full Width</b>. Then click on the <b>Design</b> tab and set the <b>Background Color</b> to <b>#f2f2f2</b>.</p>
-	<h4 id="page-builder-widget-style">4.2.2. Page Builder Widget Style</h4>
-	<p>In Auto theme we added 1 new widget style. You can now choose bigger heading with line.
-	This option can be choosed for all widgets in the page builder under the tab Design.</p>
-	<h3 id="page-builder-widgets">4.3. Page Builder Widgets</h3>
-	<p>You can use almost any widget in the Page Builder. Let's take a look at few not so straight forward ones.</p>
-	<h4>4.3.1. SiteOrigin Editor Widget</h4>
-	<p>SiteOrigin Editor will create you the same editor environment as a normal WordPress editor does. You can use this widget if you want normal text editing options. SiteOrigin Editor Widget is part of <a href="https://wordpress.org/plugins/so-widgets-bundle/" target="_blank">Site Origin Widgets Bundle</a>.</p>
-	<h4>4.3.2. Call to Action Widget</h4>
-	<p>How to add button? With our custom shortcodes. You can find instructions on <a href="#buttons">section 7.1</a>.</p>
-	<h4>4.3.3. Open Position Widget</h4>
-	<p>Open Position is perfect widget for listing your Jobs. Widget is very easy to use, with clear fields. If you want to use <b>collapse option</b> with the widget you will need to insert <b>Read More</b> tag as seen below. This tag will hide everything beneath it and will add a collapsable <b>Read More</b> link.</p>
-	<img src="images/open-position-read-more.png" alt="Read more Open Position widget">
-	<h4>4.3.4. Twitter Widget</h4>
-	<p>This widget can be included everywhere - in page builder and in a normal sidebar widget. For that widget we again use normal WordPress <b>Text Widget</b>.</p>
-	<p>First, go on <a href="https://twitter.com/settings/widgets">https://twitter.com/settings/widgets</a> and click <b>Create new</b>.</p>
-	<img src="images/twitter-settings.jpg" alt="Twitter Settings" width="900" height="560">
-	<p>Now choose your Username, height of the widget, Theme (Light for default Auto theme) and Link color (Default Auto color is #957aca). When you are happy with your widget click on Create widget button. You will get the code which you copy and paste in the Text Widget in your WordPress site.</p>
-	<img src="images/twitter-code.jpg" alt="Twitter Code" width="900" height="600">
-</section>
+{{> pages}}
+
 {{!-- Slider --}}
-<section>
-	<h2 id="slider">5. Slider</h2>
-	<p>Building a Theme slider has never been easier.<br>
-	You can make Theme slider on any page you want. The only things you must do is to choose page template <b>Front Page With Slider</b> (you can use this template even if is not for front page). The same moment page template is chosen there will be new window at the bottom of the page which is called <b>Front page slider</b>. Add your pictures, your text and slider will be ready to go. This is example from our demo:</p>
-	<img src="images/front-page-slider-admin.png" alt="Front Page Slider Admin">
-	<p>Recommended size/resolution for slider images is 1920px (width) x 660px (height).</p>
-	<div class="info">
-		You can also use Layer/Revolution Slider. We don't include them with the theme but we make sure they work. When you activate page template - <b>Front Page With Layer/Revolution Slider</b> there is new field in which you can put alias from Layer/Revolution Slider and that's it.
-	</div>
-</section>
+{{> slider}}
+
 {{!-- Theme Options --}}
-<section>
-	<h2 id="proteusthemes-options">6. ProteusThemes Options</h2>
-	<p>You can find all <b>Theme Options</b> in the Customizer: <b>Appearance » Customize</b>. This is a live preview editor for your page.</p>
-	<p>Here you can change:</p>
-	<ul>
-		<li><b>Logo</b></li>
-		<li><b>Header</b></li>
-		<li><b>Navigation</b></li>
-		<li><b>Page Header Area</b></li>
-		<li><b>Breadcrumbs</b></li>
-		<li><b>Theme Layout &amp; Colors</b></li>
-		<li><b>Shop</b></li>
-		<li><b>Footer</b></li>
-		<li><b>Custom Code</b></li>
-		<li><b>And Much More ...</b></li>
-	</ul>
-</section>
+{{> theme-options}}
+
+
 {{!-- Shortcodes --}}
 <section>
 	<h2 id="shortcodes">7. Shortcodes</h2>
