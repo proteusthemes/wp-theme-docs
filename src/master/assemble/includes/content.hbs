@@ -20,94 +20,11 @@
 {{> shortcodes}}
 
 {{!-- Plugins --}}
-<section>
-	<h2 id="plugins">8. Plugins</h2>
-	<p>We also use and support some of the best plugins for WordPress.</p>
-	<h3 id="contact-form-7">8.1. Contact Form 7</h3>
-	<p>We use Contact Form 7 for our Contact Us page. This is the code from our demo:</p>
-<pre>&#x3C;div class=&#x22;row&#x22;&#x3E;
-  &#x3C;div class=&#x22;col-xs-12  col-lg-6&#x22;&#x3E;
-    [text* your-name class:form-control placeholder &#x22;First &#x26; Last Name *&#x22;]
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;col-xs-12  col-lg-6&#x22;&#x3E;
-    [email* your-email class:form-control placeholder &#x22;E-mail *&#x22;]
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;row&#x22;&#x3E;
-  &#x3C;div class=&#x22;col-xs-12  col-lg-6&#x22;&#x3E;
-    [tel your-telephone class:form-control placeholder &#x22;Phone&#x22;]
-  &#x3C;/div&#x3E;
-  &#x3C;div class=&#x22;col-xs-12  col-lg-6&#x22;&#x3E;
-    [text your-subject class:form-control placeholder &#x22;Service&#x22;]
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;row&#x22;&#x3E;
-  &#x3C;div class=&#x22;col-xs-12&#x22;&#x3E;
-    [textarea your-message class:form-control placeholder &#x22;Message&#x22;]
-    &#x3C;div class=&#x22;wpcf7-notice&#x22;&#x3E;Fields with * are required.&#x3C;/div&#x3E;
-    [submit class:btn class:btn-primary &#x22;SEND MESSAGE&#x22;]
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</pre>
-	<p>After that just place the plugin's shortcode to your contact us page.</p>
-	<h3 id="woocommerce">8.2. WooCommerce</h3>
-	<p>Auto supports basic WooCommerce integration.</p>
-	<p>Once the WooCommerce is activated you will see this notice:</p>
-	<img src="images/woocommerce-begin-setup.png" alt="WooCommerce Begin Setup">
-	<p>Click on <strong>Run the Setup Wizard</strong> button to begin with the WooCommerce install. That will start the setup wizard, where you can set things like <strong>shop pages</strong>, <strong>store locale</strong>, <strong>shipping & tax</strong> and <strong>payments</strong></p>
-	<img src="images/woocommerce-setup-wizard.png" alt="WooCommerce Setup Wizard">
-	<p>If you want to change some settings, you can change them in <strong>WooCommerce » Settings</strong>. There are many tabs at the top, you can configure to fit your needs.</p>
-	<p>Next, you can install the demo products by the WooCommerce. Go to the <strong>Tools » Import » WordPress</strong> and import the demo XML file which can be found in the folder where the WooCommerce was installed on your server. Usually this is in the <code>wp-content/plugins/woocommerce</code>. Find the file <code>dummy-data.xml</code> there and upload it to the server. Also check the <strong>Download and import file attachments</strong> check-box, so that all product images will be downloaded as well.</p>
-	<p>When you're done, you should see the products:</p>
-	<img src="images/woocommerce-products.jpg" alt="WooCommerce Products" width="1081" height="746">
-	<div class="info">
-		If you click on the <strong>star</strong>, which can be found next to the products, than this products will become <strong>featured</strong>.
-	</div>
-	<p>When you are done with the settings, go to the <strong>Appearance » Widgets</strong>.</p>
-	<p>Drag &amp; Drop the WooCommerce widgets that start with "WooCommerce" to the sidebar called <strong>Shop Sidebar</strong>.</p>
-	<img class="aligncenter" src="images/woocommerce-shop-sidebar.jpg" alt="WooCommercer Shop Sidebar" width="515" height="481">
-	<p>That's all, your WooCommerce shop is now ready!</p>
-	<div class="info">
-		All further information and documentation for the WooCommerce you can find on official <a href="http://docs.woothemes.com/documentation/plugins/woocommerce/" target="_blank"><strong>WooCommerce website</strong></a>.
-	</div>
+{{> plugins}}
 
-	{{!-- <h3 id="visual-composer">8.3. Visual Composer</h3>
-	<p><strong>Visual Composer: Page Builder for WordPress</strong> is supported for our <strong>Auto</strong> theme. (Note: We do not bundle this plugin with the theme).</p>
-	<p>We have converted our widgets to the Visual Composer content elements, so you can use them in the VC editor. You can add them to your site from the <strong>Add new Element</strong> menu. Our elements are marked with our ProteusThemes icon, so they are easy to spot.
-	<img src="images/vc_add_new_element.png" alt="ProteusThemes Visual Editor elements"></p>
-	<h4>8.3.1 Templates for Visual Composer</h4>
-	<p>We've also made it very easy to create our original demo page layout templates with Visual Composer. You can choose from these premade templates: <strong>Home Page</strong>, <strong>Who We Are</strong>, <strong>Contact Us</strong>, and <strong>Our Services</strong>. To recreate the Auto Home Page you need to:</p>
-	<ol>
-		<li>Create a new page and set the page template to <strong>Front Page with Slider</strong> and set the slider images below the editor.</li>
-		<li>In the Visual Composer editor click on <strong>Templates</strong> icon, click on <strong>Default Templates</strong> tab and then select <strong>Auto: Home Page</strong> template:<img src="images/vc_home_page_template.png" alt="Visual Composer default templates"><img src="images/vc_select_front_page_template.png" alt="Visual Composer default templates"></li>
-		<li>Publish/update the page.</li>
-	</ol>
-	<h4>8.3.2 Nested Visual Composer Elements</h4>
-	<p>Some of our Visual Composer elements are nested elements. That means that once you select the element you will have to add it's child element in order to achieve the desired result.</p>
-	<p>Lets take <strong>Social Icons</strong> as an example of the nested element. When you select <strong>Social Icons</strong> element in the VC editor a window will pop up with just a simple option to open links in a new tab and a "container" will be displayed in the editor.</p>
-	<img src="images/vc_social_icons.png" alt="Social Icons VC element">
-	<p>Now you have to click the + icon and add a <strong>Social Icon</strong> element, edit it's settings (that will actually add a social icon to the page). With this method you can add as many social Icons as you want. And that's why we use nested elements.</p>
-	<p>Other nested elements are: <strong>Accordion</strong>, <strong>Testimonials</strong> and <strong>Pricing List</strong>. They all work on the same principle, they enable you to add multiple accordion items, testimonials and so on...</p>
-	<h4>8.3.3 Missing elements</h4>
-	<p>In our Auto theme we are using the <strong>Tabs widget for Page Builder</strong> plugin, which allows us to create advanced tabs with Page Builder by SiteOrigin editor. The <strong>Tabs</strong> Visual Composer element is not as flexible and so we were not able to implement the design that we want. That's why there are no tabs in the Visual Composer version of our home page template.</p>
-	<p>In our Auto demo page we are using <strong>SiteOrigin Google Maps</strong> widget which has the ability to use custom map styles. Visual Composer does not have such element (which would allow custom map styles), that's why the maps on our Visual Composer templates have the default look. You could install a Visual Composer addon, which enables the Google maps styles and use our custom style:<p>
-
-	<pre>[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]</pre>
-	<h3 id="bookly">8.4. Bookly</h3>
-	<p>Bookly is a great easy-to-use and easy-to-manage booking tool for service providers. Plugin supports wide range of services, provided by business and individuals service providers offering reservations through websites.</p>
-	<p>In Auto theme we use <strong>free version</strong> of <a href="https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/">Bookly plugin</a> but you can also buy premium version of plugin if you need more features.</p> --}}
-
-</section>
 {{!-- Footer --}}
-<section>
-	<h2 id="footer">9. Footer</h2>
-	<p>Last but not least there is our footer area. Footer area is divided in three - Footer Widgets, Middle Footer and Bottom Footer.</p>
-	<h3 id="footer-widgets">9.1. Footer Widgets</h3>
-	<p>Footer Widgets is place where you can add the last things to your page. You can add widgets in the <b>Apperance » Widgets » Footer</b>. There are also few options for that area in the <b>Appearance » Customize » Theme Options » Footer</b>. You can changes different colors there.</p>
-	<h3 id="middle-footer">9.2. Middle Footer</h3>
-	<p>Middle Footer area is place for your additinoal information like social icons, supported credit cards, copyrights or some text. Custom text for left or right of middle footer can be added in live customizer <b>Appearance » Customize » Theme Options » Footer</b>. In that area you will also find Back to Top button which can be turned off in the same place in customizer.</p>
-	<h3 id="bottom-footer">9.2. Bottom Footer</h3>
-	<p>Bottom Footer area is place for copyrights or some custom text. Custom text for left and right side of bottom footer can be added in live customizer <b>Appearance » Customize » Theme Options » Footer</b>.</p>
-</section>
+{{> theme-footer}}
+
 {{!-- Translate --}}
 <section>
 	<h2 id="translations">10. Translations</h2>
