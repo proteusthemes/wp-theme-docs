@@ -228,9 +228,9 @@ module.exports = function(grunt) {
 			grunt.log.writeln( this.name + ", missing parameter (theme name)" );
 		} else {
 			grunt.config.set( 'theme', name );
-			grunt.config.set( 'page.meta.themename', themename );
-			grunt.config.set( 'page.meta.creationdate', creationdate );
-			grunt.config.set( 'page.meta.tfurl', tfurl );
+			grunt.config.set( 'themename', themename );
+			grunt.config.set( 'creationdate', creationdate );
+			grunt.config.set( 'tfurl', tfurl );
 			grunt.task.run([
 				'assemble:build',
 				'compass:build',
