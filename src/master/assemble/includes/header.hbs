@@ -1,5 +1,5 @@
 ---
-theme: <%= themename %> WordPress Theme Documentation
+themeName: <%= themename %> WordPress Theme Documentation
 themeText: <%= themedescription %>
 themeImageSrc: images/header-cover.jpg
 themeImageAlt: <%= themename %> Cover
@@ -15,7 +15,7 @@ themeChangelogURL: http://<%= tfurl %>#item-description__changelog
 		<meta name="author" content="ProteusNet">
 		<link rel="icon" type="image/ico" href="images/favicon.ico"/>
 
-		<title>{{header.theme}} Online Documentation</title>
+		<title>{{header.themeName}} Online Documentation</title>
 
 		<script type="text/javascript">
 			WebFontConfig = {
@@ -71,7 +71,7 @@ themeChangelogURL: http://<%= tfurl %>#item-description__changelog
 							<li><a href="http://support.proteusthemes.com/">Support</a></li>
 							<li><a href="https://www.youtube.com/user/ProteusNetCompany">Video Tutorials</a></li>
 							<li><a href="http://www.proteusthemes.com/themes.html">Our Themes</a></li>
-							<li><a href="{{ header.themeChangelogURL }}">Changelog</a></li>
+							<li><a href="{{header.themeChangelogURL}}">Changelog</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</nav>
@@ -80,7 +80,7 @@ themeChangelogURL: http://<%= tfurl %>#item-description__changelog
 			<div class="theme-header">
 				<div class="row">
 					<div class="col-xs-12  col-md-6">
-						<h1 class="theme-header__title">{{header.theme}}</h1>
+						<h1 class="theme-header__title">{{header.themeName}}</h1>
 						<p class="theme-header__text">
 							{{header.themeText}}
 						</p>
