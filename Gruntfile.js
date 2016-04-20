@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 				creationdate: 'March 4, 2015',
 				tfurl: 'themeforest.net/item/buildpress-construction-business-wp-theme/9323981?ref=ProteusThemes',
 				themedescription: 'BuildPress is a premium WordPress theme, available only on ThemeForest. It is specially designed for mechanics, repair and mechanic workshops, car repairs and handymen, but you can use it for any closely related businesses that will fit in. BuildPress WordPress theme has everything you need for a perfect website. Moreover, you\'ll be able to set it up and run with just a few clicks!',
+				shutterstockurl: 'goo.gl/zrhmwE',
 			},
 			{
 				name: 'auto',
@@ -22,6 +23,7 @@ module.exports = function(grunt) {
 				creationdate: 'April 12, 2016',
 				tfurl: 'themeforest.net/item/auto-ideal-car-mechanic-and-auto-repair-template-for-wordpress/15194530?ref=ProteusThemes',
 				themedescription: 'Auto is a premium WordPress theme, available only on ThemeForest. It is specially designed for mechanics, repair and mechanic workshops, car repairs and handymen, but you can use it for any closely related businesses that will fit in. Auto WordPress theme has everything you need for a perfect website. Moreover, you\'ll be able to set it up and run with just a few clicks!',
+				shutterstockurl: 'www.shutterstock.com/',
 			}
 		]
 	};
@@ -226,7 +228,7 @@ module.exports = function(grunt) {
 	});
 
 	// Build docs for single theme. Run multiple tasks (theme is given as a parameter).
-	grunt.registerTask( 'buildTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themedescription ) {
+	grunt.registerTask( 'buildTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themedescription, shutterstockurl ) {
 		if ( arguments.length < 1 ) {
 			grunt.log.writeln( this.name + ", missing parameter (theme name)" );
 		} else {
@@ -235,6 +237,7 @@ module.exports = function(grunt) {
 			grunt.config.set( 'creationdate', creationdate );
 			grunt.config.set( 'tfurl', tfurl );
 			grunt.config.set( 'themedescription', themedescription );
+			grunt.config.set( 'shutterstockurl', shutterstockurl );
 			grunt.task.run([
 				'assemble:build',
 				'compass:build',
@@ -255,7 +258,7 @@ module.exports = function(grunt) {
 		grunt.log.writeln( "building files for all themes..." );
 		for (var i = 0; i < themes.length; i++) {
 			grunt.task.run([
-				'buildTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themedescription
+				'buildTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themedescription + ':' + themes[i].shutterstockurl
 			]);
 		}
 	});
