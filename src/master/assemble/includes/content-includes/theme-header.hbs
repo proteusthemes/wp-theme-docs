@@ -1,37 +1,29 @@
 <section>
 	<h2 id="header">Header</h2>
-	<h3 id="logo-and-favicon">Logo</h3>
-	<p>
-		Logo can be changed in our Theme Options - <b>Appearance » Customize » Theme Options » Logo.</b>
-	</p>
+
+	{{!-- Top Bar --}}
+	{{> top-bar}}
+
+	{{!-- Logo --}}
+	{{> logo}}
+
+	{{!-- Favicon --}}
+	{{> favicon}}
+
 	<h3 id="header-widgets">Header Widgets</h3>
 	<p>
-		You can put the following widgets in Header widget area: Icon Box, Buttons, Social Icons or Skype Button.
+		You can put a lot of widgets in the <strong>Header</strong> widget area, but your header will look great with the following widgets:
 	</p>
-	<h4>Icon Box</h4>
-	<img class="alignright" src="images/widget-icon-box.jpg" alt="Widget Icon Box" width="390" height="624">
-	<p>
-		With widget Icon Box you can put any kind of title with small text and image in the header. In our demo we use this widget for contact information which we think are very important for customers.
-	</p>
-	<p>
-		In this widget you can choose Title, Text and Icon from Font Awesome. You can also choose a link for the whole box. If you let that field empty Icon Box will not be click-able.
-	</p>
-	<p>
-		We give you few Icons to choose from but you can actually use any icon from <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">519 Font Awesome icons</a>. Just paste the icon title in the Icon field and that's it. How cool is that?
-	</p>
-	<p>
-		You can also have more than one Icon Box in the Header.
-	</p>
-	<div class="info">
-		You can also use <b>tel:</b> and <b>mailto:</b> in the Link area for direct connection with phone or mail. For example: tel:0038631567536 or mailto:info@auto.com.
-	</div>
-	<h3 id="main-menu">Main Menu</h3>
-	<p>
-		Main Menu can be set in <b>wp-admin » Appearance » Menus</b>. Theme locations for Main Menu is called Main Menu.
-	</p>
-	<img class="aligncenter" src="images/main-menu-location.png" alt="Page Template">
-	<h3 id="navigation-widgets">Navigation Widgets</h3>
-	<p>
-		Area next to main menu which can be used for Social Icons.
-	</p>
+
+	{{!-- Header Widgets --}}
+	{{> header-widgets}}
+
+	{{!-- Main Menu --}}
+	{{> main-menu}}
+
+	{{!-- Navigation Widgets --}}
+	{{> navigation-widgets}}
+
+	{{!-- After Header --}}
+	{{> after-header}}
 </section>
