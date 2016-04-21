@@ -1,0 +1,72 @@
+<h3 id="page-builder">Page Builder (version 1.5.X)</h3>
+	<div class="warning">
+		Instructions for Page Builder version 1.5.X are deprecated. See the <a href="#page-builder-2">documentation for version 2.0 below</a>.
+	</div>
+	<p>
+		Page Builder is very powerful tool for making pages. Here is one example of how it looks like:
+	</p>
+	<img src="images/page-builder-example.png" alt="Page Builder examlpe">
+	<p>
+		You can make any kind of grid with adding new rows and inside them you can put widgets. When you are finished with adding widgets you can also move whole rows up and down.
+	</p>
+	<p>
+		You can also choose between <strong>few Visual</strong> Styles of row - <strong>Default</strong>, <strong>Wide (No Container)</strong>, <strong>Wide Solid Background Color</strong>, <strong>Wide Pattern Background</strong>, <strong>Wide Image Background</strong>.
+	</p>
+	<p>
+		<strong>Default</strong>: normal most common visual style.
+	</p>
+	<p>
+		<strong>Wide (No Container)</strong>: visual style with no container. Everything you put here will go from edge to edge of the screen. Most useful for Google Maps Widget.
+	</p>
+	<p>
+		<strong>Wide Solid Background Color</strong>: visual style with full width color for background. In our demo we use this style for showing Banners.
+	</p>
+	<p>
+		<strong>Wide Pattern Background</strong>: visual style with full width pattern for background. In our demo we use this style for showing Testimonials.
+	</p>
+	<p>
+		<strong>Wide Image Background</strong>: visual style with full width Image for background. In our demo we use this style for showing Motivational Text.
+	</p>
+	<p>
+		All this styles can be modified in the <strong>wp-admin » Appearance » Customize » Theme Options » Page Builder Row Styles</strong>, so you can give your own feel to the site.
+	</p>
+	<div class="info">
+		Page Builder works best with our carefully selected widgets. You can see how to use and modified them in the Widgets section.
+	</div>
+	<h3 id="page-builder-2">Page Builder (version 2.0 and above)</h3>
+	<p>
+		From December 15, 2014 (version of BuildPress: <code>v1.8.1</code>) the old version of Page Builder is deprecated. This affects the way the demo data are imported and (especially) how the front page is configured.
+	</p>
+	<p>
+		From <code>v1.8.1</code> the front page is imported, but the import doesn't work as it used to, since only the bare content is imported for the pages which use Page Builder plugin.
+	</p>
+	<p>
+		In order to compensate that, we created a prebuilt layout called <strong>Home page</strong>. You just create a new page, select Page Builder and click to button <strong>Prebuilt Layouts</strong>. Select the Home Page and you are done (make sure you are using the page template <strong>Front Page with Slider</strong>).
+	</p>
+	<div class="info">
+		In the next days we will be creating a more complete and easier way to import the pages built using the Page Builder, so stay tuned.
+	</div>
+	<h4 id="page-builder-fix">Manual Upgrade from 1.5.x to 2.0</h4>
+	<p>
+		In the new version of Page Builder all row layouts work differently than before. This is why after the update all the wide elements are cropped left and right. Here is a guide on how to fix that really fast with a few clicks.
+	</p>
+	<p>
+		You must go into Page Builder editor and <b>Edit Row</b> of broken row.
+	</p>
+	<img src="images/page-builder-fix.jpg" alt="Page Builder Fix" width="1480" height="510">
+	<ul>
+		<li>You will need to delete everything in <b>Attributes » Row Class</b> for each element.</li>
+		<li>In the <b>Layout</b> options select Row Layout <b>Full Width</b> or <b>Full Width Stretched</b> (Google Maps for example).</li>
+		<li>And in the <b>Design</b> you must choose <b>Background Color</b> or <b>Background Image</b>. If you use pattern than you must choose both. The images for background and patterns are located in the BuildPress theme in <code>buildpress/assets/images/</code>.</li>
+	</ul>
+	<h4 id="page-builder-maps">Wide Layout on Boxed Version</h4>
+	<p>
+		The <strong>Full Width</strong> Row Layout in the new Page Builder works flawlessly. But in the boxed BuildPress some content might not be visible. One example is Google Maps where the controls for zoom and navigation are hidden when using Full Width.
+	</p>
+	<p>
+		Of couse, we have a workaround for that. Since BuildPress <code>v1.9.0</code> there is a special class you should set for wide rows when you are using boxed layout of the theme (set in <strong>Themes &raquo; Customize &raquo; Theme Options &raquo; Theme Layout &amp; Colors &raquo; Layout</strong>). When editing row (see screenshot above) click to <strong>Attribues</strong> and enter the <code>wide-boxed</code> for the <strong>Row Class</strong>.
+	</p>
+	<img src="images/page-builder-wide-boxed.jpg" width="780" height="433">
+	<div class="info">
+		Make sure that you leave the <strong>Standard</strong> layout on <strong>Layout &raquo; Row Layout</strong> when using the <code>wide-boxed</code> class.
+	</div>
