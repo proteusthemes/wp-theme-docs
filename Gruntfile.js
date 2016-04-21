@@ -12,18 +12,18 @@ module.exports = function(grunt) {
 			{
 				name: 'buildpress',
 				themename: 'BuildPress',
-				creationdate: 'March 4, 2015',
+				creationdate: 'November 4, 2014',
 				tfurl: 'themeforest.net/item/buildpress-construction-business-wp-theme/9323981?ref=ProteusThemes',
-				themedescription: 'BuildPress is a premium WordPress theme, available only on ThemeForest. It is specially designed for mechanics, repair and mechanic workshops, car repairs and handymen, but you can use it for any closely related businesses that will fit in. BuildPress WordPress theme has everything you need for a perfect website. Moreover, you\'ll be able to set it up and run with just a few clicks!',
+				themeheadertext: 'BuildPress is a premium WordPress Theme for any kind of construction businesses and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use with one click demo content import. Available only on ThemeForest!',
 				shutterstockurl: 'goo.gl/zrhmwE',
 			},
 			{
 				name: 'auto',
 				themename: 'Auto',
-				creationdate: 'April 12, 2016',
+				creationdate: 'March 4, 2016',
 				tfurl: 'themeforest.net/item/auto-ideal-car-mechanic-and-auto-repair-template-for-wordpress/15194530?ref=ProteusThemes',
-				themedescription: 'Auto is a premium WordPress theme, available only on ThemeForest. It is specially designed for mechanics, repair and mechanic workshops, car repairs and handymen, but you can use it for any closely related businesses that will fit in. Auto WordPress theme has everything you need for a perfect website. Moreover, you\'ll be able to set it up and run with just a few clicks!',
-				shutterstockurl: 'www.shutterstock.com/',
+				themeheadertext: 'Auto is a premium WordPress theme, available only on ThemeForest. It is specially designed for mechanics, repair and mechanic workshops, car repairs and handymen, but you can use it for any closely related businesses that will fit in. Auto WordPress theme has everything you need for a perfect website. Moreover, you\'ll be able to set it up and run with just a few clicks!',
+				shutterstockurl: 'www.shutterstock.com',
 			}
 		]
 	};
@@ -228,7 +228,7 @@ module.exports = function(grunt) {
 	});
 
 	// Build docs for single theme. Run multiple tasks (theme is given as a parameter).
-	grunt.registerTask( 'buildTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themedescription, shutterstockurl ) {
+	grunt.registerTask( 'buildTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themeheadertext, shutterstockurl ) {
 		if ( arguments.length < 1 ) {
 			grunt.log.writeln( this.name + ", missing parameter (theme name)" );
 		} else {
@@ -236,7 +236,7 @@ module.exports = function(grunt) {
 			grunt.config.set( 'themename', themename );
 			grunt.config.set( 'creationdate', creationdate );
 			grunt.config.set( 'tfurl', tfurl );
-			grunt.config.set( 'themedescription', themedescription );
+			grunt.config.set( 'themeheadertext', themeheadertext );
 			grunt.config.set( 'shutterstockurl', shutterstockurl );
 			grunt.task.run([
 				'assemble:build',
@@ -258,7 +258,7 @@ module.exports = function(grunt) {
 		grunt.log.writeln( "building files for all themes..." );
 		for (var i = 0; i < themes.length; i++) {
 			grunt.task.run([
-				'buildTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themedescription + ':' + themes[i].shutterstockurl
+				'buildTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themeheadertext + ':' + themes[i].shutterstockurl
 			]);
 		}
 	});

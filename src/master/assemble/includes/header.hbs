@@ -1,7 +1,6 @@
 ---
 themeName: <%= themename %> WordPress Theme Documentation
-themeText: <%= themedescription %>
-themeImageSrc: images/header-cover.jpg
+themeHeaderText: <%= themeheadertext %>
 themeImageAlt: <%= themename %> Cover
 themeChangelogURL: http://<%= tfurl %>#item-description__changelog
 ---
@@ -82,11 +81,11 @@ themeChangelogURL: http://<%= tfurl %>#item-description__changelog
 					<div class="col-xs-12  col-md-6">
 						<h1 class="theme-header__title">{{header.themeName}}</h1>
 						<p class="theme-header__text">
-							{{header.themeText}}
+							{{header.themeHeaderText}}
 						</p>
 					</div>
 					<div class="col-xs-12  col-md-6">
-						<img class="theme-header__cover" src="{{header.themeImageSrc}}" alt="{{header.themeImageAlt}}" width="880" height="660">
+						<img class="theme-header__cover" src="images/header-cover.jpg" alt="{{header.themeImageAlt}}" width="880" height="660">
 					</div>
 				</div>
 			</div>
