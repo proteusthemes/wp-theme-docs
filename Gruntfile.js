@@ -34,6 +34,14 @@ module.exports = function(grunt) {
 				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?code=eeaf9c9991c6ca3ad788a159eea11de2&lightbox_id=35785523',
 			},
 			{
+				name: 'legalpress',
+				themename: 'LegalPress',
+				creationdate: 'July 30, 2015',
+				tfurl: 'themeforest.net/item/legalpress-law-attorney-insurance-legal-theme/12389860?ref=proteusthemes',
+				themeheadertext: 'Introducing LegalPress. LegalPress is only available on ThemeForest, so read on to see why it’s perfect for your company’s WordPress website!',
+				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?lightbox_id=37165535&code=ad22660d30fe796626a150741e96a866',
+			},
+			{
 				name: 'auto',
 				themename: 'Auto',
 				creationdate: 'March 4, 2016',
