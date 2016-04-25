@@ -11,13 +11,13 @@ items:
   - link: demo-content
     name: Demo Content
     subitems:
+    - link: one-click-demo-install
+      name: One Click Demo Install
     - link: import-xml-file
       name: Import XML File
   - link: header
     name: Header
     subitems:
-    - link: top-bar
-      name: Top Bar
     - link: logo-and-favicon
       name: Logo & Favicon
     - link: header-widgets
@@ -51,22 +51,22 @@ items:
       name: Contact Form 7
     - link: woocommerce
       name: WooCommerce
-    - link: visual-composer
-      name: Visual Composer
   - link: footer
     name: Footer
     subitems:
     - link: footer-widgets
       name: Footer Widgets
+    - link: middle-footer
+      name: Middle Footer
     - link: bottom-footer
       name: Bottom Footer
   - link: translations
     name: Translations
     subitems:
-    - link: wpml
-      name: WPML
     - link: manual-translation
       name: Manual Translation
+    - link: wpml
+      name: WPML
   - link: extras
     name: Extras
     subitems:
