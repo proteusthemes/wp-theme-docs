@@ -18,6 +18,14 @@ module.exports = function(grunt) {
 				shutterstockurl: 'goo.gl/zrhmwE',
 			},
 			{
+				name: 'mentalpress',
+				themename: 'MentalPress',
+				creationdate: 'March 6, 2015',
+				tfurl: 'themeforest.net/item/mentalpress-wp-theme-for-your-medical-or-psychology-website-/10676732?ref=proteusthemes',
+				themeheadertext: 'MentalPress is a premium WordPress Theme for psychologists, therapists and counseling individuals and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use, with one click demo content import. Available only on ThemeForest!',
+				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?lightbox_id=33824813&code=330baa151015f131244df6d0990bf218',
+			},
+			{
 				name: 'auto',
 				themename: 'Auto',
 				creationdate: 'March 4, 2016',
