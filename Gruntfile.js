@@ -147,8 +147,9 @@ module.exports = function(grunt) {
 		// Clean the build dir.
 		// https://github.com/gruntjs/grunt-contrib-clean
 		clean: {
-			beforebuild: [config.buildFolder, config.prepFolder],
-			afterBuild:  ['.tmp', '.sass-cache']
+			beforeBuild:      [config.buildFolder, config.prepFolder],
+			beforeThemeBuild: [config.buildFolder + '/<%= theme %>', config.prepFolder + '/<%= theme %>'],
+			afterBuild:       ['.tmp', '.sass-cache']
 		},
 
 		// Copy some files not handled by other tasks.
@@ -244,7 +245,7 @@ module.exports = function(grunt) {
 	});
 
 	// Build docs for single theme. Run multiple tasks (theme is given as a parameter).
-	grunt.registerTask( 'buildTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themeheadertext, shutterstockurl ) {
+	grunt.registerTask( 'buildSingleTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themeheadertext, shutterstockurl ) {
 		if ( arguments.length < 1 ) {
 			grunt.log.writeln( this.name + ", missing parameter (theme name)" );
 		} else {
@@ -274,15 +275,36 @@ module.exports = function(grunt) {
 		grunt.log.writeln( "building files for all themes..." );
 		for (var i = 0; i < themes.length; i++) {
 			grunt.task.run([
-				'buildTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themeheadertext + ':' + themes[i].shutterstockurl
+				'buildSingleTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themeheadertext + ':' + themes[i].shutterstockurl
 			]);
+		}
+	});
+
+	// Build single theme docs (theme name is passed as the parameter).
+	grunt.registerTask( 'buildTheme', 'build docs files for single theme', function( theme ) {
+		var themes = config.themes;
+		grunt.log.writeln( "building files for: " + theme );
+		for (var i = 0; i < themes.length; i++) {
+			if ( themes[i].name === theme ) {
+				grunt.config.set( 'theme', theme );
+				grunt.task.run([
+					'replace:modifiedDate',
+					'clean:beforeThemeBuild',
+					'copyFromTo:src/master:**:' + config.prepFolder + '/' + themes[i].name,
+					'copyFromTo:src/' + themes[i].name + ':**:' + config.prepFolder + '/' + themes[i].name,
+					'copyFromTo:prep/' + themes[i].name + '/images:**/*.{png,gif,jpg,jpeg,ico}:' + config.buildFolder + '/' + themes[i].name + '/images',
+					'copyFromTo:prep/' + themes[i].name + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + themes[i].name + '/bower_components',
+					'buildSingleTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themeheadertext + ':' + themes[i].shutterstockurl,
+					'clean:afterBuild'
+				]);
+			}
 		}
 	});
 
 	// Build all theme docs.
 	grunt.registerTask( 'build_docs', [
 		'replace:modifiedDate',
-		'clean:beforebuild',
+		'clean:beforeBuild',
 		'copyMasterToPrep',
 		'copyThemesToPrep',
 		'copyPrepImagesToBuild',
