@@ -26,6 +26,14 @@ module.exports = function(grunt) {
 				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?lightbox_id=33824813&code=330baa151015f131244df6d0990bf218',
 			},
 			{
+				name: 'cargopress',
+				themename: 'CargoPress',
+				creationdate: 'May 26, 2015',
+				tfurl: 'themeforest.net/item/cargopress-logistic-warehouse-transport-wp/11601531?ref=proteusthemes',
+				themeheadertext: 'Introducing CargoPress, the best premium WordPress theme for transportation, freight, and logistics businesses. CargoPress is easy to set up and use. It provides a simple roadmap to create a great-looking website, so you can get back to what is most important - your business and clients. CargoPress is only available on ThemeForest, so read on to see why it’s perfect for your company’s WordPress website!',
+				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?code=eeaf9c9991c6ca3ad788a159eea11de2&lightbox_id=35785523',
+			},
+			{
 				name: 'auto',
 				themename: 'Auto',
 				creationdate: 'March 4, 2016',

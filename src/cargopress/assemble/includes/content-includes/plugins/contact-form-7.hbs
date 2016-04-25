@@ -1,0 +1,30 @@
+<h3 id="contact-form-7">Contact Form 7</h3>
+<p>
+	We use Contact Form 7 for our Contact Us page. This is the code from our demo:
+</p>
+{{!-- Contact form 7 code example used in our demo page --}}
+{{> contact-form-7-code}}
+<p>
+	After that just place the plugin's shortcode to your contact us page.
+</p>
+<p>
+	The same goes for <b>Request a Quick Note</b> form on front page. Here is the code from our demo:
+</p>
+<pre>&#x3C;div class=&#x22;contact-form-small&#x22;&#x3E;
+  &#x3C;div class=&#x22;row&#x22;&#x3E;
+    &#x3C;div class=&#x22;col-xs-12  col-md-6&#x22;&#x3E;
+      [text* your-name placeholder &#x22;First and Last Name&#x22;]
+      [email* your-email placeholder &#x22;E-mail address&#x22;]
+      [select menu-354 &#x22;Transport&#x22; &#x22;Storage&#x22;]
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;col-xs-12  col-md-6&#x22;&#x3E;
+        [text* your-subject placeholder &#x22;Subject&#x22;]
+        [textarea your-message placeholder &#x22;Message&#x22;]
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;row&#x22;&#x3E;
+    &#x3C;div class=&#x22;col-xs-12&#x22;&#x3E;
+      [submit class:btn class:btn-primary class:pull-right &#x22;SEND MESSAGE&#x22;]
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</pre>
