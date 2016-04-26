@@ -58,6 +58,14 @@ module.exports = function(grunt) {
 				shutterstockurl: 'goo.gl/zrhmwE',
 			},
 			{
+				name: 'beauty',
+				themename: 'Beauty',
+				creationdate: 'January 7, 2016',
+				tfurl: 'themeforest.net/item/beauty-hair-salon-nail-spa-fashion-wp-theme/14458185?ref=ProteusThemes',
+				themeheadertext: 'Introducing Beauty, a premium WordPress theme, available only on ThemeForest. With its light and clean design it is a smart choice for beauty salons, hair salons, wellness centers and similar businesses. Beauty has everything you need to take your company to the next level, but most of all it is extremely easy to set up and use.',
+				shutterstockurl: 'www.shutterstock.com',
+			},
+			{
 				name: 'auto',
 				themename: 'Auto',
 				creationdate: 'March 4, 2016',
