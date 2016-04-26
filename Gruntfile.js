@@ -42,6 +42,14 @@ module.exports = function(grunt) {
 				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?lightbox_id=37165535&code=ad22660d30fe796626a150741e96a866',
 			},
 			{
+				name: 'repairpress',
+				themename: 'RepairPress',
+				creationdate: 'September 28, 2015',
+				tfurl: 'themeforest.net/item/repairpress-gsm-phone-repair-shop-wp/13065600?ref=ProteusThemes',
+				themeheadertext: 'Introducing RepairPress, the best premium WordPress theme for mobile phone repair shops, smartphone repair shops, laptop repairers, computer repair companies, camera repairers, tablet repair shops, and other digital or technology product repairers. RepairPress is incredibly easy to set up and use.',
+				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?lightbox_id=37633853&code=48dc6585532a0ce61a8ae76b51c346e3&pl=123396-42119&utm_medium=Affiliate&utm_campaign=Spakonar&utm_source=123396&irgwc=1',
+			},
+			{
 				name: 'auto',
 				themename: 'Auto',
 				creationdate: 'March 4, 2016',
