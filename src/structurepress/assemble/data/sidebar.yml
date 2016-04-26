@@ -1,0 +1,86 @@
+items:
+  - link: general-and-installation
+    name: General & Installation
+    subitems:
+    - link: few-words-on-start
+      name: Few Words on Start
+    - link: installation-and-updates
+      name: Installation & Updates
+    - link: customize-the-appearance
+      name: Customize the Appearance
+  - link: demo-content
+    name: Demo Content
+    subitems:
+    - link: one-click-demo-install
+      name: One Click Demo Install
+    - link: import-xml-file
+      name: Import XML File
+  - link: header
+    name: Header
+    subitems:
+    - link: top-bar
+      name: Top Bar
+    - link: logo-and-favicon
+      name: Logo & Favicon
+    - link: header-widgets
+      name: Slider Widgets
+    - link: main-menu
+      name: Main Menu
+    - link: featured-page
+      name: Featured Page Button
+  - link: pages
+    name: Pages
+    subitems:
+    - link: page-templates
+      name: Page Templates
+    - link: page-builder
+      name: Page Builder
+    - link: page-builder-widgets
+      name: Page Builder Widgets
+  - link: slider
+    name: Slider
+  - link: proteusthemes-options
+    name: ProteusThemes Options
+  - link: shortcodes
+    name: Shortcodes
+    subitems:
+    - link: buttons
+      name: Buttons
+    - link: icons-font-awesome
+      name: Icons - Font Awesome
+    - link: tables
+      name: Tables
+  - link: plugins
+    name: Plugins
+    subitems:
+    - link: contact-form-7
+      name: Contact Form 7
+    - link: woocommerce
+      name: WooCommerce
+    - link: visual-composer
+      name: Visual Composer
+  - link: footer
+    name: Footer
+    subitems:
+    - link: footer-widgets
+      name: Footer Widgets
+    - link: bottom-footer
+      name: Bottom Footer
+  - link: translations
+    name: Translations
+    subitems:
+    - link: manual-translation
+      name: Manual Translation
+    - link: wpml
+      name: WPML
+  - link: extras
+    name: Extras
+    subitems:
+    - link: demo-images
+      name: Demo Images
+    - link: customizations
+      name: Customizations
+    - link: changelog
+      name: Changelog
+    - link: support
+      name: Support

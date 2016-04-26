@@ -50,6 +50,14 @@ module.exports = function(grunt) {
 				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?lightbox_id=37633853&code=48dc6585532a0ce61a8ae76b51c346e3&pl=123396-42119&utm_medium=Affiliate&utm_campaign=Spakonar&utm_source=123396&irgwc=1',
 			},
 			{
+				name: 'structurepress',
+				themename: 'StructurePress',
+				creationdate: 'November 20, 2015',
+				tfurl: 'themeforest.net/item/structurepress-construction-and-architecture-wordpress-theme/13743206?ref=ProteusThemes',
+				themeheadertext: 'StructurePress has been developed from the ground up catering solely to the Construction Industry; no matter which segment you are in, StructurePress has a professional layout for your business.',
+				shutterstockurl: 'goo.gl/zrhmwE',
+			},
+			{
 				name: 'auto',
 				themename: 'Auto',
 				creationdate: 'March 4, 2016',
