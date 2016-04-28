@@ -7,7 +7,6 @@
     "Gregor Capuder <gregor.capuder@proteusnet.com>"
   ],
   "description": "Documentation for all newer ProteusThemes themes.",
-  "main": "src/index.html",
   "keywords": [
     "documentation, ProteusThemes, themes, WP"
   ],
