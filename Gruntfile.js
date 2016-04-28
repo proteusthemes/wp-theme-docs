@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	// require('load-grunt-tasks')(grunt);
 	require( 'load-grunt-tasks' )( grunt, { pattern: ['grunt-*', 'assemble'] } );
 
-	// Read the config file with all the data of themes.
+	// Read the config file with all themes data.
 	var config = grunt.file.readJSON('themes-config.json');
 
 	// Project configuration.
@@ -16,14 +16,14 @@ module.exports = function(grunt) {
 			build: {
 				options: {
 					partials:   [ config.prepFolder + '/<%= theme %>/assemble/includes/**/*.hbs' ],
-					production: true,
-					data: config.prepFolder + '/<%= theme %>/assemble/data/*.yml'
+					data:       config.prepFolder + '/<%= theme %>/assemble/data/*.yml',
+					production: true
 				},
 				files: [{
-					expand: true,
 					cwd:    config.prepFolder + '/<%= theme %>/assemble',
-					src:    ['*.hbs'],
-					dest:   'build/<%= theme %>/'
+					src:    [ '*.hbs' ],
+					dest:   'build/<%= theme %>/',
+					expand: true
 				}]
 			}
 		},
@@ -46,11 +46,11 @@ module.exports = function(grunt) {
 					debugInfo:      false
 				},
 				files: [{
-					expand: true,
 					cwd:    config.prepFolder + '/<%= theme %>/sass/',
 					src:    '{,*/}*.scss',
 					dest:   config.buildFolder + '/<%= theme %>/stylesheets',
-					ext:    '.css'
+					ext:    '.css',
+					expand: true
 				}]
 			}
 		},
@@ -60,10 +60,10 @@ module.exports = function(grunt) {
 		autoprefixer: {
 			build: {
 				files: [{
-					expand: true,
 					cwd:    config.buildFolder + '/<%= theme %>/stylesheets/',
 					src:    '*.css',
-					dest:   config.buildFolder + '/<%= theme %>/stylesheets'
+					dest:   config.buildFolder + '/<%= theme %>/stylesheets',
+					expand: true
 				}]
 			}
 		},
@@ -119,10 +119,10 @@ module.exports = function(grunt) {
 		copy: {
 			XtoY: {
 				files: [{
-					expand: true,
 					cwd:    '<%= cwd %>',
 					src:    '<%= src %>',
-					dest:   '<%= dest %>'
+					dest:   '<%= dest %>',
+					expand: true
 				}]
 			},
 		},
