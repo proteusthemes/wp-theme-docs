@@ -110,7 +110,6 @@ module.exports = function(grunt) {
 		// Clean the build dir.
 		// https://github.com/gruntjs/grunt-contrib-clean
 		clean: {
-			beforeBuild:      [config.buildFolder, config.prepFolder],
 			beforeThemeBuild: [config.buildFolder + '/<%= theme %>', config.prepFolder + '/<%= theme %>'],
 			afterBuild:       ['.tmp', '.sass-cache']
 		},
@@ -131,16 +130,6 @@ module.exports = function(grunt) {
 		// Replace pieces of code.
 		// https://github.com/yoniholmes/grunt-text-replace
 		replace: {
-			allThemesModifyDate: {
-				src:          'src/master/assemble/includes/meta.hbs',
-				overwrite:    true,
-				replacements: [{
-					from: /^lastModified:.+?$/m,
-					to:   function () {
-						return grunt.template.process( 'lastModified: <%= grunt.template.today( "mmmm d, yyyy" ) %>' );
-					}
-				}],
-			},
 			modifyDate: {
 				src:          config.prepFolder  + '/<%= theme %>/assemble/includes/meta.hbs',
 				overwrite:    true,
@@ -170,58 +159,10 @@ module.exports = function(grunt) {
 		}
 	});
 
-	// Copy master content to all theme folders in the prep folder.
-	grunt.registerTask( 'copyMasterToPrep', 'copy master folder to multiple theme folders in prep folder', function() {
-		var themes = config.themes;
-		grunt.log.writeln( "copying master folder to the following theme folders in prep folder:" );
-		for (var i = 0; i < themes.length; i++) {
-			grunt.log.writeln( themes[i].name );
-
-			grunt.task.run([
-				'copyFromTo:src/master:**:' + config.prepFolder + '/' + themes[i].name
-			]);
-		}
-	});
-
-	// Copy theme folders from src to all theme folders in the prep folder.
-	grunt.registerTask( 'copyThemesToPrep', 'copy theme folders from src to all theme folders in prep folder', function() {
-		var themes = config.themes;
-		grunt.log.writeln( "copying theme folders from src to the theme folders in prep folder:" );
-		for (var i = 0; i < themes.length; i++) {
-			grunt.log.writeln( themes[i].name );
-
-			grunt.task.run([
-				'copyFromTo:src/' + themes[i].name + ':**:' + config.prepFolder + '/' + themes[i].name
-			]);
-		}
-	});
-
-	// Copy all theme images from prep to all theme folders in the build folder.
-	grunt.registerTask( 'copyPrepImagesToBuild', 'copy images from prep folder to theme folders in build folder', function() {
-		var themes = config.themes;
-		grunt.log.writeln( "copying images from prep folder to the build folder..." );
-		for (var i = 0; i < themes.length; i++) {
-			grunt.task.run([
-				'copyFromTo:prep/' + themes[i].name + '/images:**/*.{png,gif,jpg,jpeg,ico}:' + config.buildFolder + '/' + themes[i].name + '/images'
-			]);
-		}
-	});
-
-	// Copy fonts from prep to all theme folders in the build folder.
-	grunt.registerTask( 'copyFontsToBuild', 'copy fonts from prep folder to theme folders in build folder', function() {
-		var themes = config.themes;
-		grunt.log.writeln( "copying fonts from prep folder to the build folder..." );
-		for (var i = 0; i < themes.length; i++) {
-			grunt.task.run([
-				'copyFromTo:prep/' + themes[i].name + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + themes[i].name + '/bower_components'
-			]);
-		}
-	});
-
-	// Build docs for single theme. Run multiple tasks (theme is given as a parameter).
+	// Build process for single theme docs. Run multiple tasks.
 	grunt.registerTask( 'buildSingleTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themeheadertext, shutterstockurl ) {
-		if ( arguments.length < 1 ) {
-			grunt.log.writeln( this.name + ", missing parameter (theme name)" );
+		if ( arguments.length < 6 ) {
+			grunt.log.writeln( this.name + ", missing parameter!" );
 		} else {
 			grunt.config.set( 'theme', name );
 			grunt.config.set( 'themename', themename );
@@ -243,17 +184,6 @@ module.exports = function(grunt) {
 		}
 	});
 
-	// Build theme docs files.
-	grunt.registerTask( 'buildAllThemes', 'build docs files for all themes', function() {
-		var themes = config.themes;
-		grunt.log.writeln( "building files for all themes..." );
-		for (var i = 0; i < themes.length; i++) {
-			grunt.task.run([
-				'buildSingleTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themeheadertext + ':' + themes[i].shutterstockurl
-			]);
-		}
-	});
-
 	// Build single theme docs (theme name is passed as the parameter).
 	grunt.registerTask( 'buildTheme', 'build docs files for single theme', function( theme ) {
 		var themes = config.themes;
@@ -262,28 +192,35 @@ module.exports = function(grunt) {
 			if ( themes[i].name === theme ) {
 				grunt.config.set( 'theme', theme );
 				grunt.task.run([
+					// Clean theme folder in the build folder.
 					'clean:beforeThemeBuild',
+					// Copy master content to theme folder in the prep folder.
 					'copyFromTo:src/master:**:' + config.prepFolder + '/' + themes[i].name,
+					// Copy theme content from src to theme folder in the prep folder.
 					'copyFromTo:src/' + themes[i].name + ':**:' + config.prepFolder + '/' + themes[i].name,
+					// Copy all theme images from prep to theme folder in the build folder.
 					'copyFromTo:prep/' + themes[i].name + '/images:**/*.{png,gif,jpg,jpeg,ico}:' + config.buildFolder + '/' + themes[i].name + '/images',
+					// Copy fonts from prep to theme folder in the build folder.
 					'copyFromTo:prep/' + themes[i].name + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + themes[i].name + '/bower_components',
+					// Replace lastModified date in the meta.hbs file.
 					'replace:modifyDate',
+					// Run the build process of the docs.
 					'buildSingleTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themeheadertext + ':' + themes[i].shutterstockurl,
+					// Clear unneeded temp files.
 					'clean:afterBuild'
 				]);
 			}
 		}
 	});
 
-	// Build all theme docs.
-	grunt.registerTask( 'build_docs', [
-		'replace:allThemesModifyDate',
-		'clean:beforeBuild',
-		'copyMasterToPrep',
-		'copyThemesToPrep',
-		'copyPrepImagesToBuild',
-		'copyFontsToBuild',
-		'buildAllThemes',
-		'clean:afterBuild'
-	] );
+	// Build ALL theme docs files at once.
+	grunt.registerTask( 'buildAllThemes', 'build docs files for all themes', function() {
+		var themes = config.themes;
+		grunt.log.writeln( "building files for all themes..." );
+		for (var i = 0; i < themes.length; i++) {
+			grunt.task.run([
+				'buildTheme:' + themes[i].name
+			]);
+		}
+	});
 };
