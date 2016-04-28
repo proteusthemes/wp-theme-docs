@@ -4,85 +4,8 @@ module.exports = function(grunt) {
 	// require('load-grunt-tasks')(grunt);
 	require( 'load-grunt-tasks' )( grunt, { pattern: ['grunt-*', 'assemble'] } );
 
-	var config = {
-		prepFolder: 'prep',
-		buildFolder: 'build',
-		themes:
-		[
-			{
-				name: 'buildpress',
-				themename: 'BuildPress',
-				creationdate: 'November 4, 2014',
-				tfurl: 'themeforest.net/item/buildpress-construction-business-wp-theme/9323981?ref=ProteusThemes',
-				themeheadertext: 'BuildPress is a premium WordPress Theme for any kind of construction businesses and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use with one click demo content import. Available only on ThemeForest!',
-				shutterstockurl: 'goo.gl/zrhmwE',
-			},
-			{
-				name: 'mentalpress',
-				themename: 'MentalPress',
-				creationdate: 'March 6, 2015',
-				tfurl: 'themeforest.net/item/mentalpress-wp-theme-for-your-medical-or-psychology-website-/10676732?ref=proteusthemes',
-				themeheadertext: 'MentalPress is a premium WordPress Theme for psychologists, therapists and counseling individuals and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use, with one click demo content import. Available only on ThemeForest!',
-				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?lightbox_id=33824813&code=330baa151015f131244df6d0990bf218',
-			},
-			{
-				name: 'cargopress',
-				themename: 'CargoPress',
-				creationdate: 'May 26, 2015',
-				tfurl: 'themeforest.net/item/cargopress-logistic-warehouse-transport-wp/11601531?ref=proteusthemes',
-				themeheadertext: 'Introducing CargoPress, the best premium WordPress theme for transportation, freight, and logistics businesses. CargoPress is easy to set up and use. It provides a simple roadmap to create a great-looking website, so you can get back to what is most important - your business and clients. CargoPress is only available on ThemeForest, so read on to see why it’s perfect for your company’s WordPress website!',
-				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?code=eeaf9c9991c6ca3ad788a159eea11de2&lightbox_id=35785523',
-			},
-			{
-				name: 'legalpress',
-				themename: 'LegalPress',
-				creationdate: 'July 30, 2015',
-				tfurl: 'themeforest.net/item/legalpress-law-attorney-insurance-legal-theme/12389860?ref=proteusthemes',
-				themeheadertext: 'Introducing LegalPress. LegalPress is only available on ThemeForest, so read on to see why it’s perfect for your company’s WordPress website!',
-				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?lightbox_id=37165535&code=ad22660d30fe796626a150741e96a866',
-			},
-			{
-				name: 'repairpress',
-				themename: 'RepairPress',
-				creationdate: 'September 28, 2015',
-				tfurl: 'themeforest.net/item/repairpress-gsm-phone-repair-shop-wp/13065600?ref=ProteusThemes',
-				themeheadertext: 'Introducing RepairPress, the best premium WordPress theme for mobile phone repair shops, smartphone repair shops, laptop repairers, computer repair companies, camera repairers, tablet repair shops, and other digital or technology product repairers. RepairPress is incredibly easy to set up and use.',
-				shutterstockurl: 'www.shutterstock.com/public_lightbox.mhtml?lightbox_id=37633853&code=48dc6585532a0ce61a8ae76b51c346e3&pl=123396-42119&utm_medium=Affiliate&utm_campaign=Spakonar&utm_source=123396&irgwc=1',
-			},
-			{
-				name: 'structurepress',
-				themename: 'StructurePress',
-				creationdate: 'November 20, 2015',
-				tfurl: 'themeforest.net/item/structurepress-construction-and-architecture-wordpress-theme/13743206?ref=ProteusThemes',
-				themeheadertext: 'StructurePress has been developed from the ground up catering solely to the Construction Industry; no matter which segment you are in, StructurePress has a professional layout for your business.',
-				shutterstockurl: 'goo.gl/zrhmwE',
-			},
-			{
-				name: 'beauty',
-				themename: 'Beauty',
-				creationdate: 'January 7, 2016',
-				tfurl: 'themeforest.net/item/beauty-hair-salon-nail-spa-fashion-wp-theme/14458185?ref=ProteusThemes',
-				themeheadertext: 'Introducing Beauty, a premium WordPress theme, available only on ThemeForest. With its light and clean design it is a smart choice for beauty salons, hair salons, wellness centers and similar businesses. Beauty has everything you need to take your company to the next level, but most of all it is extremely easy to set up and use.',
-				shutterstockurl: 'www.shutterstock.com',
-			},
-			{
-				name: 'auto',
-				themename: 'Auto',
-				creationdate: 'March 4, 2016',
-				tfurl: 'themeforest.net/item/auto-ideal-car-mechanic-and-auto-repair-template-for-wordpress/15194530?ref=ProteusThemes',
-				themeheadertext: 'Auto is a premium WordPress theme, available only on ThemeForest. It is specially designed for mechanics, repair and mechanic workshops, car repairs and handymen, but you can use it for any closely related businesses that will fit in. Auto WordPress theme has everything you need for a perfect website. Moreover, you\'ll be able to set it up and run with just a few clicks!',
-				shutterstockurl: 'www.shutterstock.com',
-			},
-			{
-				name: 'bolts',
-				themename: 'Bolts',
-				creationdate: 'April 30, 2016',
-				tfurl: 'themeforest.net',
-				themeheadertext: 'TODO - Add text here!',
-				shutterstockurl: 'www.shutterstock.com',
-			}
-		]
-	};
+	// Read the config file with all the data of the themes.
+	var config = grunt.file.readJSON('themes-config.json');
 
 	// Project configuration.
 	grunt.initConfig( {
@@ -338,6 +261,13 @@ module.exports = function(grunt) {
 					'clean:afterBuild'
 				]);
 			}
+		}
+	});
+
+	grunt.registerTask( 'testconfig', 'test config', function() {
+		var themes = config.themes;
+		for (var i = 0; i < themes.length; i++) {
+			grunt.log.writeln( themes[i].name );
 		}
 	});
 
