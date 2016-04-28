@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	// require('load-grunt-tasks')(grunt);
 	require( 'load-grunt-tasks' )( grunt, { pattern: ['grunt-*', 'assemble'] } );
 
-	// Read the config file with all the data of the themes.
+	// Read the config file with all the data of themes.
 	var config = grunt.file.readJSON('themes-config.json');
 
 	// Project configuration.
@@ -37,12 +37,12 @@ module.exports = function(grunt) {
 					javascriptsDir: config.prepFolder + '/<%= theme %>/scripts',
 					imagesDir:      config.buildFolder + '/<%= theme %>/images',
 					cssDir:         config.buildFolder + '/<%= theme %>/stylesheets',
-					environment:    'production',
-					noLineComments: true,
-					watch:          false,
-					outputStyle:    'nested',
-					relativeAssets: true,
 					importPath:     [config.prepFolder + '/<%= theme %>/bower_components/bootstrap-sass-official/assets/stylesheets'],
+					environment:    'production',
+					outputStyle:    'nested',
+					noLineComments: true,
+					relativeAssets: true,
+					watch:          false,
 					debugInfo:      false
 				},
 				files: [{
@@ -68,7 +68,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// RequireJS optimizer.
+		// RequireJS - build main js file.
 		// https://github.com/gruntjs/grunt-contrib-requirejs
 		requirejs: {
 			build: {
