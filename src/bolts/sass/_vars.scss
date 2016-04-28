@@ -1,0 +1,19 @@
+/*
+	Variables and Bootstrap overrides
+*/
+
+// Brand colors
+// -------------------------
+$primary-color: #fec303;
+
+// Typography
+// -------------------------
+$default-font: 'Roboto', Helvetica, Arial, sans-serif;
+$line-height-base: 1.5;
+
+// Bootstrap fonts path
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+// Grid system
+// -------------------------
+$grid-float-breakpoint: 992px;

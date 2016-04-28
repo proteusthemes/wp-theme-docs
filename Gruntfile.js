@@ -72,6 +72,14 @@ module.exports = function(grunt) {
 				tfurl: 'themeforest.net/item/auto-ideal-car-mechanic-and-auto-repair-template-for-wordpress/15194530?ref=ProteusThemes',
 				themeheadertext: 'Auto is a premium WordPress theme, available only on ThemeForest. It is specially designed for mechanics, repair and mechanic workshops, car repairs and handymen, but you can use it for any closely related businesses that will fit in. Auto WordPress theme has everything you need for a perfect website. Moreover, you\'ll be able to set it up and run with just a few clicks!',
 				shutterstockurl: 'www.shutterstock.com',
+			},
+			{
+				name: 'bolts',
+				themename: 'Bolts',
+				creationdate: 'April 30, 2016',
+				tfurl: 'themeforest.net',
+				themeheadertext: 'TODO - Add text here!',
+				shutterstockurl: 'www.shutterstock.com',
 			}
 		]
 	};
