@@ -17,13 +17,13 @@ module.exports = function(grunt) {
 				options: {
 					partials:   [ config.prepFolder + '/<%= theme %>/assemble/includes/**/*.hbs' ],
 					data:       config.prepFolder + '/<%= theme %>/assemble/data/*.yml',
-					production: true
+					production: true,
 				},
 				files: [{
 					cwd:    config.prepFolder + '/<%= theme %>/assemble',
 					src:    [ '*.hbs' ],
 					dest:   'build/<%= theme %>/',
-					expand: true
+					expand: true,
 				}]
 			}
 		},
@@ -37,20 +37,20 @@ module.exports = function(grunt) {
 					javascriptsDir: config.prepFolder + '/<%= theme %>/scripts',
 					imagesDir:      config.buildFolder + '/<%= theme %>/images',
 					cssDir:         config.buildFolder + '/<%= theme %>/stylesheets',
-					importPath:     [config.prepFolder + '/<%= theme %>/bower_components/bootstrap-sass-official/assets/stylesheets'],
+					importPath:     [ config.prepFolder + '/<%= theme %>/bower_components/bootstrap-sass-official/assets/stylesheets' ],
 					environment:    'production',
 					outputStyle:    'nested',
 					noLineComments: true,
 					relativeAssets: true,
 					watch:          false,
-					debugInfo:      false
+					debugInfo:      false,
 				},
 				files: [{
 					cwd:    config.prepFolder + '/<%= theme %>/sass/',
 					src:    '{,*/}*.scss',
 					dest:   config.buildFolder + '/<%= theme %>/stylesheets',
 					ext:    '.css',
-					expand: true
+					expand: true,
 				}]
 			}
 		},
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 					cwd:    config.buildFolder + '/<%= theme %>/stylesheets/',
 					src:    '*.css',
 					dest:   config.buildFolder + '/<%= theme %>/stylesheets',
-					expand: true
+					expand: true,
 				}]
 			}
 		},
@@ -76,13 +76,13 @@ module.exports = function(grunt) {
 				options: {
 					baseUrl:                 config.prepFolder + '/<%= theme %>/scripts',
 					mainConfigFile:          config.prepFolder + '/<%= theme %>/scripts/main.js',
+					out:                     config.buildFolder + '/<%= theme %>/js/main.js',
+					name:                    '../bower_components/almond/almond',
+					include:                 'main',
 					optimize:                'uglify2',
 					preserveLicenseComments: false,
 					useStrict:               true,
 					wrap:                    true,
-					name:                    '../bower_components/almond/almond',
-					include:                 'main',
-					out:                     config.buildFolder + '/<%= theme %>/js/main.js'
 				}
 			}
 		},
@@ -95,23 +95,23 @@ module.exports = function(grunt) {
 			}
 		},
 		usemin: {
-			html: [config.buildFolder + '/<%= theme %>/{,*/}*.html'],
-			css:  [config.buildFolder + '/<%= theme %>/stylesheets/{,*/}*.css']
+			html: [ config.buildFolder + '/<%= theme %>/{,*/}*.html' ],
+			css:  [ config.buildFolder + '/<%= theme %>/stylesheets/{,*/}*.css' ]
 		},
 
 		// Rename the files based on the content.
 		// https://github.com/cbas/grunt-rev
 		rev: {
 			files: {
-				src: [config.buildFolder + '/<%= theme %>/stylesheets/*.css', config.buildFolder + '/<%= theme %>/js/*.js']
+				src: [ config.buildFolder + '/<%= theme %>/stylesheets/*.css', config.buildFolder + '/<%= theme %>/js/*.js' ]
 			}
 		},
 
 		// Clean the build dir.
 		// https://github.com/gruntjs/grunt-contrib-clean
 		clean: {
-			beforeThemeBuild: [config.buildFolder + '/<%= theme %>', config.prepFolder + '/<%= theme %>'],
-			afterBuild:       ['.tmp', '.sass-cache']
+			beforeThemeBuild: [ config.buildFolder + '/<%= theme %>', config.prepFolder + '/<%= theme %>' ],
+			afterBuild:       [ '.tmp', '.sass-cache' ]
 		},
 
 		// Copy some files.
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
 					cwd:    '<%= cwd %>',
 					src:    '<%= src %>',
 					dest:   '<%= dest %>',
-					expand: true
+					expand: true,
 				}]
 			},
 		},
