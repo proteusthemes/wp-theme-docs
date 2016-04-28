@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 			afterBuild:       ['.tmp', '.sass-cache']
 		},
 
-		// Copy some files not handled by other tasks.
+		// Copy some files.
 		// https://github.com/gruntjs/grunt-contrib-copy
 		copy: {
 			XtoY: {
@@ -128,10 +128,21 @@ module.exports = function(grunt) {
 			},
 		},
 
+		// Replace pieces of code.
 		// https://github.com/yoniholmes/grunt-text-replace
 		replace: {
-			modifiedDate: {
+			allThemesModifyDate: {
 				src:          'src/master/assemble/includes/meta.hbs',
+				overwrite:    true,
+				replacements: [{
+					from: /^lastModified:.+?$/m,
+					to:   function () {
+						return grunt.template.process( 'lastModified: <%= grunt.template.today( "mmmm d, yyyy" ) %>' );
+					}
+				}],
+			},
+			modifyDate: {
+				src:          config.prepFolder  + '/<%= theme %>/assemble/includes/meta.hbs',
 				overwrite:    true,
 				replacements: [{
 					from: /^lastModified:.+?$/m,
@@ -251,12 +262,12 @@ module.exports = function(grunt) {
 			if ( themes[i].name === theme ) {
 				grunt.config.set( 'theme', theme );
 				grunt.task.run([
-					'replace:modifiedDate',
 					'clean:beforeThemeBuild',
 					'copyFromTo:src/master:**:' + config.prepFolder + '/' + themes[i].name,
 					'copyFromTo:src/' + themes[i].name + ':**:' + config.prepFolder + '/' + themes[i].name,
 					'copyFromTo:prep/' + themes[i].name + '/images:**/*.{png,gif,jpg,jpeg,ico}:' + config.buildFolder + '/' + themes[i].name + '/images',
 					'copyFromTo:prep/' + themes[i].name + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + themes[i].name + '/bower_components',
+					'replace:modifyDate',
 					'buildSingleTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themeheadertext + ':' + themes[i].shutterstockurl,
 					'clean:afterBuild'
 				]);
@@ -264,16 +275,9 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask( 'testconfig', 'test config', function() {
-		var themes = config.themes;
-		for (var i = 0; i < themes.length; i++) {
-			grunt.log.writeln( themes[i].name );
-		}
-	});
-
 	// Build all theme docs.
 	grunt.registerTask( 'build_docs', [
-		'replace:modifiedDate',
+		'replace:allThemesModifyDate',
 		'clean:beforeBuild',
 		'copyMasterToPrep',
 		'copyThemesToPrep',
