@@ -2,7 +2,6 @@
   "name": "pt-docs",
   "version": "1.0.0",
   "description": "Documentation for all newer ProteusThemes themes.",
-  "main": "src/index.html",
   "author": "ProteusThemes",
   "license": "GPL-2.0+",
   "devDependencies": {
