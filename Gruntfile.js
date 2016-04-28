@@ -148,7 +148,6 @@ module.exports = function(grunt) {
 		if ( arguments.length < 3 ) {
 			grunt.log.writeln( this.name + ", missing parameters (cwd and/or src and/or dest)" );
 		} else {
-			grunt.log.writeln( this.name + ": from " + cwd + " with src: " + src + " to " + dest );
 			grunt.config.set( 'cwd', cwd );
 			grunt.config.set( 'src', src );
 			grunt.config.set( 'dest', dest );
@@ -187,7 +186,6 @@ module.exports = function(grunt) {
 	// Build single theme docs (theme name is passed as the parameter).
 	grunt.registerTask( 'buildTheme', 'build docs files for single theme', function( theme ) {
 		var themes = config.themes;
-		grunt.log.writeln( "building files for: " + theme );
 		for (var i = 0; i < themes.length; i++) {
 			if ( themes[i].name === theme ) {
 				grunt.config.set( 'theme', theme );
@@ -216,7 +214,6 @@ module.exports = function(grunt) {
 	// Build ALL theme docs files at once.
 	grunt.registerTask( 'buildAllThemes', 'build docs files for all themes', function() {
 		var themes = config.themes;
-		grunt.log.writeln( "building files for all themes..." );
 		for (var i = 0; i < themes.length; i++) {
 			grunt.task.run([
 				'buildTheme:' + themes[i].name
