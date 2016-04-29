@@ -87,6 +87,7 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// Minimize CSS and replace the CSS and JS files with unique names (cache busting).
 		// https://github.com/yeoman/grunt-usemin
 		useminPrepare: {
 			html: config.buildFolder + '/<%= theme %>/index.html',
@@ -107,7 +108,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Clean the build dir.
+		// Clean (remove) folders and files.
 		// https://github.com/gruntjs/grunt-contrib-clean
 		clean: {
 			beforeThemeBuild: [ config.buildFolder + '/<%= theme %>', config.prepFolder + '/<%= theme %>' ],
