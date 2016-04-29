@@ -4,6 +4,10 @@
   "description": "Documentation for all newer ProteusThemes themes.",
   "author": "ProteusThemes",
   "license": "GPL-2.0+",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:proteusthemes/wp-theme-docs.git"
+  },
   "devDependencies": {
     "assemble": "^0.4.0",
     "grunt": "^1.0.0",
