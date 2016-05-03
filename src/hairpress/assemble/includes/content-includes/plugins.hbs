@@ -1,0 +1,130 @@
+<section>
+	<h2 id="plugins">Plugins</h2>
+	<p>We also use and support some of the best plugins for WordPress.</p>
+	<h3 id="slider-revolution">Slider Revolution</h3>
+	<p>
+		The theme comes with the Slider Revolution WP Plugin which needs to be installed for the both versions of the Front Template.
+	</p>
+	<p>
+		If you decide to use the original plugin, just <a href="http://docs.woothemes.com/documentation/plugins/woocommerce/">read the original docs</a> for more information. Make sure to use Full Width slider for best results with width 1500px and height 530px.
+	</p>
+	<p>
+		Once you prepare the slider, just grab the alias of the slider and copy / paste it to the page meta box which uses the slider revolution (front page with slider revolution or front page with content).
+	</p>
+	{{!-- WooCommerce --}}
+	{{> woocommerce}}
+
+	<h3 id="contact-page">Contact Page</h3>
+	<p>
+		The Contact Us form and Make an Appointment form on the website are made live using the Contact Form 7 WP Plugin: <a href="http://wordpress.org/extend/plugins/contact-form-7/">http://wordpress.org/extend/plugins/contact-form-7/</a>.
+	</p>
+	<p>
+		Here is the code for the Contact Form 7 WP plugin for a contact us page:
+	</p>
+	<p>
+		<b>Form:</b>
+	</p>
+<pre>&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;First and Last Name&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* your-name class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;Phone Number&lt;/label&gt;
+[text your-phone class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;E-mail address&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* your-email class:span3]
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;span9&quot;&gt;
+&lt;label&gt;Your message&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[textarea* your-message x5 class:span9]
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;span9&quot;&gt;
+[submit class:btn class:btn-theme class:no-bevel class:pull-right &quot;Send&quot;]
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+	<p>
+		<b>Message body:</b>
+	</p>
+<pre>From: [your-name] &lt;[your-email]&gt;
+Phone: [your-phone]
+
+Message Body:
+[your-message]</pre>
+	<p>
+		After that just place the plugin's shortcode to your contact us page.
+	</p>
+	<p>
+		Here is the code for the Contact Form 7 WP plugin for a Make an Appointment page:
+	</p>
+	<p>
+		<b>Form:</b>
+	</p>
+<pre>&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;First and Last Name&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* your-name class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;Phone Number&lt;/label&gt;
+[text your-phone class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;E-mail address&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* your-email class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;Date&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* appointment-date class:add-datepicker] &lt;a class=&quot;add-datepicker-icon&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;icon icons-calendar&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;span9&quot;&gt;
+&lt;label&gt;Type here if you have some special requirements:&lt;/label&gt;
+[textarea* your-message x5 class:span9]
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;span9&quot;&gt;
+[submit class:btn class:btn-theme class:no-bevel class:pull-right &quot;Send&quot;]
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+	<p>
+		<b>Message body:</b>
+	</p>
+<pre>From: [your-name] &lt;[your-email]&gt;
+Phone: [your-phone]
+Date: [appointment-date]
+
+Message Body:
+[your-message]</pre>
+	<p>
+		After that just place the plugin's shortcode to your make an appointment page.
+	</p>
+	<h3 id="fancybox-gallery-effect">FancyBox Gallery Effect</h3>
+	<p>
+		Download and activate the FancyBox for WordPress: <a href="http://wordpress.org/plugins/fancybox-for-wordpress/" target="_blank">http://wordpress.org/plugins/fancybox-for-wordpress/</a>. And that's all.
+	</p>
+
+	{{!-- Twitter widget --}}
+	{{> twiter-widget}}
+</section>

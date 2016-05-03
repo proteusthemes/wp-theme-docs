@@ -41,12 +41,8 @@ themeName: <%= themename %> WP
 	</div>
 	{{!-- After Installation --}}
 	{{> after-installation}}
-	<h3 id="customize-the-appearance">Customize the Appearance</h3>
-	<p>
-		You can fully customize the appearance of the {{general.themeName}} Theme. Go to the Appearance » Themes and click on the <b>Customize</b> button:
-	</p>
-	<img class="aligncenter" src="images/customize-theme.png" alt="Customize {{general.themeName}}">
-	<p>
-		The new window appears and you can now customize the appearance of your theme - upload your custom logo, change the base colors, enable/disable theme features, add Custom CSS or Javascript etc.
-	</p>
+
+	{{!-- Theme Customization --}}
+	{{> theme-customization}}
+
 </section>
