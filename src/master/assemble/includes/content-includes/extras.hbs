@@ -5,13 +5,8 @@ shutterstockURL: http://<%= shutterstockurl %>
 ---
 <section>
 	<h2 id="extras">Extras</h2>
-	<h3 id="demo-images">Demo Images</h3>
-	<p>
-		All images used in {{extras.themeName}} can be found on <a href="{{extras.shutterstockURL}}" target="_blank">Shutterstock</a>.
-	</p>
-	<div class="info">
-		All the images shown in the demo page of {{extras.themeName}} are copyrighted and come blurry with the theme (demo content).
-	</div>
+	{{!-- Demo Images --}}
+	{{> demo-images}}
 	<h3 id="customizations">Customizations</h3>
 	<p>If you need advanced customizations on the theme, we are available for that as well.</p>
 	<p>
