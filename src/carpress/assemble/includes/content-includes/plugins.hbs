@@ -1,0 +1,144 @@
+<section>
+	<h2 id="plugins">Plugins</h2>
+	<p>We also use and support some of the best plugins for WordPress.</p>
+	{{!-- WooCommerce --}}
+	{{> woocommerce}}
+
+	<h3 id="contact-page">Contact Page</h3>
+	<p>
+		The Contact Us form and Make an Appointment form on the website are made live using the Contact Form 7 WP Plugin: <a href="http://wordpress.org/extend/plugins/contact-form-7/">http://wordpress.org/extend/plugins/contact-form-7/</a>.
+	</p>
+	<p>
+		Here is the code for the Contact Form 7 WP plugin for a contact us page:
+	</p>
+	<p><b>Form:</b></p>
+<pre>&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;First and Last Name&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* your-name class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;Phone Number&lt;/label&gt;
+[text your-phone class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;E-mail address&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* your-email class:span3]
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;span9&quot;&gt;
+&lt;label&gt;Your message&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[textarea* your-message x5 class:span9]
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;span9&quot;&gt;
+[submit class:btn class:btn-theme class:no-bevel class:pull-right &quot;Send&quot;]
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+	<p><b>Message body:</b></p>
+<pre>From: [your-name] &lt;[your-email]&gt;
+Phone: [your-phone]
+
+Message Body:
+[your-message]</pre>
+	<p>
+		After that just place the plugin's shortcode to your contact us page.
+	</p>
+	<p>
+		Here is the code for the Contact Form 7 WP plugin for a Make an Appointment page:
+	</p>
+	<p>
+		<b>Form:</b>
+	</p>
+<pre>&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;First and Last Name&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* your-name class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;Phone Number&lt;/label&gt;
+[text your-phone class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;E-mail address&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* your-email class:span3]
+&lt;/div&gt;
+
+&lt;div class=&quot;span3&quot;&gt;
+&lt;label&gt;Date&lt;span class=&quot;theme-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+[text* appointment-date class:add-datepicker] &lt;a class=&quot;add-datepicker-icon&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;icon icons-calendar&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;span9&quot;&gt;
+&lt;label&gt;Type here if you have some special requirements:&lt;/label&gt;
+[textarea* your-message x5 class:span9]
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;span9&quot;&gt;
+[submit class:btn class:btn-theme class:no-bevel class:pull-right &quot;Send&quot;]
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+	<p><b>Message body:</b></p>
+<pre>From: [your-name] &lt;[your-email]&gt;
+Phone: [your-phone]
+Date: [appointment-date]
+
+Message Body:
+[your-message]</pre>
+	<p>
+		After that just place the plugin's shortcode to your make an appointment page.
+	</p>
+	<h3 id="fancybox-gallery-effect">FancyBox Gallery Effect</h3>
+	<p>
+		Download and activate the FancyBox for WordPress: <a href="http://wordpress.org/plugins/fancybox-for-wordpress/" target="_blank">http://wordpress.org/plugins/fancybox-for-wordpress/</a>. And that's all.
+	</p>
+
+	{{!-- Twitter widget --}}
+	{{> twiter-widget}}
+
+	<h3 id="slider-plugin">Slider</h3>
+	<p>
+		Carpress has very simple but powerfull slider. For adding new slide just click on the Slider and Add New button.
+	</p>
+	<img src="images/slider2.jpg" alt="Slider" width="800" height="600">
+	<p>
+		Here you can add title for slider, some content and slider image. When you're happy with resoults click on the Update button and slider is already showing your slide.
+	</p>
+	<img src="images/slider1.jpg" alt="Slider" width="1721" height="760">
+	<p>
+		You can add as many slides as you want. To keep all that slides organized you can manage them with order of numbers.
+	</p>
+	<img src="images/slider-order.jpg" alt="Slider Order" width="376" height="453">
+	<p>
+		Few more settings can be found in customizer under Front Page & Banners. Here you can change the speed of carousel (slider) interval, background color of the content in slider and opacity of that background.
+	</p>
+	<h4 id="revolution-slider-template">Revolution Slider</h3>
+	<p>
+		If you prefer to work with the Revolution slider plugin, then you can use it with our <strong>Front page with Revolution Slider</strong> page template.
+	</p>
+	<p>
+		All you need to do is:
+		<ul>
+			<li>Create a slider in the Revolutions Slider plugin and copy the alias of the slider,</li>
+			<li>Change the page template of your homepage to <strong>Front page with Revolution Slider</strong> and set the <strong>Revolution Slider alias</strong> in the Carpress Options metabox:</li>
+		</ul>
+	</p>
+	<img src="images/revolution-slider-template.png" alt="Revolution Slider template">
+
+</section>

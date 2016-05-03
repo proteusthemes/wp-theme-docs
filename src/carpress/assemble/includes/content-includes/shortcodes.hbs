@@ -1,0 +1,160 @@
+<section>
+	<h2 id="shortcodes">Shortcodes</h2>
+	<h3 id="columns">Columns</h3>
+	<p>
+		For displaying the columns you will need to use two shortcodes.
+	</p>
+	<p>
+		To start the columns area one can use the <code>[colcontainer]</code> shortcode, followed by <code>[span]</code> shortcode. The <code>[span]</code> accepts one parameter, for example <code>n="5"</code>. The Carpress is build on top of the Twitter Bootstrap framework, using the 12 columns grid, which means the theme is vertically divided into 12 columns - the full width of the website. If there is the sidebar present in the page, it already takes 3 spans, so to create the 3 columns on the page with sidebar (no matter left or right) you may use shortcodes like this:
+	</p>
+	<pre>[colcontainer][span n=3]Lorem Ipsum[/span][span n=3]Sit Dolor[/span][span n=3]Amet.[/span][/colcontainer]</pre>
+	<p>
+		This ends up at the 3 (sidebar) + 3*3 (for 3 columns with span 3) = 12 cols = full width of the website.
+	</p>
+	<p>
+		However, if this page has no sidebar, you should use <code>[span n=4]</code> three times to create three columns.
+	</p>
+	<p>
+		Maybe this approach seems little too difficult compared to the standard "One Half", "One Third" etc. way, but it is extremely more powerful - it allows you to create just any number of columns you would like and any width you would like, for example something like this:
+	</p>
+	<img src="images/columns.jpg" alt="Columns">
+	<h3 id="buttons">Buttons</h3>
+	<p>
+		The shortcode <code>[button]Your content[/button]</code> is available for the buttons to insert the buttons into your content.
+	</p>
+	<p>
+		The options for the buttons:
+	</p>
+	<dl>
+		<dt>Rounded</dt>
+		<dd>
+			<p>How many pixels you would like to have your button rounded?</p>
+			<p>Possible values:</p>
+			<ul>
+				<li><i>empty</i> - the default state, rounded 3 pixels</li>
+				<li><b>rounded="2"</b> - rounded 2 pixels</li>
+				<li><b>rounded="6"</b> - rounded 6 pixels</li>
+				<li><b>rounded="10"</b> - rounded 10 pixels</li>
+				<li><b>rounded="rounded"</b> - fully rounded</li>
+			</ul>
+			<p>Example</p>
+			<pre>[button rounded="10"]Button title[/button]</pre>
+		</dd>
+		<dt>Link</dt>
+		<dd>
+			<p>Where would you like your button points to?</p>
+			<p>Possible values:</p>
+			<ul>
+				<li><i>empty</i> - no link</li>
+				<li><b>link="http://www.example.com"</b> - link to the website <i>http://www.example.com</i></li>
+			</ul>
+			<p>Example</p>
+			<pre>[button link="http://themeforest.net/"]Link to ThemeForest[/button]</pre>
+		</dd>
+		<dt>Target</dt>
+		<dd>
+			<p>Open a link in a new window/tab?</p>
+			<p>Possible values:</p>
+			<ul>
+				<li><i>empty</i> - opens up a link in the same window</li>
+				<li><b>target="blank"</b> - opens up a link in a new window/tab</li>
+			</ul>
+			<p>Example</p>
+			<pre>[button link="http://themeforest.net/" target="blank"]Link to ThemeForest[/button]</pre>
+		</dd>
+		<dt>Type</dt>
+		<dd>
+			<p>There are different types of the buttons available, including the ones from <a href="http://twitter.github.com/bootstrap/base-css.html#buttons">Twitter Bootstrap</a>.</p>
+			<p>Possible values:</p>
+			<ul>
+				<li><i>empty</i> - default button Button</li>
+				<li><b>type="theme"</b> - the current theme color</li>
+				<li><b>type="primary"</b> - dark blue color Button</li>
+				<li><b>type="info"</b> - light blue color Button</li>
+				<li><b>type="success"</b> - green color Button</li>
+				<li><b>type="warning"</b> - yellow color Button</li>
+				<li><b>type="danger"</b> - red color Button</li>
+				<li><b>type="inverse"</b> - black color Button</li>
+			</ul>
+			<p>Example</p>
+			<pre>[button type="success"]Success Button[/button]</pre>
+		</dd>
+	</dl>
+	<p>All the options combined:</p>
+	<pre>[button type="theme" link="http://www.proteusthemes.com" rounded="rounded"]My Power Button[/button]</pre>
+	<h3 id="content-dividers">Content Dividers</h3>
+	<img class="alignright" src="images/dividers.jpg" alt="Content Divider">
+	<p><b>Ted different</b> color dividers come with the theme. The default one you select in the Theme Options, but you can always use any of them in the content.</p>
+	<p>The <code>[divider]</code> accepts one parameter, the <b>type</b>: </p>
+	<ul>
+		<li><b>type="theme"</b> - the default theme divider, from Theme Options</li>
+		<li><b>type="mechanic"</b></li>
+		<li><b>type="divider-1"</b></li>
+		<li><b>type="divider-2"</b></li>
+		<li><b>type="divider-3"</b></li>
+		<li><b>type="divider-4"</b></li>
+		<li><b>type="divider-5"</b></li>
+		<li><b>type="divider-6"</b></li>
+		<li><b>type="divider-7"</b></li>
+		<li><b>type="divider-8"</b></li>
+		<li><b>type="divider-9"</b></li>
+	</ul>
+	<p>Example:</p>
+	<pre>[divider type="divider-1"]</pre>
+	<h3 id="accordion">Accordion</h3>
+	<p>The <code>[accordion]</code> shortcode is available as well for the accordions. It accepts two parameters, <code>title</code>, which is the title of the tab and <code>opened</code>, which determines if the the accordion is opened by default. Example:</p>
+	<pre>[accordion title="Accordion title" opened="true"]
+  Here comes the content of the accordion
+[/accordion]</pre>
+	<h3 id="pricing-tables">Pricing Tables</h3>
+	<p>Pricing tables in fact aren't shortcode, but you can edit them directly in Text editing mode:</p>
+	<img src="images/text-mode.jpg" alt="Text Mode">
+	<p>Just go to the text editing mode and copy/paste the following code there:</p>
+<pre>&lt;table class=&quot;table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Service&lt;/th&gt;
+      &lt;th class=&quot;align-center&quot;&gt;For Car&lt;/th&gt;
+      &lt;th class=&quot;align-center&quot;&gt;For Truck&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Donec suscipit vehicula turpis sed lutpat&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;35€&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;55€&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Quisque vitae quam neque.&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;32€&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;42€&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Morbi cilisis placerat dapibus.&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;44€&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;31€&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;active&quot;&gt;
+      &lt;td&gt;Etiam ultrices nulla ed leo malesuada&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;48€&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;34€&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Commodo bibendum orci vi verra ;&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;22€&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;33€&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;alesua commodo malesuada commodo&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;16€&lt;/td&gt;
+      &lt;td class=&quot;align-center&quot;&gt;7€&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+	<p>
+		Each <code>&lt;tr&gt;</code> indicates its own line. One has a <code>class="active"</code>, this one will be highlighted.
+	</p>
+	<p>
+		Once you inserted the table in Text editing mode you can also switch back to the Visual mode and edit the text and prices there.
+	</p>
+</section>

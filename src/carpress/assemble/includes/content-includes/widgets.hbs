@@ -1,0 +1,70 @@
+<section>
+	<h2 id="widgets">Widgets</h2>
+	<p>
+		There are several widgets you can use with the Carpress WP Theme:
+	</p>
+	<ul>
+		<li>Carpress: Custom Width Text For Home Page - you decide how much space the text widget will take, from 1/12 of the page to the full width of the page</li>
+		<li>Carpress: Divider - for divider on the front page</li>
+		<li>Carpress: Facebook - for FB like box in the footer</li>
+		<li>Carpress: Latest Galleries - to display latest galleries </li>
+		<li>Carpress: Latest News - to display latest news / blogposts</li>
+		<li>Carpress: Opening time - to display timetable / opening time of the business - can be used above the slider</li>
+		<li>Carpress: Our Services - to display the services on the front page</li>
+		<li>Carpress: Testimonials - to display testimonials on the front page</li>
+		<li>Carpress: Text with link</li>
+		<li>Carpress: Title with Icon - Widget for the front page in the head</li>
+	</ul>
+	<img src="images/widgets.jpg" alt="Widgets">
+	<p>
+		There are 10 different sidebars associated with the theme (look at the image above), so you can easily decide how the different layout types will look like.
+	</p>
+	<p>
+		All the widgets can have the subtitle too. In the "Title" field just add the double forward slash <code>//</code> and the text after the double slash will be used as the subtitle. Example: <code>Widget main title // This is a subtitle</code>.
+	</p>
+	<h3 id="free-repair-quote-widget">Free Repair Quote Widget</h3>
+	<img src="images/quote-widget.jpg" alt="Quote Widget">
+	<p>
+		The contact form widget as seen on demo page is in fact the <b>Contact Form 7 shortcode</b> in the widget <b>Custom Width Text For Home Page</b>.
+	</p>
+	<ol>
+		<li>Go to the Contact Form 7 Plugin and create a new form</li>
+		<li>In the field <b>Form</b> paste the following code:
+<pre>&lt;div class=&quot;row-fluid&quot;&gt;
+&lt;p class=&quot;span6&quot;&gt;&lt;label&gt;First and last name&lt;span class=&quot;orange-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;br /&gt;
+    [text* your-name] &lt;/p&gt;
+
+&lt;p class=&quot;span6&quot;&gt;&lt;label&gt;Your Email&lt;span class=&quot;orange-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;br /&gt;
+    [email* your-email] &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row-fluid&quot;&gt;
+&lt;p class=&quot;span6&quot;&gt;&lt;label&gt;Subject&lt;span class=&quot;orange-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;br /&gt;
+    [text* your-subject] &lt;/p&gt;
+
+&lt;p class=&quot;span6&quot;&gt;&lt;label&gt;Attach photo&lt;span class=&quot;orange-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;br /&gt;
+     [file file-239]&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;label&gt;Description of a problem&lt;span class=&quot;orange-clr&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;br /&gt;
+    [textarea* your-message x5] &lt;/p&gt;
+
+&lt;p&gt;[submit class:btn class:btn-warning &quot;Send Quote&quot;]&lt;/p&gt;</pre>
+		</li>
+		<li>In the field <b>Message body</b> paste the following code:
+<pre>From: [your-name] &lt;[your-email]&gt;
+Subject: [your-subject]
+
+Message Body:
+[your-message]
+
+File: [file-239]
+
+--
+This e-mail was sent from a contact form on Mechanic</pre>
+		</li>
+		<li>Do not forget to change the other fields, especially where to send the email too.</li>
+		<li>Copy the code (which will look like <code>[contact-form-7 id="1381" title="Widget on the front page"]</code>) and paste in the widget called <b>Custom Width Text For Home Page</b> and set the number of columns to <b>6</b></li>
+		<li>That's it!</li>
+	</ol>
+</section>

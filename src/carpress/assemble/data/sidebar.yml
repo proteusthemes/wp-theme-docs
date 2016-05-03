@@ -1,0 +1,78 @@
+items:
+  - link: general-and-installation
+    name: General & Installation
+    subitems:
+    - link: few-words-on-start
+      name: Few Words on Start
+    - link: installation-and-updates
+      name: Installation & Updates
+    - link: theme-options
+      name: Theme Options
+    - link: customize-the-appearance
+      name: Customize the Appearance
+    - link: custom-post-types
+      name: Custom Post Types
+  - link: demo-content
+    name: Demo Content
+  - link: post-types
+    name: Post Types
+    subitems:
+    - link: page
+      name: Page
+    - link: slider
+      name: Slider
+    - link: services
+      name: Services
+    - link: gallery
+      name: Gallery
+    - link: testimonials
+      name: Testimonials
+  - link: shortcodes
+    name: Shortcodes
+    subitems:
+    - link: columns
+      name: Columns
+    - link: buttons
+      name: Buttons
+    - link: content-dividers
+      name: Content Dividers
+    - link: accordion
+      name: Accordion
+    - link: pricing-tables
+      name: Pricing Tables
+  - link: widgets
+    name: Widgets
+    subitems:
+    - link: free-repair-quote-widget
+      name: Free Repair Quote Widget
+  - link: plugins
+    name: WP Plugins
+    subitems:
+    - link: woocommerce
+      name: WooCommerce
+    - link: contact-page
+      name: Contact Page
+    - link: fancybox-gallery-effect
+      name: FancyBox Gallery Effect
+    - link: twitter-widget
+      name: Twitter Widget
+    - link: slider-plugin
+      name: Slider
+  - link: translations
+    name: Translations
+    subitems:
+    - link: manual-translation
+      name: Manual Translation
+    - link: wpml
+      name: WPML
+  - link: extras
+    name: Extras
+    subitems:
+    - link: demo-images
+      name: Demo Images
+    - link: customizations
+      name: Customizations
+    - link: changelog
+      name: Changelog
+    - link: support
+      name: Support
