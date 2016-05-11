@@ -5,7 +5,10 @@ module.exports = function(grunt) {
 	// require('load-grunt-tasks')(grunt);
 	require( 'load-grunt-tasks' )( grunt, { pattern: ['grunt-*', 'assemble'] } );
 
-	var _ = require('lodash');
+	var _ = {
+		mapValues: require('lodash.mapvalues'),
+		find:      require('lodash.find'),
+	};
 
 	// Read the config file with all themes data.
 	var config = grunt.file.readJSON('themes-config.json');
