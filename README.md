@@ -50,13 +50,11 @@ In the root of this repos folder, there is a `themes-config.json` file which hol
 	"name": "buildpress",
 	"themename": "BuildPress",
 	"creationdate": "November 4, 2014",
-	"tfurl": "themeforest.net/item/buildpress-construction-business-wp-theme/9323981?ref=ProteusThemes",
+	"tfurl": "http://themeforest.net/item/buildpress-construction-business-wp-theme/9323981?ref=ProteusThemes",
 	"themeheadertext": "BuildPress is a premium WordPress Theme for any kind of construction businesses and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use with one click demo content import. Available only on ThemeForest!",
-	"shutterstockurl": "goo.gl/zrhmwE"
+	"shutterstockurl": "http://goo.gl/zrhmwE"
 }
 ```
-
-As you can see there are no `http://` in the URLs, that's because grunt parameter separator is `:` and that breaks the grunt tasks. So do not use a colon in these theme settings!
 
 The only other thing is to create a folder with theme name in the `src` folder (`src/theme_name_goes_here`).
 

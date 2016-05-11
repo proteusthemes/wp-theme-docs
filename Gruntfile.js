@@ -7,6 +7,18 @@ module.exports = function(grunt) {
 	// Read the config file with all themes data.
 	var config = grunt.file.readJSON('themes-config.json');
 
+	var themes = config.themes;
+
+	// Escape colons ':' in all theme settings.
+	for (var i = 0; i < themes.length; i++) {
+		themes[i].name            = themes[i].name.replace( ':', '\\:' );
+		themes[i].themename       = themes[i].themename.replace( ':', '\\:' );
+		themes[i].creationdate    = themes[i].creationdate.replace( ':', '\\:' );
+		themes[i].tfurl           = themes[i].tfurl.replace( ':', '\\:' );
+		themes[i].themeheadertext = themes[i].themeheadertext.replace( ':', '\\:' );
+		themes[i].shutterstockurl = themes[i].shutterstockurl.replace( ':', '\\:' );
+	}
+
 	// Project configuration.
 	grunt.initConfig( {
 
@@ -186,7 +198,6 @@ module.exports = function(grunt) {
 
 	// Build single theme docs (theme name is passed as the parameter).
 	grunt.registerTask( 'buildTheme', 'build docs files for single theme', function( theme ) {
-		var themes = config.themes;
 		for (var i = 0; i < themes.length; i++) {
 			if ( themes[i].name === theme ) {
 				grunt.config.set( 'theme', theme );
@@ -203,7 +214,7 @@ module.exports = function(grunt) {
 					'copyFromTo:prep/' + themes[i].name + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + themes[i].name + '/bower_components',
 					// Replace lastModified date in the meta.hbs file.
 					'replace:modifyDate',
-					// Run the build process of the docs.
+					// Run the build process of the docs (escape the colon in url paremeters.
 					'buildSingleTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themeheadertext + ':' + themes[i].shutterstockurl,
 					// Clear unneeded temp files.
 					'clean:afterBuild'
@@ -214,7 +225,6 @@ module.exports = function(grunt) {
 
 	// Build ALL theme docs files at once.
 	grunt.registerTask( 'buildAllThemes', 'build docs files for all themes', function() {
-		var themes = config.themes;
 		for (var i = 0; i < themes.length; i++) {
 			grunt.task.run([
 				'buildTheme:' + themes[i].name
