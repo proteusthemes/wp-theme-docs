@@ -1,8 +1,14 @@
 module.exports = function(grunt) {
+	'use strict';
 
 	// Auto-load the neede grunt tasks.
 	// require('load-grunt-tasks')(grunt);
 	require( 'load-grunt-tasks' )( grunt, { pattern: ['grunt-*', 'assemble'] } );
+
+	var _ = {
+		mapValues: require('lodash.mapvalues'),
+		find:      require('lodash.find'),
+	};
 
 	// Read the config file with all themes data.
 	var config = grunt.file.readJSON('themes-config.json');
@@ -10,14 +16,11 @@ module.exports = function(grunt) {
 	var themes = config.themes;
 
 	// Escape colons ':' in all theme settings.
-	for (var i = 0; i < themes.length; i++) {
-		themes[i].name            = themes[i].name.replace( ':', '\\:' );
-		themes[i].themename       = themes[i].themename.replace( ':', '\\:' );
-		themes[i].creationdate    = themes[i].creationdate.replace( ':', '\\:' );
-		themes[i].tfurl           = themes[i].tfurl.replace( ':', '\\:' );
-		themes[i].themeheadertext = themes[i].themeheadertext.replace( ':', '\\:' );
-		themes[i].shutterstockurl = themes[i].shutterstockurl.replace( ':', '\\:' );
-	}
+	themes = themes.map( function ( theme ) {
+		return _.mapValues( theme, function ( value ) {
+			return value.replace( ':', '\\:' );
+		} );
+	} );
 
 	// Project configuration.
 	grunt.initConfig( {
@@ -159,7 +162,7 @@ module.exports = function(grunt) {
 	// Copy from cwd (root) folder with src files to dest (cwd, src and dest are given as parameters).
 	grunt.registerTask( 'copyFromTo', 'copy from X into Y', function( cwd, src, dest ) {
 		if ( arguments.length < 3 ) {
-			grunt.log.writeln( this.name + ", missing parameters (cwd and/or src and/or dest)" );
+			grunt.log.writeln( this.name + ', missing parameters (cwd and/or src and/or dest)' );
 		} else {
 			grunt.config.set( 'cwd', cwd );
 			grunt.config.set( 'src', src );
@@ -174,7 +177,7 @@ module.exports = function(grunt) {
 	// Build process for single theme docs. Run multiple tasks.
 	grunt.registerTask( 'buildSingleTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themeheadertext, shutterstockurl ) {
 		if ( arguments.length < 6 ) {
-			grunt.log.writeln( this.name + ", missing parameter!" );
+			grunt.log.writeln( this.name + ', missing parameter!' );
 		} else {
 			grunt.config.set( 'theme', name );
 			grunt.config.set( 'themename', themename );
@@ -198,37 +201,38 @@ module.exports = function(grunt) {
 
 	// Build single theme docs (theme name is passed as the parameter).
 	grunt.registerTask( 'buildTheme', 'build docs files for single theme', function( theme ) {
-		for (var i = 0; i < themes.length; i++) {
-			if ( themes[i].name === theme ) {
-				grunt.config.set( 'theme', theme );
-				grunt.task.run([
-					// Clean theme folder in the build folder.
-					'clean:beforeThemeBuild',
-					// Copy master content to theme folder in the prep folder.
-					'copyFromTo:src/master:**:' + config.prepFolder + '/' + themes[i].name,
-					// Copy theme content from src to theme folder in the prep folder.
-					'copyFromTo:src/' + themes[i].name + ':**:' + config.prepFolder + '/' + themes[i].name,
-					// Copy all theme images from prep to theme folder in the build folder.
-					'copyFromTo:prep/' + themes[i].name + '/images:**/*.{png,gif,jpg,jpeg,ico}:' + config.buildFolder + '/' + themes[i].name + '/images',
-					// Copy fonts from prep to theme folder in the build folder.
-					'copyFromTo:prep/' + themes[i].name + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + themes[i].name + '/bower_components',
-					// Replace lastModified date in the meta.hbs file.
-					'replace:modifyDate',
-					// Run the build process of the docs (escape the colon in url paremeters.
-					'buildSingleTheme:' + themes[i].name + ':' + themes[i].themename + ':' + themes[i].creationdate + ':' + themes[i].tfurl + ':' + themes[i].themeheadertext + ':' + themes[i].shutterstockurl,
-					// Clear unneeded temp files.
-					'clean:afterBuild'
-				]);
-			}
-		}
+		var selectedTheme = _.find( themes, function ( currentTheme ) {
+			return currentTheme.name === theme;
+		} );
+
+		grunt.config.set( 'theme', selectedTheme );
+
+		grunt.task.run([
+			// Clean theme folder in the build folder.
+			'clean:beforeThemeBuild',
+			// Copy master content to theme folder in the prep folder.
+			'copyFromTo:src/master:**:' + config.prepFolder + '/' + selectedTheme.name,
+			// Copy theme content from src to theme folder in the prep folder.
+			'copyFromTo:src/' + selectedTheme.name + ':**:' + config.prepFolder + '/' + selectedTheme.name,
+			// Copy all theme images from prep to theme folder in the build folder.
+			'copyFromTo:prep/' + selectedTheme.name + '/images:**/*.{png,gif,jpg,jpeg,ico}:' + config.buildFolder + '/' + selectedTheme.name + '/images',
+			// Copy fonts from prep to theme folder in the build folder.
+			'copyFromTo:prep/' + selectedTheme.name + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + selectedTheme.name + '/bower_components',
+			// Replace lastModified date in the meta.hbs file.
+			'replace:modifyDate',
+			// Run the build process of the docs (escape the colon in url paremeters.
+			'buildSingleTheme:' + selectedTheme.name + ':' + selectedTheme.themename + ':' + selectedTheme.creationdate + ':' + selectedTheme.tfurl + ':' + selectedTheme.themeheadertext + ':' + selectedTheme.shutterstockurl,
+			// Clear unneeded temp files.
+			'clean:afterBuild'
+		]);
 	});
 
 	// Build ALL theme docs files at once.
 	grunt.registerTask( 'buildAllThemes', 'build docs files for all themes', function() {
-		for (var i = 0; i < themes.length; i++) {
+		themes.forEach( function ( theme ) {
 			grunt.task.run([
-				'buildTheme:' + themes[i].name
+				'buildTheme:' + theme.name
 			]);
-		}
+		} );
 	});
 };
