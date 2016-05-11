@@ -63,7 +63,7 @@ items:
       name: Twitter Widget
     - link: brochure-box
       name: Brochure Box
-    - link: featured-page
+    - link: featured-page-widget
       name: Featured Page
   - link: plugins
     name: Plugins
