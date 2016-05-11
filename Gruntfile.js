@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+	'use strict';
 
 	// Auto-load the neede grunt tasks.
 	// require('load-grunt-tasks')(grunt);
@@ -159,7 +160,7 @@ module.exports = function(grunt) {
 	// Copy from cwd (root) folder with src files to dest (cwd, src and dest are given as parameters).
 	grunt.registerTask( 'copyFromTo', 'copy from X into Y', function( cwd, src, dest ) {
 		if ( arguments.length < 3 ) {
-			grunt.log.writeln( this.name + ", missing parameters (cwd and/or src and/or dest)" );
+			grunt.log.writeln( this.name + ', missing parameters (cwd and/or src and/or dest)' );
 		} else {
 			grunt.config.set( 'cwd', cwd );
 			grunt.config.set( 'src', src );
@@ -174,7 +175,7 @@ module.exports = function(grunt) {
 	// Build process for single theme docs. Run multiple tasks.
 	grunt.registerTask( 'buildSingleTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themeheadertext, shutterstockurl ) {
 		if ( arguments.length < 6 ) {
-			grunt.log.writeln( this.name + ", missing parameter!" );
+			grunt.log.writeln( this.name + ', missing parameter!' );
 		} else {
 			grunt.config.set( 'theme', name );
 			grunt.config.set( 'themename', themename );
