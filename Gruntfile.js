@@ -6,21 +6,13 @@ module.exports = function(grunt) {
 	require( 'load-grunt-tasks' )( grunt, { pattern: ['grunt-*', 'assemble'] } );
 
 	var _ = {
-		mapValues: require('lodash.mapvalues'),
-		find:      require('lodash.find'),
+		find: require('lodash.find'),
 	};
 
 	// Read the config file with all themes data.
 	var config = grunt.file.readJSON('themes-config.json');
 
 	var themes = config.themes;
-
-	// Escape colons ':' in all theme settings.
-	themes = themes.map( function ( theme ) {
-		return _.mapValues( theme, function ( value ) {
-			return value.replace( ':', '\\:' );
-		} );
-	} );
 
 	// Project configuration.
 	grunt.initConfig( {
@@ -130,14 +122,38 @@ module.exports = function(grunt) {
 			afterBuild:       [ '.tmp', '.sass-cache' ]
 		},
 
-		// Copy some files.
+		// Copy tasks for copying multiple folders/files.
 		// https://github.com/gruntjs/grunt-contrib-copy
 		copy: {
-			XtoY: {
+			srcMasterToPrepTheme: {
 				files: [{
-					cwd:    '<%= cwd %>',
-					src:    '<%= src %>',
-					dest:   '<%= dest %>',
+					cwd:    'src/master',
+					src:    '**',
+					dest:   config.prepFolder + '/<%= theme %>',
+					expand: true,
+				}]
+			},
+			srcThemeToPrepTheme: {
+				files: [{
+					cwd:    'src/<%= theme %>',
+					src:    '**',
+					dest:   config.prepFolder + '/<%= theme %>',
+					expand: true,
+				}]
+			},
+			prepThemeImagesToBuildThemeImages: {
+				files: [{
+					cwd:    config.prepFolder + '/<%= theme %>/images',
+					src:    '**/*.{png,gif,jpg,jpeg,ico}',
+					dest:   config.buildFolder + '/<%= theme %>/images',
+					expand: true,
+				}]
+			},
+			prepThemeFontsToBuildThemeFonts: {
+				files: [{
+					cwd:    config.prepFolder + '/<%= theme %>/bower_components',
+					src:    'bootstrap-sass-official/assets/fonts/bootstrap/*',
+					dest:   config.buildFolder + '/<%= theme %>/bower_components',
 					expand: true,
 				}]
 			},
@@ -157,35 +173,27 @@ module.exports = function(grunt) {
 				}],
 			},
 		}
-	} );
-
-	// Copy from cwd (root) folder with src files to dest (cwd, src and dest are given as parameters).
-	grunt.registerTask( 'copyFromTo', 'copy from X into Y', function( cwd, src, dest ) {
-		if ( arguments.length < 3 ) {
-			grunt.log.writeln( this.name + ', missing parameters (cwd and/or src and/or dest)' );
-		} else {
-			grunt.config.set( 'cwd', cwd );
-			grunt.config.set( 'src', src );
-			grunt.config.set( 'dest', dest );
-
-			grunt.task.run([
-				'copy:XtoY'
-			]);
-		}
 	});
 
 	// Build process for single theme docs. Run multiple tasks.
-	grunt.registerTask( 'buildSingleTheme', 'build docs files for a single theme', function( name, themename, creationdate, tfurl, themeheadertext, shutterstockurl ) {
-		if ( arguments.length < 6 ) {
-			grunt.log.writeln( this.name + ', missing parameter!' );
+	grunt.registerTask( 'buildSingleTheme', 'build docs files for a single theme', function( theme ) {
+		if ( arguments.length < 1 ) {
+			grunt.log.writeln( this.name + ', missing parameter! Correct call is: buildSingleTheme:name_of_the_theme' );
 		} else {
-			grunt.config.set( 'theme', name );
-			grunt.config.set( 'themename', themename );
-			grunt.config.set( 'creationdate', creationdate );
-			grunt.config.set( 'tfurl', tfurl );
-			grunt.config.set( 'themeheadertext', themeheadertext );
-			grunt.config.set( 'shutterstockurl', shutterstockurl );
+			var selectedTheme = _.find( themes, function ( currentTheme ) {
+				return currentTheme.name === theme;
+			} );
+
+			grunt.config.set( 'theme', selectedTheme.name );
+			grunt.config.set( 'themename', selectedTheme.themename );
+			grunt.config.set( 'creationdate', selectedTheme.creationdate );
+			grunt.config.set( 'tfurl', selectedTheme.tfurl );
+			grunt.config.set( 'themeheadertext', selectedTheme.themeheadertext );
+			grunt.config.set( 'shutterstockurl', selectedTheme.shutterstockurl );
 			grunt.task.run([
+				'clean:beforeThemeBuild',
+				'copy',
+				'replace:modifyDate',
 				'assemble:build',
 				'compass:build',
 				'autoprefixer:build',
@@ -195,44 +203,17 @@ module.exports = function(grunt) {
 				'cssmin', // Automatically configured by usemin.
 				'rev',
 				'usemin',
+				'clean:afterBuild'
 			]);
 		}
-	});
-
-	// Build single theme docs (theme name is passed as the parameter).
-	grunt.registerTask( 'buildTheme', 'build docs files for single theme', function( theme ) {
-		var selectedTheme = _.find( themes, function ( currentTheme ) {
-			return currentTheme.name === theme;
-		} );
-
-		grunt.config.set( 'theme', selectedTheme );
-
-		grunt.task.run([
-			// Clean theme folder in the build folder.
-			'clean:beforeThemeBuild',
-			// Copy master content to theme folder in the prep folder.
-			'copyFromTo:src/master:**:' + config.prepFolder + '/' + selectedTheme.name,
-			// Copy theme content from src to theme folder in the prep folder.
-			'copyFromTo:src/' + selectedTheme.name + ':**:' + config.prepFolder + '/' + selectedTheme.name,
-			// Copy all theme images from prep to theme folder in the build folder.
-			'copyFromTo:prep/' + selectedTheme.name + '/images:**/*.{png,gif,jpg,jpeg,ico}:' + config.buildFolder + '/' + selectedTheme.name + '/images',
-			// Copy fonts from prep to theme folder in the build folder.
-			'copyFromTo:prep/' + selectedTheme.name + '/bower_components:bootstrap-sass-official/assets/fonts/bootstrap/*:' + config.buildFolder + '/' + selectedTheme.name + '/bower_components',
-			// Replace lastModified date in the meta.hbs file.
-			'replace:modifyDate',
-			// Run the build process of the docs (escape the colon in url paremeters.
-			'buildSingleTheme:' + selectedTheme.name + ':' + selectedTheme.themename + ':' + selectedTheme.creationdate + ':' + selectedTheme.tfurl + ':' + selectedTheme.themeheadertext + ':' + selectedTheme.shutterstockurl,
-			// Clear unneeded temp files.
-			'clean:afterBuild'
-		]);
 	});
 
 	// Build ALL theme docs files at once.
 	grunt.registerTask( 'buildAllThemes', 'build docs files for all themes', function() {
 		themes.forEach( function ( theme ) {
 			grunt.task.run([
-				'buildTheme:' + theme.name
+				'buildSingleTheme:' + theme.name
 			]);
-		} );
+		});
 	});
 };
