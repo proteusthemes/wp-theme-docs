@@ -38,7 +38,7 @@ It depends. Do you have to edit something in all theme documentations, or just i
 
 If you have to edit for all themes, then you should edit the code in `src/master`. And then build all theme docs with `grunt buildAllThemes`. If some themes have overwritten that section you just edited in master, then you have to edit those files in the specific theme doc as well.
 
-If you want to edit something just for a specific theme, then you have to overwrite the `master` file (copy the file you want to edit from `src/master` to the theme folder, keeping the folder hierarchy as it was in master) or just check in the theme folder, if this file is already there. When you are done, you should build the single theme with `grunt buildTheme:theme_name_goes_here`.
+If you want to edit something just for a specific theme, then you have to overwrite the `master` file (copy the file you want to edit from `src/master` to the theme folder, keeping the folder hierarchy as it was in master) or just check in the theme folder, if this file is already there. When you are done, you should build the single theme with `grunt buildSingleTheme:theme_name_goes_here`.
 
 How do I create a new theme documentation?
 ------------------------------------------
