@@ -21,8 +21,11 @@ Installation
 1. Clone/pull this repository to your local dev environment,
 2. run `bower install`,
 3. run `npm install`.
+4. run `grunt buildAllThemes`
 
 That's it!
+
+The index files of the theme docs will be located in `/build/theme_name_goes_here/index.html`.
 
 How does it work?
 ------------------------------
