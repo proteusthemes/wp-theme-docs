@@ -1,0 +1,81 @@
+---
+theme: <%= theme %>
+---
+<section>
+	<h2 id="demo-content">Demo Content</h2>
+	<h3 id="one-click-demo-install">One Click Demo Install</h3>
+	<img src="images/one-click-demo-import.png" alt="One Click Demo Import" width="940" height="384">
+	<div class="warning">
+		Don't forget to activate all required plugins before importing demo data.
+	</div>
+	<p>
+		You can import demo content from our demo site (with blurred licensed images) with a single click of a button. Go to <i>wp-admin » Appearance » Import Demo Data</i>, here you have to select which demo data you want to import! You can choose from our 4 demo pages:
+		<ul>
+			<li>Bolts Construction</li>
+			<li>Bolts Transport</li>
+			<li>Bolts Factory *</li>
+			<li>Bolts Industry</li>
+		</ul>
+
+		Once you select which demo data you want to import, just click on the <strong>Import Demo Data</strong> button.
+	</p>
+	<p>
+		* If you choose the <strong>Bolts Factory</strong> demo you will have to complete some extra steps in order to have the same slider as in our demo page. Follow the steps below:
+	</p>
+	<h4 id="factory-slider-revolution-import">Bolts Factory - Import Slider Revolution</h4>
+	<p>After you import the Bolts Factory demo you have to install and activate your copy of the Slider Revolution (it is <strong>not</strong> bundled with the theme) and import the demo slider:
+		<ol>
+			<li><a href="http://artifacts.proteusthemes.com/zip-files/bolts-pt/extras/rev-slider-export/factory.zip">download the slider revolution import file</a>,</li>
+			<li>go to <i>wp-admin » Slider Revolution</i> and click on <strong>Import Slider</strong></li>
+			<li>select the <strong>factory.zip</strong> file you just downloaded and click on <strong>Import Slider</strong></li>
+		</ol>
+	</p>
+	<h3 id="import-xml-file">Import XML File</h3>
+	<p>
+		If you want to import the demo content the old-fashioned way, you can get a fresh copy of the <strong>XML files</strong> on our server at these URLs:
+		<ul>
+			<li>Bolts Construction: <a href="http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-latest.xml">http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-latest.xml</a></li>
+			<li>Bolts Transport: <a href="http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-transport-latest.xml">http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-transport-latest.xml</a></li>
+			<li>Bolts Factory *: <a href="http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-factory-latest.xml">http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-factory-latest.xml</a></li>
+			<li>Bolts Industry: <a href="http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-industry-latest.xml">http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-industry-latest.xml</a></li>
+		</ul>
+
+		* <a href="#factory-slider-revolution-import">Separate rev slider import for Factory demo.</a>
+	</p>
+	<p>
+		Don't forget to activate all required plugins before importing demo data. To import the demo data go to <i>Tools » Import</i>, click on <i>WordPress</i> (install the <strong>WordPress Importer</strong> plugin if not already installed) and upload/import the previously saved xml file (don't forget to enable the <i>Download and import file attachments</i> checkbox to also import the images).
+	</p>
+	<p>
+		<b>Demo Widgets</b><br>After you import the demo content, you can also import widgets the old-fashioned way. The files for widget import are also located on our server:
+		<ul>
+			<li>Bolts Construction: <a href="http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-construction.json">http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-construction.json</a></li>
+			<li>Bolts Transport: <a href="http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-transport.json">http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-transport.json</a></li>
+			<li>Bolts Factory: <a href="http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-factory.json">http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-factory.json</a></li>
+			<li>Bolts Industry: <a href="http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-industry.json">http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-industry.json</a></li>
+		</ul>
+		Rename this file to <code>widgets.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <i>Tools » Widget Import/Export</i> and import the file.
+	</p>
+	<p>
+		<b>Customizer settings</b><br>The last thing you have to import are the customizer settings. The files for that can also be found on our server:
+		<ul>
+			<li>Bolts Construction: <a href="http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-construction.dat">http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-construction.dat</a></li>
+			<li>Bolts Transport: <a href="http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-transport.dat">http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-transport.dat</a></li>
+			<li>Bolts Factory: <a href="http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-factory.dat">http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-factory.dat</a></li>
+			<li>Bolts Industry: <a href="http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-industry.dat">http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-industry.dat</a></li>
+		</ul>
+		Install and activate the <a href="https://wordpress.org/plugins/customizer-export-import/" target="_blank">Customizer Export/Import</a>. Go to <i>Appearance » Customize » Export/Import</i> and import the file (also enable the <i>Download and import image files?</i> checkbox, to import pattern images).
+	</p>
+	<p>
+		<b>After import setup</b><br>After you have imported the demo data and widgets, you should also setup these things:
+		{{!-- After Import setup --}}
+		{{> after-import-setup}}
+	</p>
+	<p>
+		If for some reason these URLs are not available, then all you need to do is download the <strong>All files & documentation</strong> zip from ThemeForest and you will find these import files in the <strong>extras</strong> folder.
+	</p>
+	<div class="warning">
+		Don't forget to activate all required plugins before importing demo data.
+	</div>
+	{{!-- After Demo Content --}}
+	{{> after-demo-content}}
+</section>
