@@ -1,0 +1,42 @@
+<section>
+	<h2 id="header">Header</h2>
+
+	{{!-- Top Bar --}}
+	{{> top-bar}}
+
+	{{!-- Logo --}}
+	{{> logo}}
+
+	{{!-- Favicon --}}
+	{{> favicon}}
+
+	<h3 id="header-widgets">Header Widgets</h3>
+
+	<h4 id="header-layout">Header Layout</h4>
+	<p>
+		There are two header layouts that you can choose from. You can change it in <i>Appearance » Customize » Theme Options » Header &#38; Breadcrumbs</i>, here you can set the <strong>Header layout</strong> option. You can choose:
+		<ul>
+			<li>Logo in the center (default), or</li>
+			<li>Logo on the left</li>
+		</ul>
+		When <i>Logo in the center</i> is selected you will have two sidebars, to put some widgets in them: <strong>Header left</strong> and <strong>Header right</strong>. When you switch to <i>Logo on the left</i>, the <strong>Header left</strong> sidebar will disappear and only the <strong>Header right</strong> will be available.
+	</p>
+
+	<h4>Header Widgets</h4>
+
+	<p>
+		You can put a lot of widgets in the <strong>Header</strong> widget area, but your header will look great with the following widgets:
+	</p>
+
+	{{!-- Header Widgets --}}
+	{{> header-widgets}}
+
+	{{!-- Main Menu --}}
+	{{> main-menu}}
+
+	{{!-- Navigation Widgets --}}
+	{{> navigation-widgets}}
+
+	{{!-- After Header --}}
+	{{> after-header}}
+</section>
