@@ -17,8 +17,25 @@
 		After that the WPML wizard will guide you to properly configure the multilingual site.
 	</p>
 	<p>
-		Note: We have styled the WPML language switcher widget for this theme. Other multi-language plugins are not supported, this is why their language switchers are not styled.
+		Note: We have styled the WPML language switcher widget for this theme. There are too many plugins and other options to make WordPress multilingual, so we cannot support all of them. We choose to officially support only WPML as it is de-facto standard. However, in case that you selected other plugin than WPML to make your WordPress-powered site multilingual and it allows for modification of the language switcher, here is the HTML markup that you might find helpful:
 	</p>
+	<pre>&lt;div class=&quot;widget  widget_icl_lang_sel_widget  js-wpml-widget&quot; style=&quot;margin-left: 0;&quot;&gt;
+  &lt;div id=&quot;lang_sel&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot; class=&quot;lang_sel_sel icl-en&quot;&gt;&lt;img class=&quot;iclflag&quot; src=&quot;http://example.com/path/to/flags/en.png&quot; title=&quot;English&quot;/&gt;&amp;nbsp;English&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li class=&quot;icl-de&quot;&gt;
+             &lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;iclflag&quot; src=&quot;http://example.com/path/to/flags/de.png&quot; title=&quot;Deutsch&quot;/&gt;&amp;nbsp;Deutsch&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;icl-en&quot;&gt;
+             &lt;a href=&quot;https://www.proteusthemes.com/docs/shaka/#wpml&quot; target=&quot;_blank&quot;&gt;WPML support&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
 	<p>
 		For reference: the widgets and theme options can only be translated using the String Translation.
 	</p>
