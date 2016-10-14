@@ -4,8 +4,10 @@ items:
     subitems:
     - link: few-words-on-start
       name: Few Words on Start
-    - link: installation-and-updates
-      name: Installation & Updates
+    - link: installation
+      name: Installation
+    - link: updates
+      name: Updates
     - link: customize-the-appearance
       name: Customize the Appearance
   - link: demo-content
