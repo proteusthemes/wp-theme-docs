@@ -76,6 +76,8 @@ items:
       name: WooCommerce
     - link: visual-composer
       name: Visual Composer
+    - link: breadcrumbs
+      name: Breadcrumbs NavXT
     - link: premium-essential-grid
       name: Premium Essential Grid
     - link: custom-sidebars

@@ -53,6 +53,8 @@ items:
       name: Contact Form 7
     - link: woocommerce
       name: WooCommerce
+    - link: breadcrumbs
+      name: Breadcrumbs NavXT
   - link: footer
     name: Footer
     subitems:
