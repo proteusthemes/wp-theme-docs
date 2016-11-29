@@ -31,10 +31,10 @@ themeName: <%= themename %> WP
 	</p>
 	<ol>
 		<li><strong>Upload a zip file</strong><i> - preferred method</i><br>
-			When you are logged in your WordPress dashboard go to <i>Appearance » Themes » Add New » Upload Theme</i> and select the zip file <code>{{general.theme}}-pt.zip</code> you downloaded from our Shop or from the ThemeForest and click <b>Install Now</b> button.
+			When you are logged in your WordPress dashboard go to <i>Appearance » Themes » Add New » Upload Theme</i> and select the zip file <code>{{general.theme}}-ct.zip</code> you downloaded from our Shop or from the ThemeForest and click <b>Install Now</b> button.
 		</li>
 		<li><strong>FTP upload</strong><br>
-			Unzip the contents of the <code>{{general.theme}}-pt.zip</code> file and upload the folder named <code>{{general.theme}}-pt</code> to your server to <code>wp-uploads/themes/</code> folder using a FTP client.
+			Unzip the contents of the <code>{{general.theme}}-ct.zip</code> file and upload the folder named <code>{{general.theme}}-ct</code> to your server to <code>wp-uploads/themes/</code> folder using a FTP client.
 		</li>
 	</ol>
 	<p>
@@ -47,6 +47,7 @@ themeName: <%= themename %> WP
 	<div class="warning">
 		You still need to install/activate the required and recommended plugins - you can do this by visiting <b>Appearance » Install Plugins</b> inside wp-admin.
 	</div>
+
 	{{!-- After Installation --}}
 	{{> after-installation}}
 
@@ -68,6 +69,3 @@ themeName: <%= themename %> WP
 	{{> theme-customization}}
 
 </section>
-
-{{!-- Special notice --}}
-{{> special-notice}}

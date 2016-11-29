@@ -23,9 +23,9 @@ theme: <%= theme %>
 		{{!-- After Import setup --}}
 		{{> after-import-setup}}
 	</p>
-	<p>
-		If for some reason these URLs are not available, then all you need to do is download the <strong>All files & documentation</strong> zip from ThemeForest and you will find the <strong>content.xml</strong> and <strong>widgets.json</strong> file in the <strong>extras</strong> folder.
-	</p>
+	{{!-- Import files not available --}}
+	{{> import-files-not-available}}
+
 	<div class="warning">
 		Don't forget to activate all required plugins before importing demo data.
 	</div>
