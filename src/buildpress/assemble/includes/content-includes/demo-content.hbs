@@ -5,34 +5,61 @@ theme: <%= theme %>
 	<h2 id="demo-content">Demo Content</h2>
 	<h3 id="one-click-demo-install">One Click Demo Install</h3>
 	<p>
-		You can import demo content from our site (with blurred licensed images) with a single click of a button.
+		You can import demo content from our demo site (with blurred licensed images) with a single click of a button. Go to <i>wp-admin » Appearance » Import Demo Data</i>, here you have to select which demo data you want to import! You can choose from our 4 demo pages:
+		<ul>
+			<li>BuildPress Classic</li>
+			<li>BuildPress Light</li>
+			<li>BuildPress Landscape</li>
+			<li>BuildPress RTL</li>
+		</ul>
+
+		Once you select which demo data you want to import, just click on the <strong>Import</strong> button.
 	</p>
-	<img src="images/one-click-demo-import.jpg" alt="One Click Demo Import" width="940" height="384">
+	<img src="images/one-click-demo-import.jpg" alt="One Click Demo Import" width="940" height="505">
 	<div class="warning">
 		Don't forget to activate all required plugins before importing demo data.
 	</div>
 	<h3 id="import-xml-file">Import XML File</h3>
+
 	<p>
-		If you want to import the demo content the old-fashioned way, you can get a fresh copy of the <strong>XML file</strong> on our server at this URL: <a href="http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-latest.xml">http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-latest.xml</a> (and for the <strong>Light style</strong> version use: <a href="http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-light-latest.xml">http://artifacts.proteusthemes.com/xml-exports/{{demo-content.theme}}-light-latest.xml</a>). Don't forget to activate all required plugins before importing demo data. To import the demo data go to <i>Tools » Import</i>, click on <i>WordPress</i> (install the <strong>WordPress Importer</strong> plugin if not already installed) and upload/import the previously saved xml file (don't forget to enable the <i>Download and import file attachments</i> checkbox to also import the images).
+		If you want to import the demo content the old-fashioned way, you can get a fresh copy of the <strong>XML files</strong> on our server at these URLs:
+		<ul>
+			<li>BuildPress Classic: <a href="http://artifacts.proteusthemes.com/xml-exports/buildpress-latest.xml">http://artifacts.proteusthemes.com/xml-exports/buildpress-latest.xml</a></li>
+			<li>BuildPress Light: <a href="http://artifacts.proteusthemes.com/xml-exports/buildpress-light-latest.xml">http://artifacts.proteusthemes.com/xml-exports/buildpress-light-latest.xml</a></li>
+			<li>BuildPress Landscape: <a href="http://artifacts.proteusthemes.com/xml-exports/buildpress-landscape-latest.xml">http://artifacts.proteusthemes.com/xml-exports/buildpress-landscape-latest.xml</a></li>
+			<li>BuildPress RTL: <a href="http://artifacts.proteusthemes.com/xml-exports/buildpress-rtl-latest.xml">http://artifacts.proteusthemes.com/xml-exports/buildpress-rtl-latest.xml</a></li>
+		</ul>
 	</p>
 	<p>
-		<b>Demo Widgets</b><br>After you import the demo content, you can also import widgets the old-fashioned way. The file for widget import is also located on our server: <a href="http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}.json">http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}.json</a> (and for the <strong>Light style</strong> version use: <a href="http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-light.json">http://artifacts.proteusthemes.com/json-widgets/{{demo-content.theme}}-light.json</a>). Rename this file to <code>{{demo-content.theme}}.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <i>Tools » Widget Import/Export</i> and import the file.
+		Don't forget to activate all required plugins before importing demo data. To import the demo data go to <i>Tools » Import</i>, click on <i>WordPress</i> (install the <strong>WordPress Importer</strong> plugin if not already installed) and upload/import the previously saved xml file (don't forget to enable the <i>Download and import file attachments</i> checkbox to also import the images).
+	</p>
+	<p>
+		<b>Demo Widgets</b><br>After you import the demo content, you can also import widgets the old-fashioned way. The files for widget import are also located on our server:
+		<ul>
+			<li>BuildPress Classic: <a href="http://artifacts.proteusthemes.com/json-widgets/buildpress.json">http://artifacts.proteusthemes.com/json-widgets/buildpress.json</a></li>
+			<li>BuildPress Light: <a href="http://artifacts.proteusthemes.com/json-widgets/buildpress-light.json">http://artifacts.proteusthemes.com/json-widgets/buildpress-light.json</a></li>
+			<li>BuildPress Landscape: <a href="http://artifacts.proteusthemes.com/json-widgets/buildpress-landscape.json">http://artifacts.proteusthemes.com/json-widgets/buildpress-landscape.json</a></li>
+			<li>BuildPress RTL: <a href="http://artifacts.proteusthemes.com/json-widgets/buildpress-rtl.json">http://artifacts.proteusthemes.com/json-widgets/buildpress-rtl.json</a></li>
+		</ul>
+		Rename this file to <code>widgets.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <i>Tools » Widget Import/Export</i> and import the file.
 	</p>
 	<p>
 		<b>Customizer settings</b><br>The last thing you have to import are the customizer settings. The files for that can also be found on our server:
 		<ul>
-			<li>BuildPress Classic: <a href="http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}.dat">http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}.dat</a></li>
-			<li>BuildPress Light: <a href="http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-light.dat">http://artifacts.proteusthemes.com/customizer-exports/{{demo-content.theme}}-light.dat</a></li>
+			<li>BuildPress Classic: <a href="http://artifacts.proteusthemes.com/customizer-exports/buildpress.dat">http://artifacts.proteusthemes.com/customizer-exports/buildpress.dat</a></li>
+			<li>BuildPress Light: <a href="http://artifacts.proteusthemes.com/customizer-exports/buildpress-light.dat">http://artifacts.proteusthemes.com/customizer-exports/buildpress-light.dat</a></li>
+			<li>BuildPress Landscape: <a href="http://artifacts.proteusthemes.com/customizer-exports/buildpress-landscape.dat">http://artifacts.proteusthemes.com/customizer-exports/buildpress-landscape.dat</a></li>
+			<li>BuildPress RTL: <a href="http://artifacts.proteusthemes.com/customizer-exports/buildpress-rtl.dat">http://artifacts.proteusthemes.com/customizer-exports/buildpress-rtl.dat</a></li>
 		</ul>
-		Install and activate the <a href="https://wordpress.org/plugins/customizer-export-import/" target="_blank">Customizer Export/Import</a>. Go to <i>Appearance » Customize » Export/Import</i> and import the file (also enable the <i>Download and import image files?</i>).
+		Install and activate the <a href="https://wordpress.org/plugins/customizer-export-import/" target="_blank">Customizer Export/Import</a>. Go to <i>Appearance » Customize » Export/Import</i> and import the file (also enable the <i>Download and import image files?</i> checkbox, to import pattern images).
 	</p>
 	<p>
-		<b>After import setup</b><br>After you have imported the demo data and widgets, you should also setup these things:
+		<b>After import setup</b><br>After you have imported the demo data, widgets and customizer settings, you should also setup these things:
 		{{!-- After Import setup --}}
 		{{> after-import-setup}}
 	</p>
 	<p>
-		If for some reason these URLs are not available, then all you need to do is download the <strong>All files & documentation</strong> zip from ThemeForest and you will find the <strong>content.xml</strong> and <strong>widgets.json</strong> file in the <strong>extras</strong> folder.
+		If for some reason these URLs are not available, then all you need to do is download the <strong>All files & documentation</strong> zip from ThemeForest and you will find these files in the <strong>extras</strong> folder.
 	</p>
 	<div class="warning">
 		Don't forget to activate all required plugins before importing demo data.
