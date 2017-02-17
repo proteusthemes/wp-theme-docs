@@ -150,12 +150,20 @@ module.exports = function(grunt) {
 				}]
 			},
 			prepThemeFontsToBuildThemeFonts: {
-				files: [{
+				files: [
+				{
 					cwd:    config.prepFolder + '/<%= theme %>/bower_components',
 					src:    'bootstrap-sass-official/assets/fonts/bootstrap/*',
 					dest:   config.buildFolder + '/<%= theme %>/bower_components',
 					expand: true,
-				}]
+				},
+				{
+					cwd:    config.prepFolder + '/<%= theme %>',
+					src:    'fonts/*',
+					dest:   config.buildFolder + '/<%= theme %>',
+					expand: true,
+				}
+				]
 			},
 		},
 

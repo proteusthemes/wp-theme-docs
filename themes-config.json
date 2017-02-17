@@ -122,6 +122,14 @@
 			"tfurl": "https://www.proteusthemes.com/wordpress-themes/consultpress/",
 			"themeheadertext": "What do all consultants need? In short, trust. This is achieved with professional presentation and the ability to communicate clearly with existing and potential clients. Whether you are an accountant, a managerial, advisory or analytical consultant – our ConsultPress WP theme has everything you need.",
 			"shutterstockurl": "http://www.shutterstock.com"
+		},
+		{
+			"name": "medicpress",
+			"themename": "MedicPress",
+			"creationdate": "February 17, 2017",
+			"tfurl": "https://www.proteusthemes.com/wordpress-themes/medicpress/",
+			"themeheadertext": "TODO",
+			"shutterstockurl": "http://www.shutterstock.com"
 		}
 	]
 }

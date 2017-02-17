@@ -1,0 +1,71 @@
+---
+theme: <%= theme %>
+themeName: <%= themename %> WP
+---
+<section>
+	<h2 id="general-and-installation">General &amp; Installation</h2>
+	<h3 id="few-words-on-start">Few Words on Start</h3>
+	<p>
+		{{!-- Intro Text --}}
+		{{> intro-text}}
+	</p>
+	<h3 id="installation">Installation</h3>
+		{{!-- Before Installation  --}}
+		{{> before-installation}}
+	<p>
+		I assume you already have a fresh copy of <a href="https://wordpress.org">WordPress</a> installed on your server.
+	</p>
+	<p>
+		<b>Download the theme zip file</b><br>
+		The first thing you will need to do is to download the theme installation zip file.
+	</p>
+	<p>
+		If you bought the theme on our <a href="https://www.proteusthemes.com/" target="_blank">ProteusThemes Shop</a>, you should have received an email with the list of themes you have access to. You can click on the theme link with file name ending: <b>-installable.zip</b> or you can <a href="https://www.proteusthemes.com/account/" target="_blank">login to your account</a>, click on <b>View Details and Downloads</b> and download the installable zip file from there.
+	</p>
+	<p>
+		If you bought the theme on ThemeForest, then you have to download the <i>installable WordPress files only</i> zip file from the <a href="https://themeforest.net/downloads" target="_blank">ThemeForest download section</a>.
+	</p>
+	<p>
+		<b>Install the theme</b><br>
+		You can install the {{general.themeName}} Theme in two different ways:
+	</p>
+	<ol>
+		<li><strong>Upload a zip file</strong><i> - preferred method</i><br>
+			When you are logged in your WordPress dashboard go to <i>Appearance » Themes » Add New » Upload Theme</i> and select the zip file <code>{{general.theme}}-pt.zip</code> you downloaded from our Shop or from the ThemeForest and click <b>Install Now</b> button.
+		</li>
+		<li><strong>FTP upload</strong><br>
+			Unzip the contents of the <code>{{general.theme}}-pt.zip</code> file and upload the folder named <code>{{general.theme}}-pt</code> to your server to <code>wp-uploads/themes/</code> folder using a FTP client.
+		</li>
+	</ol>
+	<p>
+		Once your theme is on the server, activate it by clicking the <b>Activate</b> button below the preview image in <i>Appearance » Themes</i>
+	</p>
+	<img class="aligncenter" src="images/activate-theme.png" alt="Activate {{general.themeName}}">
+	<p>
+		Congratulations! Now the {{general.themeName}} Theme is installed.
+	</p>
+	<div class="warning">
+		You still need to install/activate the required and recommended plugins - you can do this by visiting <b>Appearance » Install Plugins</b> inside wp-admin.
+	</div>
+
+	{{!-- After Installation --}}
+	{{> after-installation}}
+
+	<h3 id="updates">Updates</h3>
+	<p>
+	<b>I bought my theme on ProteusThemes shop.</b><br>
+		If you bought the theme on our <a href="https://www.proteusthemes.com/" target="_blank">ProteusThemes Shop</a>, you can register the theme and receive automatic updates. Go to <i>Appearance » Theme Registration</i> and follow the instructions on that page. This will register your copy of the theme and you will get update notifications in the admin dashboard, whenever an update is available.
+	</p>
+	<p>
+		<i>How do you get the license key?</i> - <a href="https://www.proteusthemes.com/account/" target="_blank">Login to your account</a> and click on <b>View Details and Downloads</b>, there is a section called "License Keys:" and you can copy the appropriate license key for your theme.
+	</p>
+	<b>I bought my theme on ThemeForest.</b>
+	<ul>
+		<li>you can setup the <strong>automatic Envato ThemeForest theme updates</strong>: <a href="https://support.proteusthemes.com/hc/en-us/articles/207480409-How-to-setup-automatic-theme-updates-with-Envato-Market-plugin-" target="_blank">please follow these steps to do so</a>, or</li>
+		<li>you can update the theme <strong>manually</strong>: <a href="https://support.proteusthemes.com/hc/en-us/articles/200391361-How-do-I-manually-update-the-WordPress-theme-to-the-newer-version-" target="_blank">here are the steps on how to do that.</a></li>
+	</ul>
+
+	{{!-- Theme Customization --}}
+	{{> theme-customization}}
+
+</section>
