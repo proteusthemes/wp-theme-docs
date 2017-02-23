@@ -53,8 +53,6 @@ items:
     subitems:
     - link: contact-form-7
       name: Contact Form 7
-    - link: woocommerce
-      name: WooCommerce
     - link: breadcrumbs
       name: Breadcrumbs NavXT
   - link: footer
@@ -62,8 +60,6 @@ items:
     subitems:
     - link: footer-widgets
       name: Footer Widgets
-    - link: middle-footer
-      name: Middle Footer
     - link: bottom-footer
       name: Bottom Footer
   - link: translations
