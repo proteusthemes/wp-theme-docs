@@ -49,6 +49,8 @@ items:
   - link: plugins
     name: Plugins
     subitems:
+    - link: caldera-forms
+      name: Caldera Forms
     - link: contact-form-7
       name: Contact Form 7
     - link: breadcrumbs
