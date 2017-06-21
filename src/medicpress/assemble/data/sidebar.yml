@@ -51,8 +51,6 @@ items:
   - link: plugins
     name: Plugins
     subitems:
-    - link: wpforms
-      name: WPForms
     - link: contact-form-7
       name: Contact Form 7
     - link: breadcrumbs
