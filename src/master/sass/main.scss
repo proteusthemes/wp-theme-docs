@@ -93,6 +93,7 @@ body {
 
 a {
 	color: $primary-color;
+	text-decoration: underline;
 
 	&:hover {
 		color: darken($primary-color, 5);
