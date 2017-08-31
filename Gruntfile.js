@@ -144,7 +144,7 @@ module.exports = function(grunt) {
 			prepThemeImagesToBuildThemeImages: {
 				files: [{
 					cwd:    config.prepFolder + '/<%= theme %>/images',
-					src:    '**/*.{png,gif,jpg,jpeg,ico}',
+					src:    '**/*.{png,gif,jpg,jpeg,ico,svg}',
 					dest:   config.buildFolder + '/<%= theme %>/images',
 					expand: true,
 				}]

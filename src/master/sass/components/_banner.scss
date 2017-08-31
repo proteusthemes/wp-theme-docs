@@ -1,0 +1,75 @@
+/* Banner above header */
+.banner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #54a263;
+	color: #ffffff;
+	min-height: 75px;
+	padding: 15px;
+
+	@media (min-width: $screen-md-min) {
+		position: fixed;
+		flex-direction: row;
+		padding: 0;
+		width: 100%;
+		z-index: 10;
+	}
+
+	&__text {
+		margin-bottom: 0;
+		text-align: center;
+		text-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+
+		+ .banner__button {
+			@media (min-width: $screen-md-min) {
+				margin-left: 50px;
+			}
+		}
+	}
+
+	&__smudge {
+		position: relative;
+		margin-left: 5px;
+		z-index: 10;
+
+		&::before {
+			position: absolute;
+			content: '';
+			background-image: image-url('smudge.svg');
+			width: 150px;
+			height: 40px;
+			left: -4px;
+			top: -9px;
+			z-index: -1;
+		}
+	}
+
+	&__button {
+		font-size: 16px;
+		font-weight: bold;
+		background-color: #ffffff;
+		color: #57ad68;
+		padding: 14px 30px;
+		margin-top: 15px;
+		box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+
+		@media (min-width: $screen-md-min) {
+			margin-top: 0;
+		}
+
+		img {
+			margin-left: 8px;
+		}
+
+		&:focus,
+		&:hover {
+			background-color: #eeeeee;
+			color: #57ad68;
+			box-shadow: 0 3px 10px rgba(0, 0, 0, .5);
+		}
+	}
+}

@@ -282,7 +282,7 @@ figcaption {
 	padding: 0 30px;
 
 	@media (min-width: $screen-md-min) {
-		padding: 0 60px;
+		padding: 75px 60px 0;
 	}
 
 	&::after {
@@ -319,6 +319,7 @@ figcaption {
 @import "components/meta";
 @import "components/sidebar";
 @import "components/affix";
+@import "components/banner";
 
 /*------------------------------------*\
 		The End :)

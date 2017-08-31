@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.03" height="7" viewBox="0 0 15.03 7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #57ad68;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="fa-long-arrow-right_copy" data-name="fa-long-arrow-right copy" class="cls-1" d="M1325.93,36.256l-3.33-3.2a0.28,0.28,0,0,0-.31-0.046,0.262,0.262,0,0,0-.16.265v2.049h-10.84a0.262,0.262,0,0,0-.2.082,0.3,0.3,0,0,0-.08.21v1.756a0.3,0.3,0,0,0,.08.21,0.262,0.262,0,0,0,.2.082h10.84v2.049a0.276,0.276,0,0,0,.47.21l3.33-3.238a0.3,0.3,0,0,0,.09-0.219,0.292,0.292,0,0,0-.09-0.21h0Z" transform="translate(-1311 -33)"/>
+</svg>
