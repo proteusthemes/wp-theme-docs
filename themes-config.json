@@ -138,6 +138,14 @@
 			"tfurl": "https://www.proteusthemes.com/wordpress-themes/gympress/",
 			"themeheadertext": "GymPress is a great WordPress theme for business with focus on sports. It's perfect for a Gym, Fitness or Personal Trainer, but it's also very flexible, so it can be used for other niche sites.",
 			"shutterstockurl": "http://www.shutterstock.com"
+		},
+		{
+			"name": "growthpress",
+			"themename": "GrowthPress",
+			"creationdate": "September 26, 2017",
+			"tfurl": "https://www.proteusthemes.com/wordpress-themes/growthpress/",
+			"themeheadertext": "TODO",
+			"shutterstockurl": "http://www.shutterstock.com"
 		}
 	]
 }
