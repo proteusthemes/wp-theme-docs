@@ -51,10 +51,12 @@ items:
     subitems:
     - link: contact-form-7
       name: Contact Form 7
-    - link: breadcrumbs
-      name: Breadcrumbs NavXT
     - link: woocommerce
       name: WooCommerce
+    - link: breadcrumbs
+      name: Breadcrumbs NavXT
+    - link: smart-search-plugin
+      name: Smart Search
   - link: footer
     name: Footer
     subitems:
