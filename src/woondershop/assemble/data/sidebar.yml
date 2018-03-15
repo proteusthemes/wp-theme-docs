@@ -6,6 +6,8 @@ items:
       name: Few Words on Start
     - link: installation
       name: Installation
+    - link: theme-onboarding-wizard
+      name: Onboarding Wizard
     - link: updates
       name: Updates
     - link: customize-the-appearance
