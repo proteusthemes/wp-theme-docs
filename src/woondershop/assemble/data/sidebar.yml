@@ -59,6 +59,8 @@ items:
       name: Breadcrumbs NavXT
     - link: smart-search-plugin
       name: Smart Search
+    - link: woocommerce-product-filter
+      name: WooCommerce Product Filters
   - link: footer
     name: Footer
     subitems:
