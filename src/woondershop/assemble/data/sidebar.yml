@@ -26,8 +26,8 @@ items:
       name: Logo & Favicon
     - link: main-menu
       name: Main Menu
-    - link: special-dropdown-menu
-      name: Special Dropdown Menu
+    - link: main-menu-mega-menu
+      name: Mega Menu
   - link: pages
     name: Pages
     subitems:
