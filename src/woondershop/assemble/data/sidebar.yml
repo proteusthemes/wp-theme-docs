@@ -28,6 +28,10 @@ items:
       name: Main Menu
     - link: main-menu-mega-menu
       name: Mega Menu
+    - link: benefit-bar-widget-area
+      name: Benefit Bar Widget Area
+    - link: mobile-product-filter
+      name: Mobile Products Filter
   - link: pages
     name: Pages
     subitems:

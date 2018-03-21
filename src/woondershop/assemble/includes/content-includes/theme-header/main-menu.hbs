@@ -49,3 +49,29 @@
 <p>
 	There are also settings on when to display this Benefit Bar widget area in <b>wp-admin » Appearance » Customize » Theme options » Header</b> (show/hide/hide on mobile and display on front page only).
 </p>
+
+<h3 id="mobile-product-filter">Mobile Products Filter</h3>
+<p>
+	In order for the mobile product filter button to appear underneath the header area on WooCommerce products pages, you will need to wrap the <a href="#woocommerce-product-filter">products filter shortcode</a> in a div with a specific class: <code>mobile-filter</code>. Go to <b>wp-admin » Appearance » Widgets</b>, open the <b>Shop Sidebar</b> and place a Text widget into the sidebar. In the text widget, click on the <b>Text</b> tab and paste this code in it:
+</p>
+
+<pre>&#x3C;div class=&#x22;mobile-filter&#x22;&#x3E;[searchandfilter id=&#x22;shop_sidebar&#x22;]&#x3C;/div&#x3E;</pre>
+
+<p>
+	Don't forget to change the <a href="#woocommerce-product-filter">products filter shortcode</a> to the one you are using.
+</p>
+
+<p>
+	The code should look like this:
+	<img class="aligncenter" src="images/products-filter-widget-setup.png" alt="Mobile products filter widget setup">
+</p>
+
+<p>
+	The mobile filter button looks like this:
+	<img class="aligncenter" src="images/products-filter-frontend-button.png" alt="Mobile products filter frontend button">
+</p>
+
+<p>
+	The mobile filter will look like this:
+	<img class="aligncenter" src="images/products-filter-frontend.png" alt="Mobile products filter frontend">
+</p>
