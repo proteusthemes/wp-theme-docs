@@ -54,6 +54,8 @@ items:
       name: Icons - Font Awesome
     - link: urgency-countdown-shortcode
       name: Urgency Countdown
+    - link: time-left-shortcode
+      name: Time Left
   - link: plugins
     name: Plugins
     subitems:
