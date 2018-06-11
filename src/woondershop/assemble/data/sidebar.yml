@@ -52,6 +52,8 @@ items:
       name: Buttons
     - link: icons-font-awesome
       name: Icons - Font Awesome
+    - link: custom-icons
+      name: WoonderShop Custom Icons
     - link: urgency-countdown-shortcode
       name: Urgency Countdown
     - link: time-left-shortcode
