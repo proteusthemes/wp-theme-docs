@@ -5,7 +5,7 @@ module.exports = function (grunt) {
   // require('load-grunt-tasks')(grunt);
   require("load-grunt-tasks")(grunt, { pattern: ["grunt-*", "assemble"] });
 
-	const sass = require('node-sass');
+	const sass = require('sass');
 
   var _ = {
     find: require("lodash.find"),
