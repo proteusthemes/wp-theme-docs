@@ -5,6 +5,8 @@ module.exports = function (grunt) {
   // require('load-grunt-tasks')(grunt);
   require("load-grunt-tasks")(grunt, { pattern: ["grunt-*", "assemble"] });
 
+	const sass = require('node-sass');
+
   var _ = {
     find: require("lodash.find"),
   };
@@ -33,6 +35,30 @@ module.exports = function (grunt) {
             src: ["*.hbs"],
             dest: "build/<%= theme %>/",
             expand: true,
+          },
+        ],
+      },
+    },
+
+    // https://github.com/sindresorhus/grunt-sass
+    sass: {
+      options: {
+        outputStyle: "expanded",
+        sourceMap: true,
+        includePaths: [
+          "bower_components/bootstrap/scss",
+          "bower_components/bootstrap-sass-official/assets/stylesheets",
+        ],
+        implementation: sass,
+      },
+      build: {
+        files: [
+          {
+            expand: true,
+            cwd: "assets/sass/",
+            src: "*.scss",
+            ext: ".css",
+            dest: config.tmpdir,
           },
         ],
       },
@@ -235,7 +261,8 @@ module.exports = function (grunt) {
           "copy",
           "replace:modifyDate",
           "assemble:build",
-          "compass:build",
+          "sass:build",
+          // "compass:build",
           "autoprefixer:build",
           "requirejs:build",
           "useminPrepare",
