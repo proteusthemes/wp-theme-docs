@@ -69,38 +69,6 @@ module.exports = function (grunt) {
       },
     },
 
-    // Compass convert .scss to .css.
-    // https://github.com/gruntjs/grunt-contrib-compass
-    compass: {
-      build: {
-        options: {
-          sassDir: config.prepFolder + "/<%= theme %>/sass",
-          javascriptsDir: config.prepFolder + "/<%= theme %>/scripts",
-          imagesDir: config.buildFolder + "/<%= theme %>/images",
-          cssDir: config.buildFolder + "/<%= theme %>/stylesheets",
-          importPath: [
-            config.prepFolder +
-              "/<%= theme %>/bower_components/bootstrap-sass-official/assets/stylesheets",
-          ],
-          environment: "production",
-          outputStyle: "nested",
-          noLineComments: true,
-          relativeAssets: true,
-          watch: false,
-          debugInfo: false,
-        },
-        files: [
-          {
-            cwd: config.prepFolder + "/<%= theme %>/sass/",
-            src: "{,*/}*.scss",
-            dest: config.buildFolder + "/<%= theme %>/stylesheets",
-            ext: ".css",
-            expand: true,
-          },
-        ],
-      },
-    },
-
     // Parse CSS and add vendor-prefixed CSS properties using the Can I Use database. Based on Autoprefixer.
     // https://github.com/nDmitry/grunt-autoprefixer
     autoprefixer: {
@@ -267,7 +235,6 @@ module.exports = function (grunt) {
           "replace:modifyDate",
           "assemble:build",
           "sass:build",
-          // "compass:build",
           "autoprefixer:build",
           "requirejs:build",
           "useminPrepare",
