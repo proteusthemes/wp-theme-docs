@@ -17,14 +17,14 @@
     "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-concat": "^2.1.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-cssmin": "^5.0.0",
     "grunt-contrib-requirejs": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-rev": "^0.1.0",
     "grunt-sass": "^3.1.0",
     "grunt-text-replace": "^0.4.0",
     "grunt-usemin": "^3.1.1",
-    "load-grunt-tasks": "^3.5.2",
+    "load-grunt-tasks": "^5.1.0",
     "lodash.find": "^4.6.0",
     "sass": "^1.72.0"
   }
