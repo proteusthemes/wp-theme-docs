@@ -5,7 +5,7 @@ module.exports = function (grunt) {
   // require('load-grunt-tasks')(grunt);
   require("load-grunt-tasks")(grunt, { pattern: ["grunt-*", "assemble"] });
 
-	const sass = require('sass');
+  const sass = require("sass");
 
   var _ = {
     find: require("lodash.find"),
@@ -45,20 +45,25 @@ module.exports = function (grunt) {
       options: {
         outputStyle: "expanded",
         sourceMap: true,
+        importPath: [
+          config.prepFolder +
+            "/<%= theme %>/bower_components/bootstrap-sass-official/assets/stylesheets",
+        ],
         includePaths: [
-          "bower_components/bootstrap/scss",
-          "bower_components/bootstrap-sass-official/assets/stylesheets",
+          config.prepFolder + "/<%= theme %>/bower_components/bootstrap/scss",
+          config.prepFolder +
+            "/<%= theme %>/bower_components/bootstrap-sass-official/assets/stylesheets",
         ],
         implementation: sass,
       },
       build: {
         files: [
           {
+            cwd: config.prepFolder + "/<%= theme %>/sass/",
             expand: true,
-            cwd: "assets/sass/",
-            src: "*.scss",
+            src: "**/*.scss",
+            dest: config.buildFolder + "/<%= theme %>/stylesheets",
             ext: ".css",
-            dest: config.tmpdir,
           },
         ],
       },
