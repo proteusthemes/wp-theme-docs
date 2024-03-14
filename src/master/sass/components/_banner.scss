@@ -39,7 +39,7 @@
 		&::before {
 			position: absolute;
 			content: '';
-			background-image: image-url('smudge.svg');
+			background-image: url('../images/smudge.svg');
 			width: 150px;
 			height: 40px;
 			left: -4px;

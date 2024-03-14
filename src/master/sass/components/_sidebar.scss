@@ -62,7 +62,7 @@
 	.active {
 		> a {
 			@media (min-width: $screen-md-min) {
-				background-image: image-url("header-pattern.png");
+				background-image: url("../images/header-pattern.png");
 				color: #ffffff;
 			}
 
