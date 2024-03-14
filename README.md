@@ -1,7 +1,8 @@
-Documentation for all newer ProteusThemes WordPress themes.
-===========================================================
+Documentation for all newer ProteusThemes WordPress themes
+==========================================================
 
 In this repository you will find the source code for our newer WP theme documentations:
+
 * BuildPress
 * MentalPress
 * CargoPress
@@ -48,14 +49,14 @@ How do I create a new theme documentation?
 
 In the root of this repos folder, there is a `themes-config.json` file which holds settings for each theme. All you have to do is make a new entry, by copying an existing theme settings and changing them. For example here is the entry for BuildPress:
 
-```
+```json
 {
-	"name": "buildpress",
-	"themename": "BuildPress",
-	"creationdate": "November 4, 2014",
-	"tfurl": "http://themeforest.net/item/buildpress-construction-business-wp-theme/9323981?ref=ProteusThemes",
-	"themeheadertext": "BuildPress is a premium WordPress Theme for any kind of construction businesses and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use with one click demo content import. Available only on ThemeForest!",
-	"shutterstockurl": "http://goo.gl/zrhmwE"
+    "name": "buildpress",
+    "themename": "BuildPress",
+    "creationdate": "November 4, 2014",
+    "tfurl": "http://themeforest.net/item/buildpress-construction-business-wp-theme/9323981?ref=ProteusThemes",
+    "themeheadertext": "BuildPress is a premium WordPress Theme for any kind of construction businesses and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use with one click demo content import. Available only on ThemeForest!",
+    "shutterstockurl": "http://goo.gl/zrhmwE"
 }
 ```
 
@@ -64,9 +65,9 @@ The only other thing is to create a folder with theme name in the `src` folder (
 Now you can start copying files in the new folder to overwrite the master files. Keep in mind that the folder structure has to stay the same as in the master folder.
 
 Some files that you will most certainly have to overwrite are:
+
 * `src/theme_name_goes_here/assemble/includes/content-includes/general/intro-text.hbs`,
 * `src/theme_name_goes_here/images/activate-theme.png`,
 * `src/theme_name_goes_here/images/customize-theme.png`,
 * `src/theme_name_goes_here/images/header-cover.jpg`,
 * `src/theme_name_goes_here/sass/_vars.scss` (change the `$primary-color` color).
-
