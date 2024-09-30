@@ -9,7 +9,7 @@
     "url": "git@github.com:proteusthemes/wp-theme-docs.git"
   },
   "devDependencies": {
-    "assemble": "^0.4.42",
+    "assemble": "^0.24.3",
     "coffeescript": "^2.7.0",
     "grunt": "^1.6.1",
     "grunt-autoprefixer": "^3.0.4",
@@ -26,6 +26,6 @@
     "grunt-usemin": "^3.1.1",
     "load-grunt-tasks": "^5.1.0",
     "lodash.find": "^4.6.0",
-    "sass": "^1.72.0"
+    "sass": "^1.79.4"
   }
 }
