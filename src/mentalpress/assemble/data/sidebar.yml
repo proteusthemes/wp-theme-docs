@@ -1,6 +1,6 @@
 items:
   - link: general-and-installation
-    name: General & Installation
+    name: Introduction & Installation
     subitems:
     - link: few-words-on-start
       name: Introduction
