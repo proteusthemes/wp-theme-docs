@@ -4,10 +4,20 @@ This repository is for per-theme documentation for our themes.
 
 ## Installation
 
-1. Clone this repository to your local dev environment.
-2. run `bower install`.
-3. run `npm install`.
-4. run `grunt buildAllThemes`.
+Clone this repository on your machine and run the following (you may already have `bower` and `grunt`, in which case skip those steps):
+
+```sh
+npm install -g bower
+npm install -g grunt-cli
+
+npm install -D coffeescript
+
+bower install
+npm install
+
+grunt buildAllThemes
+```
+
 
 That’s it!
 
