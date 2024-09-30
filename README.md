@@ -1,53 +1,37 @@
-Documentation for all newer ProteusThemes WordPress themes
-==========================================================
+# Documentation for ProteusThemes’ WordPress themes
 
-In this repository you will find the source code for our newer WP theme documentations:
+This repository is for per-theme documentation for our themes.
 
-* BuildPress
-* MentalPress
-* CargoPress
-* LegalPress
-* RepairPress
-* StructurePress
-* Beauty
-* Auto
-* Bolts
-* and all other themes that will follow
+## Installation
 
-_________________________________________________
-
-Installation
-------------
-
-1. Clone/pull this repository to your local dev environment,
-2. run `bower install`,
+1. Clone this repository to your local dev environment.
+2. run `bower install`.
 3. run `npm install`.
-4. run `grunt buildAllThemes`
+4. run `grunt buildAllThemes`.
 
-That's it!
+That’s it!
 
 The index files of the theme docs will be located in `/build/theme_name_goes_here/index.html`.
 
-How does it work?
-------------------------------
+## How it works
 
 All source files are in the `src` folder. In the `src` folder, there is a `master` folder, which contains a "default/boilerplate" documentation, from which you can then overwrite specific things in the single theme documentation. Single theme documentation overwrites are located in the `src/theme_name_goes_here` folders.
 
 When you build these theme documentations, two new folders will appear in the root folder, called `prep` and `build`. `prep` folder is a middle stage folder, where everything gets prepared for the actual build process. `build` folder will hold the final **index.html** files for each theme. More on how to build these docs, can be found below.
 
-How to edit a theme documentation?
----------------------------------
+## How to edit documentation for a theme
 
 It depends. Do you have to edit something in all theme documentations, or just in a single theme?
 
-If you have to edit for all themes, then you should edit the code in `src/master`. And then build all theme docs with `grunt buildAllThemes`. If some themes have overwritten that section you just edited in master, then you have to edit those files in the specific theme doc as well.
+If you have to edit for all themes, then you should edit the code in `src/master` and then build all theme docs with `grunt buildAllThemes`.
+
+If some themes have overridden the section in `src/master`, then you have to edit those files in the specific theme doc as well.
 
 If you want to edit something just for a specific theme, then you have to overwrite the `master` file (copy the file you want to edit from `src/master` to the theme folder, keeping the folder hierarchy as it was in master) or just check in the theme folder, if this file is already there. When you are done, you should build the single theme with `grunt buildSingleTheme:theme_name_goes_here`.
 
-How do I create a new theme documentation?
-------------------------------------------
+## How to create documentation for a new theme
 
-In the root of this repos folder, there is a `themes-config.json` file which holds settings for each theme. All you have to do is make a new entry, by copying an existing theme settings and changing them. For example here is the entry for BuildPress:
+In the root of this repos folder, there is a `themes-config.json` file which holds settings for each theme. All you have to do is make a new entry by copying an existing theme settings and changing them. For example here is the entry for BuildPress:
 
 ```json
 {
@@ -56,7 +40,7 @@ In the root of this repos folder, there is a `themes-config.json` file which hol
     "creationdate": "November 4, 2014",
     "tfurl": "http://themeforest.net/item/buildpress-construction-business-wp-theme/9323981?ref=ProteusThemes",
     "themeheadertext": "BuildPress is a premium WordPress Theme for any kind of construction businesses and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use with one click demo content import. Available only on ThemeForest!",
-    "shutterstockurl": "http://goo.gl/zrhmwE"
+    "shutterstockurl": "https://www.shutterstock.com/"
 }
 ```
 
