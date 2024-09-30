@@ -40,7 +40,7 @@ In the root of this repos folder, there is a `themes-config.json` file which hol
     "creationdate": "November 4, 2014",
     "tfurl": "http://themeforest.net/item/buildpress-construction-business-wp-theme/9323981?ref=ProteusThemes",
     "themeheadertext": "BuildPress is a premium WordPress Theme for any kind of construction businesses and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use with one click demo content import. Available only on ThemeForest!",
-    "shutterstockurl": "http://goo.gl/zrhmwE"
+    "shutterstockurl": "https://www.shutterstock.com/"
 }
 ```
 
