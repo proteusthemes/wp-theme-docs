@@ -3,7 +3,7 @@ items:
     name: General & Installation
     subitems:
     - link: few-words-on-start
-      name: Few Words on Start
+      name: Introduction
     - link: installation
       name: Installation
     - link: theme-onboarding-wizard
