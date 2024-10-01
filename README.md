@@ -10,8 +10,6 @@ Clone this repository on your machine and run the following (you may already hav
 npm install -g bower
 npm install -g grunt-cli
 
-npm install -D coffeescript
-
 bower install
 npm install
 
