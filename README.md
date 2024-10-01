@@ -16,7 +16,6 @@ npm install
 grunt buildAllThemes
 ```
 
-
 That’s it!
 
 The index files of the theme docs will be located in `/build/theme_name_goes_here/index.html`.
