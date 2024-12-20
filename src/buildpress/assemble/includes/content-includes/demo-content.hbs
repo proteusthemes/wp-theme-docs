@@ -82,12 +82,30 @@ theme: <%= theme %>
 	<p>
 		Install and activate the <a href="https://wordpress.org/plugins/customizer-export-import/" target="_blank">Customizer Export/Import</a>. Go to <kbd>Appearance » Customize » Export/Import</kbd> and import the file. Also check the <kbd>Download and import image files?</kbd> checkbox to import pattern images.
 	</p>
+
+	<h4>Disabling the page builder you didn’t use</h4>
+	<p>
+		Because Elementor and SiteOrigin Page Builder conflict with each other somewhat, you should disable the plugin for the page builder you didn’t use.
+	</p>
+	<p>
+		If you ran One Click Demo Import with a SiteOrigin Page Builder version, go to <kbd>wp-admin » Plugins</kbd> and:
+	</p>
+	<ul>
+		<li>Deactivate the <samp>Elementor</samp> plugin.</li>
+		<li>Deactivate the <samp>Ultimate Addons for Elementor</samp> plugin.</li>
+	</ul>
+	<p>
+		If you ran One Click Demo Import with an Elementor version, go to <kbd>wp-admin » Plugins</kbd> and:
+	</p>
+	<ul>
+		<li>Deactivate the <samp>Page Builder by SiteOrigin</samp> plugin.</li>
+	</ul>
+	
 	<h4>After import setup</h4>
 	<p>
 		After you have imported the demo data, widgets and customizer settings, you should also set these things up:
-		{{!-- After Import setup --}}
-		{{> after-import-setup}}
 	</p>
+	{{> after-import-setup}}
 	<p>
 		If, for some reason, these URLs are not available and you downloaded the theme from ThemeForest, you may want to download the <kbd>All files &amp; documentation</kbd> zip from ThemeForest and you will find these files in the <samp>extras</samp> folder.
 	</p>
