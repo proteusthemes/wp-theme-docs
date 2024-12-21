@@ -5,61 +5,109 @@ theme: <%= theme %>
 	<h2 id="demo-content">Demo Content</h2>
 	<h3 id="one-click-demo-install">One Click Demo Install</h3>
 	<p>
-		You can import demo content from our demo site (with blurred licensed images) with a single click of a button. Go to <i>wp-admin » Appearance » Import Demo Data</i>, here you have to select which demo data you want to import! You can choose from our 4 demo pages:
-		<ul>
-			<li>BuildPress Classic</li>
-			<li>BuildPress Light</li>
-			<li>BuildPress Landscape</li>
-			<li>BuildPress RTL</li>
-		</ul>
-
-		Once you select which demo data you want to import, just click on the <strong>Import</strong> button.
+		You can import demo content from our demo site (with blurred licensed images) in two clicks.
 	</p>
-	<img src="images/one-click-demo-import.jpg" alt="One Click Demo Import" width="940" height="505">
 	<div class="warning">
 		Don't forget to activate all required plugins before importing demo data.
 	</div>
-	<h3 id="import-xml-file">Import XML File</h3>
+	<p>
+		Go to <kbd>wp-admin » Appearance » Import Demo Data</kbd>. Here, you can select which demo data you want to import. First, choose from one of our four demo pages:
+	</p>
+	<ul>
+		<li>BuildPress Classic</li>
+		<li>BuildPress Light</li>
+		<li>BuildPress Landscape</li>
+		<li>BuildPress RTL</li>
+	</ul>
+	<p>Then, choose whether you want to import the SiteOrigin or Elementor version.</p>
+	<p>
+		Finally, click on the <kbd>Import</kbd> button to begin the import process. Your site should be ready after a few minutes.
+	</p>
+	<img src="images/one-click-demo-import.jpg" alt="The “Import Demo Data” page" width="940" height="505">
 
+	<h3 id="import-xml-file">Import XML File</h3>
 	<p>
 		If you want to import the demo content the old-fashioned way, you can get a fresh copy of the <strong>XML files</strong> on our server at these URLs:
-		<ul>
-			<li>BuildPress Classic: <a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-latest.xml">https://artifacts.proteusthemes.com/xml-exports/buildpress-latest.xml</a></li>
-			<li>BuildPress Light: <a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-light-latest.xml">https://artifacts.proteusthemes.com/xml-exports/buildpress-light-latest.xml</a></li>
-			<li>BuildPress Landscape: <a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-landscape-latest.xml">https://artifacts.proteusthemes.com/xml-exports/buildpress-landscape-latest.xml</a></li>
-			<li>BuildPress RTL: <a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-rtl-latest.xml">https://artifacts.proteusthemes.com/xml-exports/buildpress-rtl-latest.xml</a></li>
-		</ul>
+	</p>
+	<ul>
+		<li><a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-latest.xml">BuildPress Classic SiteOrigin</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-light-latest.xml">BuildPress Light SiteOrigin</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-landscape-latest.xml">BuildPress Landscape SiteOrigin</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-rtl-latest.xml">BuildPress RTL SiteOrigin</a></li>
+	</ul>
+	<ul>
+		<li><a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-elementor-latest.xml">BuildPress Classic Elementor</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-light-elementor-latest.xml">BuildPress Light Elementor</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-landscape-elementor-latest.xml">BuildPress Landscape Elementor</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/xml-exports/buildpress-rtl-elementor-latest.xml">BuildPress RTL Elementor</a></li>
+	</ul>
+	<p>
+		Don’t forget to activate all required plugins before importing demo data. To import the demo data go to <kbd>Tools » Import</kbd>, click on <kbd>WordPress</kbd> (install the <strong>WordPress Importer</strong> plugin if not already installed) and upload/import the previously saved xml file. Don’t forget to check the <kbd>Download and import file attachments</kbd> checkbox to also import the images.
+	</p>
+	<h4>Demo Widgets</h4>
+	<p>
+		After you import the demo content, you can also import widgets the old-fashioned way. The files for widget import are also located on our server:
+	</p>
+	<ul>
+		<li><a href="https://artifacts.proteusthemes.com/json-widgets/buildpress.json">BuildPress Classic SiteOrigin Widgets</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-light.json">BuildPress Light SiteOrigin Widgets</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-landscape.json">BuildPress Landscape SiteOrigin Widgets</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-rtl.json">BuildPress RTL SiteOrigin Widgets</a></li>
+	</ul>
+	<ul>
+		<li><a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-elementor.json">BuildPress Classic Elementor Widgets</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-light-elementor.json">BuildPress Light Elementor Widgets</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-landscape-elementor.json">BuildPress Landscape Elementor Widgets</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-rtl-elementor.json">BuildPress RTL Elementor Widgets</a></li>
+	</ul>
+	<p>
+		Rename this file to <code>widgets.wie</code> (note the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <kbd>Tools » Widget Import/Export</kbd> and import the file.
+	</p>
+	<h4>Customizer Settings</h4>
+	<p>
+		The last thing you have to import are the customizer settings. The files for that can also be found on our server:
+	</p>
+	<ul>
+		<li><a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress.dat">BuildPress Classic Customizer Settings</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-light.dat">BuildPress Light Customizer Settings</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-landscape.dat">BuildPress Landscape Customizer Settings</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-rtl.dat">BuildPress RTL Customizer Settings</a></li>
+	</ul>
+	<ul>
+		<li><a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-elementor.dat">BuildPress Classic Elementor Customizer Settings</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-light-elementor.dat">BuildPress Light Elementor Customizer Settings</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-landscape-elementor.dat">BuildPress Landscape Elementor Customizer Settings</a></li>
+		<li><a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-rtl-elementor.dat">BuildPress RTL Elementor Customizer Settings</a></li>
+	</ul>
+	<p>
+		Install and activate the <a href="https://wordpress.org/plugins/customizer-export-import/" target="_blank">Customizer Export/Import</a>. Go to <kbd>Appearance » Customize » Export/Import</kbd> and import the file. Also check the <kbd>Download and import image files?</kbd> checkbox to import pattern images.
+	</p>
+
+	<h4>Disabling the page builder you didn’t use</h4>
+	<p>
+		Because Elementor and SiteOrigin Page Builder conflict with each other somewhat, you should disable the plugin for the page builder you didn’t use.
 	</p>
 	<p>
-		Don't forget to activate all required plugins before importing demo data. To import the demo data go to <i>Tools » Import</i>, click on <i>WordPress</i> (install the <strong>WordPress Importer</strong> plugin if not already installed) and upload/import the previously saved xml file (don't forget to enable the <i>Download and import file attachments</i> checkbox to also import the images).
+		If you ran One Click Demo Import with a SiteOrigin Page Builder version, go to <kbd>wp-admin » Plugins</kbd> and:
 	</p>
+	<ul>
+		<li>Deactivate the <samp>Elementor</samp> plugin.</li>
+		<li>Deactivate the <samp>Ultimate Addons for Elementor</samp> plugin.</li>
+	</ul>
 	<p>
-		<b>Demo Widgets</b><br>After you import the demo content, you can also import widgets the old-fashioned way. The files for widget import are also located on our server:
-		<ul>
-			<li>BuildPress Classic: <a href="https://artifacts.proteusthemes.com/json-widgets/buildpress.json">https://artifacts.proteusthemes.com/json-widgets/buildpress.json</a></li>
-			<li>BuildPress Light: <a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-light.json">https://artifacts.proteusthemes.com/json-widgets/buildpress-light.json</a></li>
-			<li>BuildPress Landscape: <a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-landscape.json">https://artifacts.proteusthemes.com/json-widgets/buildpress-landscape.json</a></li>
-			<li>BuildPress RTL: <a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-rtl.json">https://artifacts.proteusthemes.com/json-widgets/buildpress-rtl.json</a></li>
-		</ul>
-		Rename this file to <code>widgets.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <i>Tools » Widget Import/Export</i> and import the file.
+		If you ran One Click Demo Import with an Elementor version, go to <kbd>wp-admin » Plugins</kbd> and:
 	</p>
+	<ul>
+		<li>Deactivate the <samp>Page Builder by SiteOrigin</samp> plugin.</li>
+	</ul>
+	
+	<h4>After import setup</h4>
 	<p>
-		<b>Customizer settings</b><br>The last thing you have to import are the customizer settings. The files for that can also be found on our server:
-		<ul>
-			<li>BuildPress Classic: <a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress.dat">https://artifacts.proteusthemes.com/customizer-exports/buildpress.dat</a></li>
-			<li>BuildPress Light: <a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-light.dat">https://artifacts.proteusthemes.com/customizer-exports/buildpress-light.dat</a></li>
-			<li>BuildPress Landscape: <a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-landscape.dat">https://artifacts.proteusthemes.com/customizer-exports/buildpress-landscape.dat</a></li>
-			<li>BuildPress RTL: <a href="https://artifacts.proteusthemes.com/customizer-exports/buildpress-rtl.dat">https://artifacts.proteusthemes.com/customizer-exports/buildpress-rtl.dat</a></li>
-		</ul>
-		Install and activate the <a href="https://wordpress.org/plugins/customizer-export-import/" target="_blank">Customizer Export/Import</a>. Go to <i>Appearance » Customize » Export/Import</i> and import the file (also enable the <i>Download and import image files?</i> checkbox, to import pattern images).
+		After you have imported the demo data, widgets and customizer settings, you should also set these things up:
 	</p>
+	{{> after-import-setup}}
 	<p>
-		<b>After import setup</b><br>After you have imported the demo data, widgets and customizer settings, you should also setup these things:
-		{{!-- After Import setup --}}
-		{{> after-import-setup}}
-	</p>
-	<p>
-		If for some reason these URLs are not available, then all you need to do is download the <strong>All files & documentation</strong> zip from ThemeForest and you will find these files in the <strong>extras</strong> folder.
+		If, for some reason, these URLs are not available and you downloaded the theme from ThemeForest, you may want to download the <kbd>All files &amp; documentation</kbd> zip from ThemeForest and you will find these files in the <samp>extras</samp> folder.
 	</p>
 	<div class="warning">
 		Don't forget to activate all required plugins before importing demo data.
