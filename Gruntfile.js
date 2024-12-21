@@ -65,21 +65,6 @@ module.exports = function (grunt) {
       },
     },
 
-    // Parse CSS and add vendor-prefixed CSS properties using the Can I Use database. Based on Autoprefixer.
-    // https://github.com/nDmitry/grunt-autoprefixer
-    autoprefixer: {
-      build: {
-        files: [
-          {
-            cwd: config.buildFolder + "/<%= theme %>/stylesheets/",
-            src: "*.css",
-            dest: config.buildFolder + "/<%= theme %>/stylesheets",
-            expand: true,
-          },
-        ],
-      },
-    },
-
     // RequireJS - build main js file.
     // https://github.com/gruntjs/grunt-contrib-requirejs
     requirejs: {
@@ -229,7 +214,6 @@ module.exports = function (grunt) {
           "replace:modifyDate",
           "assemble:build",
           "sass:build",
-          "autoprefixer:build",
           "requirejs:build",
           "useminPrepare",
           "concat", // Automatically configured by usemin.
