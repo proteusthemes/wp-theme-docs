@@ -84,6 +84,6 @@ require( [ 'jquery', 'fastclick', 'bootstrapCollapse', 'bootstrapAffix', 'bootst
 	'use strict';
 
 	// Remove the 300ms delay on mobile devices
-	// http://www.mobify.com/blog/beginners-guide-to-perceived-performance/
+	// https://www.mobify.com/blog/beginners-guide-to-perceived-performance/
 	FastClick.attach(document.body);
 } );
