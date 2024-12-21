@@ -7,10 +7,6 @@ module.exports = function (grunt) {
 
   const sass = require("sass");
 
-  var _ = {
-    find: require("lodash.find"),
-  };
-
   // Read the config file with all themes data.
   var config = grunt.file.readJSON("themes-config.json");
 
@@ -219,9 +215,7 @@ module.exports = function (grunt) {
             ", missing parameter! Correct call is: buildSingleTheme:name_of_the_theme"
         );
       } else {
-        var selectedTheme = _.find(themes, function (currentTheme) {
-          return currentTheme.name === theme;
-        });
+        const selectedTheme = themes.find((currentTheme) => currentTheme.name === theme);
 
         grunt.config.set("theme", selectedTheme.name);
         grunt.config.set("themename", selectedTheme.themename);
