@@ -1,0 +1,36 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install -g bower grunt-cli
+          npm install
+          bower install
+
+      - name: Build all theme documentation
+        run: grunt buildAllThemes
+
+      - name: Create symlinks
+        run: |
+          for i in $(ls -d build/*/); do ln -s `echo ${i%%/} | cut -d/ -f2` ${i%%/}-pt; done
+
+      - name: Deploy to AS1
+        env:
+          AS1_IP: ${{ secrets.AS1_IP }}
+        run: |
+          rsync -avhtz --del --exclude={/restaurant,/organique,/readable,/webmarket} build/ deployer@${AS1_IP}:docs
