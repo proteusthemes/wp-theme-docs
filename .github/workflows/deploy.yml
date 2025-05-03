@@ -29,8 +29,16 @@ jobs:
         run: |
           for i in $(ls -d build/*/); do ln -s `echo ${i%%/} | cut -d/ -f2` ${i%%/}-pt; done
 
-      - name: Deploy to AS1
-        env:
-          AS1_IP: ${{ secrets.AS1_IP }}
+      - name: Setup SSH
         run: |
-          rsync -avhtz --del --exclude={/restaurant,/organique,/readable,/webmarket} build/ deployer@${AS1_IP}:docs
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY_PROD }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.AS1_IP }} >> ~/.ssh/known_hosts
+          eval $(ssh-agent -s)
+          ssh-add ~/.ssh/id_rsa
+
+      - name: Deploy to AS1
+        run: |
+          rsync -avhtz --del --exclude={/restaurant,/organique,/readable,/webmarket} build/ deployer@${{ secrets.AS1_IP }}:docs
