@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "coffeescript": "^2.7.0",
+    "grunt": "^1.6.1",
     "grunt-assemble": "^0.6.3",
     "grunt-concurrent": "^3.0.0",
     "grunt-contrib-clean": "^2.0.1",
@@ -22,7 +23,6 @@
     "grunt-sass": "^4.0.0",
     "grunt-text-replace": "^0.4.0",
     "grunt-usemin": "^3.1.1",
-    "grunt": "^1.6.1",
     "load-grunt-tasks": "^5.1.0",
     "sass": "^1.93.2"
   }
