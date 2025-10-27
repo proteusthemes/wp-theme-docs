@@ -41,12 +41,7 @@ module.exports = function (grunt) {
       options: {
         outputStyle: "expanded",
         sourceMap: true,
-        importPath: [
-          config.prepFolder +
-            "/<%= theme %>/bower_components/bootstrap-sass-official/assets/stylesheets",
-        ],
-        includePaths: [
-          config.prepFolder + "/<%= theme %>/bower_components/bootstrap/scss",
+        loadPaths: [
           config.prepFolder +
             "/<%= theme %>/bower_components/bootstrap-sass-official/assets/stylesheets",
         ],
