@@ -1,9 +1,9 @@
 module.exports = function (grunt) {
   "use strict";
 
-  // Auto-load the neede grunt tasks.
+  // Auto-load the needed grunt tasks.
   // require('load-grunt-tasks')(grunt);
-  require("load-grunt-tasks")(grunt, { pattern: ["grunt-*", "assemble"] });
+  require("load-grunt-tasks")(grunt);
 
   const sass = require("sass");
 
