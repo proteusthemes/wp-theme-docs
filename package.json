@@ -9,7 +9,6 @@
     "url": "git@github.com:proteusthemes/wp-theme-docs.git"
   },
   "devDependencies": {
-    "coffeescript": "^2.7.0",
     "grunt": "^1.6.1",
     "grunt-assemble": "^0.6.3",
     "grunt-concurrent": "^3.0.0",
