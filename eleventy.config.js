@@ -1,7 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { buildAssets } from "./lib/assets.js";
 import { resolveThemeFile } from "./lib/paths.js";
-import getThemes from "./src/_data/themes.js";
 
 export default function (eleventyConfig) {
   let assets = {};
@@ -9,7 +8,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.on("eleventy.before", async () => {
     compiled.clear();
-    assets = await buildAssets(getThemes());
+    assets = await buildAssets();
   });
 
   eleventyConfig.addGlobalData("assets", () => assets);
@@ -47,6 +46,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/**/*.scss");
   eleventyConfig.addWatchTarget("src/**/scripts/*.js");
   eleventyConfig.addWatchTarget("src/**/data/*.yml");
+  eleventyConfig.addWatchTarget("src/**/images/**");
+  eleventyConfig.addWatchTarget("src/**/fonts/**");
   eleventyConfig.addWatchTarget("themes.json");
 
   return {
