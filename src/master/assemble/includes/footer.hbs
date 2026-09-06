@@ -20,13 +20,13 @@
 	}
 	</script>
 	<script>
-		window.chatwootSettings = {
+		window.clevrBotSettings = {
 			position: "right",
 			type: "expanded_bubble",
 			launcherTitle: "Chat with us",
 		};
 		(function (d, t) {
-			var BASE_URL = "https://chatwoot.windrushlabs.com";
+			var BASE_URL = "https://app.clevrbot.com";
 			var g = d.createElement(t),
 			s = d.getElementsByTagName(t)[0];
 			g.src = BASE_URL + "/packs/js/sdk.js";
@@ -34,7 +34,7 @@
 			g.async = true;
 			s.parentNode.insertBefore(g, s);
 			g.onload = function () {
-			window.chatwootSDK.run({
+			window.clevrBotWidget.run({
 				websiteToken: "H7UxsygNZ9R98XjwqeVm5Wja",
 				baseUrl: BASE_URL,
 			});
