@@ -1,0 +1,49 @@
+@use "vars" as *;
+
+.hero {
+	padding: 40px 0 56px;
+
+	@include from($screen-md) {
+		padding: 64px 0 72px;
+	}
+}
+
+.hero__inner {
+	@include from($screen-md) {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		gap: 56px;
+		align-items: center;
+	}
+}
+
+.hero__title {
+	margin: 0 0 20px;
+	font-size: 36px;
+	line-height: 1.1;
+	color: $white;
+
+	@include from($screen-sm) {
+		font-size: 44px;
+	}
+}
+
+.hero__text {
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.7;
+	color: $muted-on-slate;
+}
+
+.hero__cover {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-top: 36px;
+	border-radius: 6px;
+	box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.06);
+
+	@include from($screen-md) {
+		margin-top: 0;
+	}
+}

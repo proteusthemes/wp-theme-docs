@@ -1,0 +1,36 @@
+@use "vars" as *;
+
+.meta {
+	background-color: $white;
+	border-bottom: 1px solid $hairline;
+}
+
+.meta__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px 40px;
+	margin: 0;
+	padding-top: 18px;
+	padding-bottom: 18px;
+}
+
+.meta__item {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+
+	dt {
+		font-family: $font-heading;
+		font-size: 13px;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: $text;
+	}
+
+	dd {
+		margin: 0;
+		font-size: 15px;
+		color: $ink;
+	}
+}

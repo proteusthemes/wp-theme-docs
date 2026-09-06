@@ -1,8 +1,20 @@
-<div class="container  container--meta">
-	<ul class="meta">
-		<li>Author: <a class="meta__link" href="https://www.proteusthemes.com/">ProteusThemes</a></li>
-		<li>Get it: <a class="meta__link" href="{{ theme.tfurl }}">{{ theme.themename }} WP</a></li>
-		<li>Created: <span class="meta__focus">{{ theme.creationdate }}</span></li>
-		<li>Last Modified: <span class="meta__focus">{{ theme.lastModified }}</span></li>
-	</ul>
+<div class="meta">
+	<dl class="container  meta__list">
+		<div class="meta__item">
+			<dt>Author</dt>
+			<dd><a class="meta__link" href="https://www.proteusthemes.com/">ProteusThemes</a></dd>
+		</div>
+		<div class="meta__item">
+			<dt>Get it</dt>
+			<dd><a class="meta__link" href="{{ theme.tfurl }}">{{ theme.themename }} WP</a></dd>
+		</div>
+		<div class="meta__item">
+			<dt>Created</dt>
+			<dd>{{ theme.creationdate }}</dd>
+		</div>
+		<div class="meta__item">
+			<dt>Last Modified</dt>
+			<dd>{{ theme.lastModified }}</dd>
+		</div>
+	</dl>
 </div>

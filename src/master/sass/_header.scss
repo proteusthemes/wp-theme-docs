@@ -1,0 +1,121 @@
+@use "vars" as *;
+
+.site-header {
+	position: relative;
+	isolation: isolate;
+	color: $white;
+	background-color: $slate;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background: url("../images/header-pattern.png") center top / 560px auto repeat;
+		opacity: 0.32;
+		mix-blend-mode: screen;
+		pointer-events: none;
+	}
+
+	:focus-visible {
+		outline-color: $white;
+	}
+}
+
+.site-header__bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0 32px;
+	min-height: 72px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+	@include from($screen-md) {
+		flex-wrap: nowrap;
+		min-height: 95px;
+	}
+}
+
+.site-header__logo {
+	display: block;
+	padding: 12px 0;
+
+	img {
+		display: block;
+		width: auto;
+		height: 52px;
+
+		@include from($screen-md) {
+			height: 68px;
+		}
+	}
+}
+
+.site-header__toggle {
+	display: none;
+	padding: 9px 16px;
+	font-family: $font-heading;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: $white;
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
+	transition: background-color 150ms ease, border-color 150ms ease;
+
+	&:hover,
+	&[aria-expanded="true"] {
+		background-color: rgba(255, 255, 255, 0.08);
+		border-color: rgba(255, 255, 255, 0.5);
+	}
+}
+
+.site-nav__list {
+	display: flex;
+	gap: 32px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-nav a {
+	display: block;
+	padding: 8px 0;
+	font-family: $font-heading;
+	font-size: 15px;
+	font-weight: 600;
+	color: $muted-on-slate;
+	text-decoration: none;
+	transition: color 150ms ease;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+@include below($screen-md) {
+	.js .site-header__toggle {
+		display: inline-block;
+	}
+
+	.site-nav {
+		width: 100%;
+	}
+
+	.js .site-nav:not(.is-open) {
+		display: none;
+	}
+
+	.site-nav__list {
+		flex-direction: column;
+		gap: 0;
+		padding: 8px 0 16px;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.site-nav a {
+		padding: 12px 0;
+	}
+}
