@@ -4,41 +4,39 @@ This repository is for per-theme documentation for our themes.
 
 ## Installation
 
-Clone this repository on your machine and run the following (you may already have `bower` and `grunt`, in which case skip those steps):
+Clone this repository on your machine and run the following:
 
 ```sh
-npm install -g bower
-npm install -g grunt-cli
-
-bower install
 npm install
 
-grunt buildAllThemes
+npm run build
 ```
 
 That’s it!
 
 The index files of the theme docs will be located in `/build/theme_name_goes_here/index.html`.
 
+While you are writing, `npm start` runs a development server that rebuilds and reloads the docs whenever you save a file.
+
 ## How it works
 
 All source files are in the `src` folder. In the `src` folder, there is a `master` folder, which contains a "default/boilerplate" documentation, from which you can then overwrite specific things in the single theme documentation. Single theme documentation overwrites are located in the `src/theme_name_goes_here` folders.
 
-When you build these theme documentations, two new folders will appear in the root folder, called `prep` and `build`. `prep` folder is a middle stage folder, where everything gets prepared for the actual build process. `build` folder will hold the final **index.html** files for each theme. More on how to build these docs, can be found below.
+A theme file wins over the master file with the same path, and that is resolved while the docs are being built. Everything ends up in the `build` folder, which will hold the final **index.html** file for each theme, together with its stylesheet, script, images and fonts.
 
 ## How to edit documentation for a theme
 
 It depends. Do you have to edit something in all theme documentations, or just in a single theme?
 
-If you have to edit for all themes, then you should edit the code in `src/master` and then build all theme docs with `grunt buildAllThemes`.
+If you have to edit for all themes, then you should edit the code in `src/master` and then build all theme docs with `npm run build`.
 
 If some themes have overridden the section in `src/master`, then you have to edit those files in the specific theme doc as well.
 
-If you want to edit something just for a specific theme, then you have to overwrite the `master` file (copy the file you want to edit from `src/master` to the theme folder, keeping the folder hierarchy as it was in master) or just check in the theme folder, if this file is already there. When you are done, you should build the single theme with `grunt buildSingleTheme:theme_name_goes_here`.
+If you want to edit something just for a specific theme, then you have to overwrite the `master` file (copy the file you want to edit from `src/master` to the theme folder, keeping the folder hierarchy as it was in master) or just check in the theme folder, if this file is already there.
 
 ## How to create documentation for a new theme
 
-In the root of this repos folder, there is a `themes-config.json` file which holds settings for each theme. All you have to do is make a new entry by copying an existing theme settings and changing them. For example here is the entry for BuildPress:
+In the root of this repos folder, there is a `themes.json` file which holds settings for each theme. All you have to do is make a new entry by copying an existing theme settings and changing them. For example here is the entry for BuildPress:
 
 ```json
 {
@@ -57,8 +55,11 @@ Now you can start copying files in the new folder to overwrite the master files.
 
 Some files that you will most certainly have to overwrite are:
 
-* `src/theme_name_goes_here/assemble/includes/content-includes/general/intro-text.hbs`,
+* `src/theme_name_goes_here/includes/content-includes/general/intro-text.njk`,
 * `src/theme_name_goes_here/images/activate-theme.png`,
 * `src/theme_name_goes_here/images/customize-theme.png`,
 * `src/theme_name_goes_here/images/header-cover.jpg`,
-* `src/theme_name_goes_here/sass/_vars.scss` (change the `$primary-color` color).
+* `src/theme_name_goes_here/sass/_vars.scss` (change the `$primary-color` color),
+* `src/theme_name_goes_here/data/sidebar.yml` (the sidebar navigation).
+
+A `src/theme_name_goes_here/scripts/main.js` file is optional: when it is there, it gets appended to the theme’s script bundle.

@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v6
         with:
-          node-version: '18'
+          node-version: '22'
+          cache: npm
 
       - name: Install dependencies
-        run: |
-          npm install -g bower grunt-cli
-          npm install
-          bower install
+        run: npm ci
 
       - name: Build all theme documentation
-        run: grunt buildAllThemes
+        run: npm run build
 
       - name: Create symlinks
         run: |

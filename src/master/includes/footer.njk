@@ -1,0 +1,38 @@
+	<script src="js/{{ assets[theme.name].js }}"></script>
+	<script>
+	if ( window.location.hostname === 'www.proteusthemes.com' ) {
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='https://www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-33538073-25','auto',{'allowLinker':true});
+		ga('require','linker');
+		ga('linker:autoLink',['proteusthemes.com','themeforest.net']);
+		ga('send','pageview');
+	}
+	</script>
+	<script>
+		window.clevrBotSettings = {
+			position: "right",
+			type: "expanded_bubble",
+			launcherTitle: "Chat with us",
+		};
+		(function (d, t) {
+			var BASE_URL = "https://app.clevrbot.com";
+			var g = d.createElement(t),
+			s = d.getElementsByTagName(t)[0];
+			g.src = BASE_URL + "/packs/js/sdk.js";
+			g.defer = true;
+			g.async = true;
+			s.parentNode.insertBefore(g, s);
+			g.onload = function () {
+			window.clevrBotWidget.run({
+				websiteToken: "H7UxsygNZ9R98XjwqeVm5Wja",
+				baseUrl: BASE_URL,
+			});
+			};
+		})(document, "script");
+	</script>
+	</body>
+</html>

@@ -1,7 +1,5 @@
 node_modules/
-.sass-cache/
-.tmp
 build/
-prep/
 .DS_Store
 .claude/
+tmp/
