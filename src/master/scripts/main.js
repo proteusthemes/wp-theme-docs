@@ -67,7 +67,7 @@
 		if (!list.length) return;
 		var threshold = window.scrollY + 1;
 		var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-		var match = null;
+		var match = list[0].link;
 		if (window.scrollY >= maxScroll - 1) {
 			match = list[list.length - 1].link;
 		} else {

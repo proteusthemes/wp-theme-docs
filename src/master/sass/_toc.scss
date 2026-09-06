@@ -36,12 +36,15 @@
 
 .sidebar__subitems {
 	display: grid;
-	grid-template-rows: 0fr;
-	visibility: hidden;
 	transition: grid-template-rows 200ms ease, visibility 200ms;
 }
 
-.sidebar__item.is-active > .sidebar__subitems {
+.js .sidebar__subitems {
+	grid-template-rows: 0fr;
+	visibility: hidden;
+}
+
+.js .sidebar__item.is-active > .sidebar__subitems {
 	grid-template-rows: 1fr;
 	visibility: visible;
 }
@@ -165,7 +168,7 @@
 		padding: 10px $gutter 10px ($gutter - 3px);
 	}
 
-	.sidebar__subitems {
+	.js .sidebar__subitems {
 		grid-template-rows: 1fr;
 		visibility: visible;
 		transition: none;
