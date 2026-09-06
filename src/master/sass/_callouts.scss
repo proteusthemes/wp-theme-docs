@@ -1,11 +1,11 @@
 @use "vars" as *;
 
-@function icon($stroke, $lines) {
-	@return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#{$stroke}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E#{$lines}%3C/svg%3E");
+@function icon($lines) {
+	@return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E#{$lines}%3C/svg%3E");
 }
 
-$info-icon: icon("%2325a9f6", "%3Cline x1='12' y1='16' x2='12' y2='12'/%3E%3Cline x1='12' y1='8' x2='12.01' y2='8'/%3E");
-$warning-icon: icon("%23f03e41", "%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'/%3E");
+$info-icon: icon("%3Cline x1='12' y1='16' x2='12' y2='12'/%3E%3Cline x1='12' y1='8' x2='12.01' y2='8'/%3E");
+$warning-icon: icon("%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'/%3E");
 
 .info,
 .warning {
@@ -25,7 +25,8 @@ $warning-icon: icon("%23f03e41", "%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cl
 		left: 20px;
 		width: 24px;
 		height: 24px;
-		background: no-repeat center / contain;
+		-webkit-mask: no-repeat center / contain;
+		mask: no-repeat center / contain;
 	}
 
 	a {
@@ -49,7 +50,9 @@ $warning-icon: icon("%23f03e41", "%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cl
 	border-color: $link;
 
 	&::before {
-		background-image: $info-icon;
+		background-color: $link;
+		-webkit-mask-image: $info-icon;
+		mask-image: $info-icon;
 	}
 }
 
@@ -59,6 +62,8 @@ $warning-icon: icon("%23f03e41", "%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cl
 	border-color: $primary;
 
 	&::before {
-		background-image: $warning-icon;
+		background-color: $primary;
+		-webkit-mask-image: $warning-icon;
+		mask-image: $warning-icon;
 	}
 }

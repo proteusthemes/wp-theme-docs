@@ -25,6 +25,12 @@
 			if (event.target.closest("a")) setOpen(false);
 		});
 
+		document.addEventListener("click", function (event) {
+			if (button.getAttribute("aria-expanded") === "true" && !panel.contains(event.target) && !button.contains(event.target)) {
+				setOpen(false);
+			}
+		});
+
 		document.addEventListener("keydown", function (event) {
 			if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
 				setOpen(false);

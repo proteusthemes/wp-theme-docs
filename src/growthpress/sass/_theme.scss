@@ -1,48 +1,3 @@
-$font-heading: "futura-pt", "Jost", "Helvetica Neue", Arial, sans-serif;
-$font-body: Merriweather, Georgia, serif;
-$font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-
-$font-size: 17px;
-$line-height: 1.7;
-
-$slate: #364253;
-$ink: #343745;
-$text: #636375;
-$primary: #f03e41;
-$primary-text: #d7282c;
-$link: #25a9f6;
-$link-text: #0b76b8;
-$panel: #eeeeee;
-$hairline: #e3e7eb;
-$code-bg: #f3f5f7;
-$white: #ffffff;
-$muted-on-slate: rgba(230, 242, 255, 0.66);
-$promo-green: #54a263;
-$promo-green-text: #2f7a3d;
-
-$container: 1140px;
-$gutter: 24px;
-$toc-width: 270px;
-$main-gap: 48px;
-$toc-bar-offset: 76px;
-
-$screen-sm: 768px;
-$screen-md: 992px;
-$screen-lg: 1200px;
-
-@mixin from($width) {
-	@media (min-width: $width) {
-		@content;
-	}
-}
-
-@mixin below($width) {
-	@media (max-width: $width - 0.02px) {
-		@content;
-	}
-}
-
-// Custom medic icons
 .pt-growth-icons-list {
 	margin-top: 30px;
 
@@ -55,7 +10,6 @@ $screen-lg: 1200px;
 	}
 }
 
-/* Growth Fonts */
 @font-face {
 	font-family: 'ptgrowth';
 	src: url('../fonts/ptgrowth.ttf') format('truetype'),
@@ -66,7 +20,6 @@ $screen-lg: 1200px;
 }
 
 .gp {
-	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'ptgrowth';
 	speak: none;
 	font-style: normal;
@@ -76,7 +29,6 @@ $screen-lg: 1200px;
 	line-height: 1;
 	font-size: 42px;
 
-	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

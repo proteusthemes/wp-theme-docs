@@ -44,7 +44,8 @@
 	visibility: hidden;
 }
 
-.js .sidebar__item.is-active > .sidebar__subitems {
+.js .sidebar__item.is-active > .sidebar__subitems,
+.js .sidebar__item:focus-within > .sidebar__subitems {
 	grid-template-rows: 1fr;
 	visibility: visible;
 }

@@ -63,6 +63,6 @@ Some files that you will most certainly have to overwrite are:
 * `src/theme_name_goes_here/images/header-cover.jpg`,
 * `src/theme_name_goes_here/data/sidebar.yml` (the sidebar navigation).
 
-Overriding `src/theme_name_goes_here/sass/_vars.scss` is optional. Every Sass partial reads its tokens from that file, so a copy of the master `_vars.scss` lets a theme change the colors (`$primary`, `$link`, `$slate` and friends), the font stacks and the breakpoints, and anything appended after the tokens (for example the icon-font `@font-face` rules of GrowthPress and MedicPress) is compiled into that theme’s stylesheet only.
+Theme-specific CSS goes into `src/theme_name_goes_here/sass/_theme.scss`, which is compiled into that theme’s stylesheet only and can use every token from the master `_vars.scss` with `@use "vars" as *;`. GrowthPress and MedicPress use it for their icon-font `@font-face` rules. Overriding `_vars.scss` itself is also possible, but the copy must then define every token the partials read, so prefer `_theme.scss` for additions.
 
 A `src/theme_name_goes_here/scripts/main.js` file is optional: when it is there, it gets appended to the theme’s script bundle.

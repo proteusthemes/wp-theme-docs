@@ -33,14 +33,3 @@
 		background-color: color.adjust($primary-text, $lightness: -8%);
 	}
 }
-
-.btn--secondary {
-	color: $ink;
-	background-color: #eef1f4;
-
-	&:hover,
-	&:focus-visible {
-		color: $ink;
-		background-color: $hairline;
-	}
-}
