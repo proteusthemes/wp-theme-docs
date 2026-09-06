@@ -4,25 +4,25 @@
   "description": "Documentation for all newer ProteusThemes themes.",
   "author": "ProteusThemes",
   "license": "GPL-2.0+",
+  "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:proteusthemes/wp-theme-docs.git"
   },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf build && eleventy",
+    "start": "eleventy --serve"
+  },
   "devDependencies": {
-    "grunt": "^1.6.1",
-    "grunt-assemble": "^0.6.3",
-    "grunt-concurrent": "^3.0.0",
-    "grunt-contrib-clean": "^2.0.1",
-    "grunt-contrib-concat": "^2.1.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^5.0.0",
-    "grunt-contrib-requirejs": "^1.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-rev": "^0.1.0",
-    "grunt-sass": "^4.0.0",
-    "grunt-text-replace": "^0.4.0",
-    "grunt-usemin": "^3.1.1",
-    "load-grunt-tasks": "^5.1.0",
+    "@11ty/eleventy": "^3.1.6",
+    "bootstrap-sass": "^3.4.3",
+    "esbuild": "^0.28.2",
+    "jquery": "^3.7.1",
+    "js-yaml": "^4.1.0",
     "sass": "^1.93.2"
   }
 }

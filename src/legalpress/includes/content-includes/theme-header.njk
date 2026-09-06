@@ -1,0 +1,42 @@
+<section>
+	<h2 id="header">Header</h2>
+
+	{# Top Bar #}
+	{% part "content-includes/theme-header/top-bar" %}
+
+	{# Logo #}
+	{% part "content-includes/theme-header/logo" %}
+
+	{# Favicon #}
+	{% part "content-includes/theme-header/favicon" %}
+
+	<h3 id="header-widgets">Header Widgets</h3>
+
+	<h4 id="header-layout">Header Layout</h4>
+	<p>
+		There are two header layouts that you can choose from. You can change it in <kbd><kbd><samp>Appearance</samp></kbd> → <kbd><samp>Customize</samp></kbd> → <kbd><samp>Theme Options</samp></kbd> → <kbd><samp>Header &#38; Breadcrumbs</samp></kbd></kbd>, here you can set the <strong>Header layout</strong> option. You can choose:
+		<ul>
+			<li>Logo in the center (default), or</li>
+			<li>Logo on the left</li>
+		</ul>
+		When <i>Logo in the center</i> is selected you will have two sidebars, to put some widgets in them: <strong>Header left</strong> and <strong>Header right</strong>. When you switch to <i>Logo on the left</i>, the <strong>Header left</strong> sidebar will disappear and only the <strong>Header right</strong> will be available.
+	</p>
+
+	<h4>Header Widgets</h4>
+
+	<p>
+		You can put a lot of widgets in the <strong>Header</strong> widget area, but your header will look great with the following widgets:
+	</p>
+
+	{# Header Widgets #}
+	{% part "content-includes/theme-header/header-widgets" %}
+
+	{# Main Menu #}
+	{% part "content-includes/theme-header/main-menu" %}
+
+	{# Navigation Widgets #}
+	{% part "content-includes/theme-header/navigation-widgets" %}
+
+	{# After Header #}
+	{% part "content-includes/theme-header/after-header" %}
+</section>

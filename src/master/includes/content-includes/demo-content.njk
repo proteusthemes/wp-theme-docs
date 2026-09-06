@@ -1,0 +1,37 @@
+<section>
+	<h2 id="demo-content">Demo Content</h2>
+	<h3 id="one-click-demo-install">One Click Demo Install</h3>
+	<p>
+		You can import demo content from our demo site (with blurred licensed images) with a single click of a button. Go to <kbd><kbd><samp>Appearance</samp></kbd> → <kbd><samp>Import Demo Data</samp></kbd></kbd> and click on the import button.
+	</p>
+	<div class="warning">
+		Don't forget to activate all required plugins before importing demo data.
+	</div>
+	<img src="images/one-click-demo-import.jpg" alt="One Click Demo Import" width="940" height="444">
+	<div class="info">
+		<p>When setting up a content with your new theme, put special focus on the page speed optimization, especially on the <strong><a href="https://www.proteusthemes.com/blog/ultimate-guide-image-optimization-wordpress/">image optimization process</a></strong>. This way you can save on your bandwidth, reduce the bounce rate on your website, and make your users happy. Our themes are created with the speed in mind but large, non-optimized images can and will ruin this experience.</p>
+		<p><a href="https://www.proteusthemes.com/blog/ultimate-guide-image-optimization-wordpress/">Read more &rarr;</a></p>
+	</div>
+	<h3 id="import-xml-file">Import XML File</h3>
+	<p>
+		If you want to import the demo content the old-fashioned way, you can get a fresh copy of the <strong>XML file</strong> on our server at this URL: <a href="https://artifacts.proteusthemes.com/xml-exports/{{ theme.name }}-latest.xml">https://artifacts.proteusthemes.com/xml-exports/{{ theme.name }}-latest.xml</a>. Don't forget to activate all required plugins before importing demo data. To import the demo data go to <kbd><kbd><samp>Tools</samp></kbd> → <kbd><samp>Import</samp></kbd></kbd>, click on <i>WordPress</i> (install the <strong>WordPress Importer</strong> plugin if not already installed) and upload/import the previously saved xml file (don't forget to enable the <i>Download and import file attachments</i> checkbox to also import the images).
+	</p>
+	<p>
+		<b>Demo Widgets</b><br>After you import the demo content, you can also import widgets the old-fashioned way. The file for widget import is also located on our server: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}.json</a>. Rename this file to <code>{{ theme.name }}.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <kbd><kbd><samp>Tools</samp></kbd> → <kbd><samp>Widget Import/Export</samp></kbd></kbd> and import the file.
+	</p>
+	<p>
+		<b>After import setup</b><br>After you have imported the demo data and widgets, you should also setup these things:
+	</p>
+
+	{# After Import setup #}
+	{% part "content-includes/demo-content/after-import-setup" %}
+
+	{# Import files not available #}
+	{% part "content-includes/demo-content/import-files-not-available" %}
+
+	<div class="warning">
+		Don't forget to activate all required plugins before importing demo data.
+	</div>
+	{# After Demo Content #}
+	{% part "content-includes/demo-content/after-demo-content" %}
+</section>
