@@ -2,11 +2,11 @@
 	"use strict";
 
 	var sidebar = document.querySelector(".sidebar");
-	var toggle = sidebar && sidebar.querySelector(".sidebar__toggle");
 	var current = sidebar && sidebar.querySelector("[data-toc-current]");
 	var links = sidebar ? Array.prototype.slice.call(sidebar.querySelectorAll('a[href^="#"]')) : [];
 	var active = null;
 	var ticking = false;
+	var settled = 0;
 
 	Array.prototype.forEach.call(document.querySelectorAll("button[aria-controls]"), function (button) {
 		var panel = document.getElementById(button.getAttribute("aria-controls"));
@@ -37,7 +37,9 @@
 		return links
 			.map(function (link) {
 				var target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
-				return target && { link: link, top: target.getBoundingClientRect().top + window.scrollY };
+				if (!target) return null;
+				var margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+				return { link: link, top: target.getBoundingClientRect().top + window.scrollY - margin };
 			})
 			.filter(Boolean)
 			.sort(function (a, b) {
@@ -63,7 +65,7 @@
 	function spy() {
 		var list = targets();
 		if (!list.length) return;
-		var threshold = window.scrollY + 24 + (toggle ? toggle.offsetHeight : 0);
+		var threshold = window.scrollY + 1;
 		var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 		var match = null;
 		if (window.scrollY >= maxScroll - 1) {
@@ -77,6 +79,8 @@
 	}
 
 	function onScroll() {
+		clearTimeout(settled);
+		settled = setTimeout(spy, 120);
 		if (ticking) return;
 		ticking = true;
 		window.requestAnimationFrame(function () {
