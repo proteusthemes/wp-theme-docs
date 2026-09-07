@@ -44,9 +44,17 @@ Birthday coming up? Get Rush&#xA0;gift card.
 <p>For account requirements and connection help, follow <a href="https://smashballoon.com/doc/setting-up-the-free-instagram-feed-wordpress-plugin/" target="_blank">Smash Balloon's setup guide</a>. Configure the feed layout and refresh settings in the plugin.</p>
 
 <h4 id="weather-widget">Weather Widget</h4>
-<div class="info">
-	The built-in Weather widget is currently unavailable because it uses OpenWeather One Call 2.5, which <a href="https://openweather.co.uk/blog/post/upgrade-your-weather-data-experience-one-call-api-30" target="_blank">OpenWeather discontinued in June 2024</a>. A theme update is needed before this widget can retrieve forecasts again. Creating a new API key or changing the widget settings does not upgrade its API connection.
-</div>
+<p>The Weather widget shows a location forecast. It uses a free OpenWeatherMap API key. You do not need a One Call subscription.</p>
+<ol>
+	<li>Follow <a href="https://openweathermap.org/guide#how_to_start" target="_blank">OpenWeatherMap's API key guide</a> to create an account and copy your key.</li>
+	<li>Paste the key into the widget's <b>API key</b> field.</li>
+	<li>Enter the location name, then the latitude and longitude. Look those up on <a href="https://www.latlong.net/" target="_blank">latlong.net</a>.</li>
+	<li>Choose whether to show current weather in the main area, how many forecast days to display, and the temperature unit, then save the page.</li>
+</ol>
+<p>Weather data is cached for 30 minutes. To refresh it sooner, edit the widget (for example, change the forecast length, update the page, then change it back).</p>
+<p>If the widget still cannot retrieve forecasts after you add a key, update the theme to version 3.0.1 or later. Older versions called OpenWeather's discontinued One Call 2.5 API.</p>
+<p>This is how the Weather widget looks in this theme:</p>
+<img src="images/weather-widget.png" class="center-block" alt="Weather widget">
 
 {# Twiter widget #}
 {% part "content-includes/pages/twiter-widget" %}
