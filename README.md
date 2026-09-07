@@ -36,7 +36,7 @@ If some themes have overridden the section in `src/master`, then you have to edi
 
 If you want to edit something just for a specific theme, then you have to overwrite the `master` file (copy the file you want to edit from `src/master` to the theme folder, keeping the folder hierarchy as it was in master) or just check in the theme folder, if this file is already there.
 
-Before updating shared content, verify it against each affected theme's released code. Plugin inventories and required/recommended flags come from each theme's TGM configuration; registration, Customizer controls and shortcode attributes can differ by theme and distribution. Preserve section IDs used by navigation and external links. HairPress is retired: keep its archived content in theme overrides when changing shared sections. Build all pages and check section links, images and desktop/mobile rendering after changes.
+Before updating shared content, verify it against each affected theme's released code. Plugin inventories and required/recommended flags come from each theme's TGM configuration; registration, Customizer controls and shortcode attributes can differ by theme and distribution. Preserve section IDs used by navigation and external links. HairPress is retired: keep its archived content in theme overrides when changing shared sections. Build all pages and check section links, images and desktop/mobile rendering after changes. For visual verification, map the diff to rendered sections and inspect every changed region, including retained screenshots and navigation labels. Report complete desktop coverage separately from targeted mobile checks; structural link and image checks alone are not a visual review.
 
 ## How to create documentation for a new theme
 

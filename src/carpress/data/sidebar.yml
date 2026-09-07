@@ -57,7 +57,7 @@ items:
     - link: contact-page
       name: Contact Page
     - link: twitter-widget
-      name: Twitter Widget
+      name: X (Twitter) Timeline
     - link: slider-plugin
       name: Slider
   - link: translations

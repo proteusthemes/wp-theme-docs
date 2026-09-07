@@ -54,10 +54,10 @@ items:
       name: Icons - Font Awesome
     - link: custom-icons
       name: WoonderShop Custom Icons
+    - link: woonder-product-shortcode
+      name: Single Product Shortcode
     - link: urgency-countdown-shortcode
       name: Urgency Countdown
-    - link: woonder-product-shortcode
-      name: Featured Product Shortcode
     - link: time-left-shortcode
       name: Time Left
   - link: plugins
