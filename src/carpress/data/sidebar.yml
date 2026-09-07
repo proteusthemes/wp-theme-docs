@@ -13,7 +13,7 @@ items:
     - link: customize-the-appearance
       name: Customize the Appearance
     - link: special-notice
-      name: Special Notice
+      name: Google Maps API Key
     - link: custom-post-types
       name: Custom Post Types
   - link: demo-content
@@ -56,10 +56,8 @@ items:
       name: WooCommerce
     - link: contact-page
       name: Contact Page
-    - link: fancybox-gallery-effect
-      name: FancyBox Gallery Effect
     - link: twitter-widget
-      name: Twitter Widget
+      name: X (Twitter) Timeline
     - link: slider-plugin
       name: Slider
   - link: translations

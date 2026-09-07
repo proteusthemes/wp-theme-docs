@@ -7,7 +7,7 @@ items:
     - link: installation
       name: Installation
     - link: updates
-      name: Updates
+      name: Registration and Updates
     - link: customize-the-appearance
       name: Customize the Appearance
   - link: demo-content
@@ -62,7 +62,7 @@ items:
     - link: why-choose-us
       name: Why Choose Us
     - link: twitter-widget
-      name: Twitter Widget
+      name: X (Twitter) Timeline
     - link: brochure-box
       name: Brochure Box
     - link: featured-page-widget
@@ -75,9 +75,9 @@ items:
     - link: woocommerce
       name: WooCommerce
     - link: visual-composer
-      name: Visual Composer
+      name: WPBakery Page Builder
     - link: breadcrumbs
-      name: Breadcrumbs NavXT
+      name: Breadcrumb NavXT
     - link: premium-essential-grid
       name: Premium Essential Grid
     - link: custom-sidebars

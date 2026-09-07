@@ -6,18 +6,7 @@
 	<p>
 		You can install and activate these plugins by going to <kbd><kbd><samp>wp-admin</samp></kbd>&nbsp;→ <kbd><samp>Appearance</samp></kbd>&nbsp;→ <kbd><samp>Install Plugins</samp></kbd></kbd>.
 	</p>
-	<p>
-		The list of required and recommended plugins used in this theme:
-	</p>
-	<ul>
-		<li><a href="https://wordpress.org/plugins/contact-form-7/" target="_blank">Contact Form 7</a></li>
-		<li><a href="https://wordpress.org/plugins/fancybox-for-wordpress/" target="_blank">FancyBox for WordPress</a></li>
-		<li><a href="https://wordpress.org/plugins/jetpack/" target="_blank">Jetpack by WordPress.com</a></li>
-		<li><a href="https://wordpress.org/plugins/wordpress-importer/" target="_blank">WordPress Importer</a></li>
-		<li><a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer & Exporter</a></li>
-		<li><a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a></li>
-		<li><a href="https://wordpress.org/plugins/easy-google-fonts/" target="_blank">Easy Google Fonts</a></li>
-	</ul>
+	{% part "content-includes/plugins/list-of-tgm-plugins" %}
 
 	{# WooCommerce #}
 	{% part "content-includes/plugins/woocommerce" %}
@@ -122,10 +111,6 @@ Message Body:
 	<p>
 		After that just place the plugin's shortcode to your make an appointment page.
 	</p>
-	<h3 id="fancybox-gallery-effect">FancyBox Gallery Effect</h3>
-	<p>
-		Download and activate the FancyBox for WordPress: <a href="https://wordpress.org/plugins/fancybox-for-wordpress/" target="_blank">https://wordpress.org/plugins/fancybox-for-wordpress/</a>. And that's all.
-	</p>
 
 	{# Twitter widget #}
 	{% part "content-includes/pages/twiter-widget" %}
@@ -146,7 +131,7 @@ Message Body:
 	<p>
 		Few more settings can be found in customizer under Front Page & Banners. Here you can change the speed of carousel (slider) interval, background color of the content in slider and opacity of that background.
 	</p>
-	<h4 id="revolution-slider-template">Revolution Slider</h3>
+	<h4 id="revolution-slider-template">Revolution Slider</h4>
 	<p>
 		If you prefer to work with the Revolution slider plugin, then you can use it with our <strong>Front page with Revolution Slider</strong> page template.
 	</p>

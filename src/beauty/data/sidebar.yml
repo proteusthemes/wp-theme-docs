@@ -7,7 +7,7 @@ items:
     - link: installation
       name: Installation
     - link: updates
-      name: Updates
+      name: Registration and Updates
     - link: customize-the-appearance
       name: Customize the Appearance
   - link: demo-content
@@ -58,9 +58,9 @@ items:
     - link: woocommerce
       name: WooCommerce
     - link: visual-composer
-      name: Visual Composer
+      name: WPBakery Page Builder
     - link: breadcrumbs
-      name: Breadcrumbs NavXT
+      name: Breadcrumb NavXT
     - link: bookly
       name: Bookly
   - link: footer
