@@ -7,16 +7,12 @@ permalink: "{{ theme.name }}/index.html"
 eleventyExcludeFromCollections: true
 ---
 {% part "header" %}
-	<div class="container  container--main">
-		<div class="row">
-			<div class="col-xs-12  col-md-9  col-md-push-3">
-				<div class="content">
-					{% part "content" %}
-				</div>
-			</div>
-			<div class="col-xs-12  col-md-3  col-md-pull-9" id="sidebar-menu">
+		<main class="container  main">
+			<aside class="toc">
 				{% part "sidebar" %}
-			</div>
-		</div>
-	</div>
+			</aside>
+			<article class="content" id="content" tabindex="-1">
+				{% part "content" %}
+			</article>
+		</main>
 {% part "footer" %}

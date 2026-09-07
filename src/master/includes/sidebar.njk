@@ -1,20 +1,23 @@
-<div class="sidebar  navbar-sidebar" data-spy="affix" data-offset-top="610">
-	<ul class="nav  sidebar__navigation" role="tablist">
+<nav class="sidebar" aria-label="On this page">
+	<button class="sidebar__toggle" type="button" aria-expanded="false" aria-controls="sidebar-menu">
+		<span class="sidebar__toggle-label">On this page</span>
+		<span class="sidebar__toggle-current" data-toc-current></span>
+		<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+	</button>
+	<ul class="sidebar__navigation" id="sidebar-menu">
 		{% for item in theme.sidebar.items %}
-		<li class="{% if item.subitems %}dropdown{% endif %}">
+		<li class="sidebar__item">
 			<a href="#{{ item.link }}">{{ item.name }}</a>
 			{% if item.subitems %}
-			<ul class="sidebar__navigation__dropdown">
-				{% for sub in item.subitems %}
-				<li><a href="#{{ sub.link }}">{{ sub.name }}</a></li>
-				{% endfor %}
-			</ul>
+			<div class="sidebar__subitems">
+				<ul class="sidebar__sublist">
+					{% for sub in item.subitems %}
+					<li><a href="#{{ sub.link }}">{{ sub.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
 			{% endif %}
 		</li>
 		{% endfor %}
 	</ul>
-	<hr class="sidebar__divider">
-	<div class="sidebar__credits">
-		© <a href="https://www.proteusthemes.com">ProteusThemes</a>
-	</div>
-</div>
+</nav>

@@ -24,6 +24,8 @@ All source files are in the `src` folder. In the `src` folder, there is a `maste
 
 A theme file wins over the master file with the same path, and that is resolved while the docs are being built. Everything ends up in the `build` folder, which will hold the final **index.html** file for each theme, together with its stylesheet, script, images and fonts.
 
+The stylesheet and the script are our own (no Bootstrap, no jQuery): the Sass partials in `src/master/sass` are compiled per theme, and `src/master/scripts/main.js` handles the table of contents and the mobile menus. The brand fonts (futura-pt and Merriweather) are loaded from the ProteusThemes Typekit kit, so they are not part of the build.
+
 ## How to edit documentation for a theme
 
 It depends. Do you have to edit something in all theme documentations, or just in a single theme?
@@ -59,7 +61,8 @@ Some files that you will most certainly have to overwrite are:
 * `src/theme_name_goes_here/images/activate-theme.png`,
 * `src/theme_name_goes_here/images/customize-theme.png`,
 * `src/theme_name_goes_here/images/header-cover.jpg`,
-* `src/theme_name_goes_here/sass/_vars.scss` (change the `$primary-color` color),
 * `src/theme_name_goes_here/data/sidebar.yml` (the sidebar navigation).
+
+Theme-specific CSS goes into `src/theme_name_goes_here/sass/_theme.scss`, which is compiled into that theme’s stylesheet only and can use every token from the master `_vars.scss` with `@use "vars" as *;`. GrowthPress and MedicPress use it for their icon-font `@font-face` rules. Overriding `_vars.scss` itself is also possible, but the copy must then define every token the partials read, so prefer `_theme.scss` for additions.
 
 A `src/theme_name_goes_here/scripts/main.js` file is optional: when it is there, it gets appended to the theme’s script bundle.

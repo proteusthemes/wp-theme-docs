@@ -19,9 +19,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "bootstrap-sass": "^3.4.3",
-    "esbuild": "^0.28.2",
-    "jquery": "^3.7.1",
     "js-yaml": "^4.1.0",
     "sass": "^1.93.2"
   }

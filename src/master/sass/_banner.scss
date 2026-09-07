@@ -1,0 +1,35 @@
+@use "vars" as *;
+
+.banner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 16px 36px;
+	padding: 18px $gutter;
+	font-family: $font-heading;
+	font-weight: 600;
+	color: $white;
+	text-align: center;
+	background-color: $promo-green;
+
+	@include below(600px) {
+		flex-direction: column;
+	}
+}
+
+.banner__text {
+	margin: 0;
+	font-size: 24px;
+	line-height: 1.3;
+}
+
+.banner__pill {
+	display: inline-block;
+	margin-left: 4px;
+	padding: 1px 14px 2px;
+	color: $promo-green-text;
+	white-space: nowrap;
+	background-color: $white;
+	border-radius: 999px;
+}

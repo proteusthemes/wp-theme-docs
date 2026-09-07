@@ -1,0 +1,168 @@
+@use "sass:color";
+@use "vars" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	margin: 0;
+	font-family: $font-body;
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $text;
+	background-color: $white;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: $font-heading;
+	font-weight: 600;
+	line-height: 1.2;
+	color: $ink;
+}
+
+p,
+ul,
+ol,
+dl,
+pre,
+figure,
+blockquote {
+	margin: 0 0 1em;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin-left: 0;
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+img,
+svg,
+iframe,
+video {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+}
+
+iframe {
+	border: 0;
+}
+
+hr {
+	height: 0;
+	margin: 32px 0;
+	border: 0;
+	border-top: 1px solid $hairline;
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family: $font-mono;
+}
+
+a {
+	color: $link-text;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
+	transition: color 150ms ease;
+
+	&:hover {
+		color: color.adjust($link-text, $lightness: -10%);
+	}
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+	color: inherit;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+:focus-visible {
+	outline: 2px solid $primary;
+	outline-offset: 2px;
+}
+
+.skip-link {
+	position: absolute;
+	top: -100px;
+	left: 16px;
+	z-index: 100;
+	padding: 10px 16px;
+	font-family: $font-heading;
+	font-weight: 600;
+	color: $white;
+	background-color: $ink;
+	border-radius: 4px;
+	text-decoration: none;
+
+	&:focus {
+		top: 16px;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: $container + 2 * $gutter;
+	margin: 0 auto;
+	padding: 0 $gutter;
+}
+
+.main {
+	padding-top: 40px;
+
+	@include from($screen-md) {
+		display: grid;
+		grid-template-columns: $toc-width minmax(0, 1fr);
+		gap: $main-gap;
+		align-items: start;
+		padding-top: 56px;
+	}
+}

@@ -62,8 +62,8 @@ items:
     subitems:
     - link: footer-widgets
       name: Footer Widgets
-    - link: middle-footer
-      name: Middle Footer
+    - link: featured-footer
+      name: Featured Footer Widget
     - link: bottom-footer
       name: Bottom Footer
   - link: translations

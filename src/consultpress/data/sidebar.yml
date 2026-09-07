@@ -46,6 +46,11 @@ items:
       name: Buttons
     - link: icons-font-awesome
       name: Icons - Font Awesome
+  - link: widgets
+    name: Widgets
+    subitems:
+    - link: clients
+      name: Clients
   - link: plugins
     name: Plugins
     subitems:
@@ -58,10 +63,10 @@ items:
   - link: footer
     name: Footer
     subitems:
+    - link: top-footer
+      name: Top Footer
     - link: footer-widgets
       name: Footer Widgets
-    - link: middle-footer
-      name: Middle Footer
     - link: bottom-footer
       name: Bottom Footer
   - link: translations

@@ -12,6 +12,8 @@ items:
       name: Theme Options
     - link: customize-the-appearance
       name: Customize the Appearance
+    - link: special-notice
+      name: Special Notice
     - link: custom-post-types
       name: Custom Post Types
   - link: demo-content

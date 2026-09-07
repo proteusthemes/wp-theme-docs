@@ -2,77 +2,44 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<meta name="author" content="ProteusNet">
+		<meta name="description" content="{{ theme.themeheadertext }}">
+		<meta name="author" content="ProteusThemes">
 		<link rel="icon" type="image/ico" href="images/favicon.ico">
 
-		<title>{{ theme.themename }} WordPress Theme Documentation Online Documentation</title>
+		<title>{{ theme.themename }} WordPress Theme Documentation</title>
 
-		<script>
-			WebFontConfig = {
-				google: { families: [ 'Roboto:700,400:latin' ] }
-			};
-			(function() {
-				var wf = document.createElement('script');
-				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-					'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-				wf.type = 'text/javascript';
-				wf.async = 'true';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(wf, s);
-			})();
-		</script>
-
-		<!-- Custom styles for this template -->
+		<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+		<link rel="stylesheet" href="https://use.typekit.net/qco0ktp.css">
 		<link rel="stylesheet" href="stylesheets/{{ assets[theme.name].css }}">
+		<script>document.documentElement.classList.add("js")</script>
 	</head>
-	<body data-spy="scroll" data-target=".navbar-sidebar">
+	<body>
+		<a class="skip-link" href="#content">Skip to content</a>
 		{% part "banner" %}
-		<header class="container  container--header">
-			<div class="header">
-				<div class="header__logo">
-					<a href="#">
-						<img src="images/logo.png" alt="ProteusThemes Logo" width="200" height="90">
-					</a>
-				</div>
-
-
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<a href="#sidebar-menu" class="navbar-toggle  collapsed">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-				</div>
-
-				<nav class="navbar  navbar-default">
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse  navbar-collapse" id="docs-navbar-collapse">
-						<ul class="navigation">
-							<li><a href="https://www.proteusthemes.com/help/">Support</a></li>
-							<li><a href="https://www.youtube.com/user/ProteusNetCompany">Video Tutorials</a></li>
-							<li><a href="https://www.proteusthemes.com/themes.html">Our Themes</a></li>
-							<li><a href="{{ theme.changelogUrl }}">Changelog</a></li>
-						</ul>
-					</div><!-- /.navbar-collapse -->
+		<header class="site-header">
+			<div class="container  site-header__bar">
+				<a class="site-header__logo" href="https://www.proteusthemes.com/">
+					<img src="images/logo.png" alt="ProteusThemes" width="200" height="90">
+				</a>
+				<button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+				<nav class="site-nav" id="site-nav" aria-label="ProteusThemes">
+					<ul class="site-nav__list">
+						<li><a href="https://www.proteusthemes.com/help/">Support</a></li>
+						<li><a href="https://www.youtube.com/user/ProteusNetCompany">Video Tutorials</a></li>
+						<li><a href="https://www.proteusthemes.com/themes.html">Our Themes</a></li>
+						<li><a href="{{ theme.changelogUrl }}">Changelog</a></li>
+					</ul>
 				</nav>
 			</div>
 
-			<div class="theme-header">
-				<div class="row">
-					<div class="col-xs-12  col-md-6">
-						<h1 class="theme-header__title">{{ theme.themename }} WordPress Theme Documentation</h1>
-						<p class="theme-header__text">
-							{{ theme.themeheadertext }}
-						</p>
+			<div class="hero">
+				<div class="container  hero__inner">
+					<div class="hero__copy">
+						<h1 class="hero__title">{{ theme.themename }} Documentation</h1>
+						<p class="hero__text">{{ theme.themeheadertext }}</p>
 					</div>
-					<div class="col-xs-12  col-md-6">
-						<img class="theme-header__cover" src="images/header-cover.jpg" alt="{{ theme.themename }} Cover" width="880" height="660">
-					</div>
+					<img class="hero__cover" src="images/header-cover.jpg" alt="{{ theme.themename }} Cover" width="880" height="660">
 				</div>
 			</div>
 		</header>

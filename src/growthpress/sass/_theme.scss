@@ -1,24 +1,5 @@
-/*
-	Variables and Bootstrap overrides
-*/
+@use "vars" as *;
 
-// Brand colors
-// -------------------------
-$primary-color: #3298cb;
-
-// Typography
-// -------------------------
-$default-font: 'Roboto', Helvetica, Arial, sans-serif;
-$line-height-base: 1.5;
-
-// Bootstrap fonts path
-$icon-font-path: "../fonts/bootstrap/";
-
-// Grid system
-// -------------------------
-$grid-float-breakpoint: 992px;
-
-// Custom medic icons
 .pt-growth-icons-list {
 	margin-top: 30px;
 
@@ -31,7 +12,6 @@ $grid-float-breakpoint: 992px;
 	}
 }
 
-/* Growth Fonts */
 @font-face {
 	font-family: 'ptgrowth';
 	src: url('../fonts/ptgrowth.ttf') format('truetype'),
@@ -42,7 +22,6 @@ $grid-float-breakpoint: 992px;
 }
 
 .gp {
-	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'ptgrowth';
 	speak: none;
 	font-style: normal;
@@ -52,7 +31,6 @@ $grid-float-breakpoint: 992px;
 	line-height: 1;
 	font-size: 42px;
 
-	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -88,7 +66,7 @@ $grid-float-breakpoint: 992px;
 .gp-bar-chart .path2::before {
 	content: '\e905';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-bar-chart .path3::before {
@@ -123,7 +101,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-binoculars .path1::before {
 	content: '\e90b';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-binoculars .path2::before {
@@ -245,7 +223,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-chat-2 .path1::before {
 	content: '\e920';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-chat-2 .path2::before {
@@ -262,7 +240,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-chat .path1::before {
 	content: '\e923';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-chat .path2::before {
@@ -327,7 +305,7 @@ $grid-float-breakpoint: 992px;
 .gp-cloud-computing-1 .path5::before {
 	content: '\e92e';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-cloud-computing-1 .path6::before {
@@ -409,7 +387,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-compass-1 .path1::before {
 	content: '\e93c';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-compass-1 .path2::before {
@@ -432,7 +410,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-compass .path1::before {
 	content: '\e940';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-compass .path2::before {
@@ -647,7 +625,7 @@ $grid-float-breakpoint: 992px;
 .gp-computer-1 .path2::before {
 	content: '\e964';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-computer-1 .path3::before {
@@ -682,7 +660,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-computer .path1::before {
 	content: '\e96a';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-computer .path2::before {
@@ -746,7 +724,7 @@ $grid-float-breakpoint: 992px;
 .gp-connection .path2::before {
 	content: '\e975';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-connection .path3::before {
@@ -775,7 +753,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-desk .path1::before {
 	content: '\e97a';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-desk .path2::before {
@@ -798,7 +776,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-directions .path1::before {
 	content: '\e97e';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-directions .path2::before {
@@ -945,7 +923,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-dollar-symbol .path1::before {
 	content: '\e997';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-dollar-symbol .path2::before {
@@ -1153,7 +1131,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-group-1 .path1::before {
 	content: '\e9ba';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-group-1 .path2::before {
@@ -1170,7 +1148,7 @@ $grid-float-breakpoint: 992px;
 .gp-group-2 .path2::before {
 	content: '\e9bd';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-group-2 .path3::before {
@@ -1217,7 +1195,7 @@ $grid-float-breakpoint: 992px;
 .gp-group .path2::before {
 	content: '\e9c5';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-group .path3::before {
@@ -1258,7 +1236,7 @@ $grid-float-breakpoint: 992px;
 .gp-handshake .path3::before {
 	content: '\e9cc';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-handshake .path4::before {
@@ -1304,7 +1282,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-hierarchical-structure .path1::before {
 	content: '\e9d4';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-hierarchical-structure .path2::before {
@@ -1415,7 +1393,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-laptop-2 .path1::before {
 	content: '\e9e7';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-laptop-2 .path2::before {
@@ -1432,7 +1410,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-laptop .path1::before {
 	content: '\e9ea';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-laptop .path2::before {
@@ -1472,7 +1450,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-like-2 .path1::before {
 	content: '\e9f1';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-like-2 .path2::before {
@@ -1483,7 +1461,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-like-3 .path1::before {
 	content: '\e9f3';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-like-3 .path2::before {
@@ -1566,7 +1544,7 @@ $grid-float-breakpoint: 992px;
 .gp-like-4 .path2::before {
 	content: '\ea01';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-like-4 .path3::before {
@@ -1589,7 +1567,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-like-5 .path1::before {
 	content: '\ea05';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-like-5 .path2::before {
@@ -1690,7 +1668,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-like .path1::before {
 	content: '\ea16';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-like .path2::before {
@@ -1767,7 +1745,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-list-1 .path1::before {
 	content: '\ea23';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-list-1 .path2::before {
@@ -1856,7 +1834,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-list .path1::before {
 	content: '\ea32';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-list .path2::before {
@@ -2190,7 +2168,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-money .path1::before {
 	content: '\ea6a';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-money .path2::before {
@@ -2288,7 +2266,7 @@ $grid-float-breakpoint: 992px;
 .gp-network-1 .path2::before {
 	content: '\ea7b';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-network-1 .path3::before {
@@ -2299,13 +2277,13 @@ $grid-float-breakpoint: 992px;
 
 .gp-network .path1::before {
 	content: '\ea7d';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-network .path2::before {
 	content: '\ea7e';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-network .path3::before {
@@ -2316,37 +2294,37 @@ $grid-float-breakpoint: 992px;
 
 .gp-networking-1 .path1::before {
 	content: '\ea80';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking-1 .path2::before {
 	content: '\ea81';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking-1 .path3::before {
 	content: '\ea82';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking-1 .path4::before {
 	content: '\ea83';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking-1 .path5::before {
 	content: '\ea84';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking-1 .path6::before {
 	content: '\ea85';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking-1 .path7::before {
@@ -2405,7 +2383,7 @@ $grid-float-breakpoint: 992px;
 .gp-networking-2 .path2::before {
 	content: '\ea8f';
 	margin-left: -1em;
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking-2 .path3::before {
@@ -2428,7 +2406,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-networking-3 .path1::before {
 	content: '\ea93';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking-3 .path2::before {
@@ -2474,7 +2452,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-networking-5 .path1::before {
 	content: '\ea9b';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking-5 .path2::before {
@@ -2485,7 +2463,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-networking .path1::before {
 	content: '\ea9d';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-networking .path2::before {
@@ -2561,7 +2539,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-padlock .path1::before {
 	content: '\eaaa';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-padlock .path2::before {
@@ -2590,7 +2568,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-pencil .path1::before {
 	content: '\eaaf';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-pencil .path2::before {
@@ -2654,7 +2632,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-pie-chart-1 .path1::before {
 	content: '\eaba';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-pie-chart-1 .path2::before {
@@ -2807,7 +2785,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-piggy-bank .path1::before {
 	content: '\ead4';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-piggy-bank .path2::before {
@@ -2824,7 +2802,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-placeholder .path1::before {
 	content: '\ead7';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-placeholder .path2::before {
@@ -3091,7 +3069,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-search .path1::before {
 	content: '\eb04';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-search .path2::before {
@@ -3343,7 +3321,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-sharing .path1::before {
 	content: '\eb2f';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-sharing .path2::before {
@@ -3372,7 +3350,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-shopping-bag .path1::before {
 	content: '\eb34';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-shopping-bag .path2::before {
@@ -3430,7 +3408,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-smartphone .path1::before {
 	content: '\eb3e';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-smartphone .path2::before {
@@ -3471,7 +3449,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-startup .path1::before {
 	content: '\eb45';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-startup .path2::before {
@@ -3778,7 +3756,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-transfer .path1::before {
 	content: '\eb79';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-transfer .path2::before {
@@ -3865,7 +3843,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-user-3 .path1::before {
 	content: '\eb88';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-user-3 .path2::before {
@@ -3935,7 +3913,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-user-5 .path1::before {
 	content: '\eb94';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-user-5 .path2::before {
@@ -3952,7 +3930,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-user-6 .path1::before {
 	content: '\eb97';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-user-6 .path2::before {
@@ -4074,7 +4052,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-user-10 .path1::before {
 	content: '\ebac';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-user-10 .path2::before {
@@ -4149,7 +4127,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-user-13 .path1::before {
 	content: '\ebb9';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-user-13 .path2::before {
@@ -4183,7 +4161,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-user .path1::before {
 	content: '\ebbf';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-user .path2::before {
@@ -4224,7 +4202,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-worldwide-1 .path1::before {
 	content: '\ebc6';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-worldwide-1 .path2::before {
@@ -4382,7 +4360,7 @@ $grid-float-breakpoint: 992px;
 
 .gp-wristwatch .path1::before {
 	content: '\ebe1';
-	color: theme-color('primary');
+	color: $primary;
 }
 
 .gp-wristwatch .path2::before {

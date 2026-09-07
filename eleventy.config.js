@@ -6,9 +6,9 @@ export default function (eleventyConfig) {
   let assets = {};
   const compiled = new Map();
 
-  eleventyConfig.on("eleventy.before", async () => {
+  eleventyConfig.on("eleventy.before", () => {
     compiled.clear();
-    assets = await buildAssets();
+    assets = buildAssets();
   });
 
   eleventyConfig.addGlobalData("assets", () => assets);

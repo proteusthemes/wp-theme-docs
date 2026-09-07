@@ -1,0 +1,43 @@
+@use "sass:math";
+@use "vars" as *;
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+
+[class*="col-"] {
+	position: relative;
+	flex: 0 0 auto;
+	width: 100%;
+	min-height: 1px;
+	padding: 0 15px;
+
+	&:has(> [class*="col-"]) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+@mixin columns($prefix, $sizes) {
+	@each $size in $sizes {
+		.col-#{$prefix}-#{$size} {
+			width: math.percentage(math.div($size, 12));
+		}
+	}
+}
+
+@include columns(xs, (12));
+
+@include from($screen-sm) {
+	@include columns(sm, (2, 3, 4, 8, 9));
+}
+
+@include from($screen-md) {
+	@include columns(md, (3, 6, 9));
+}
+
+@include from($screen-lg) {
+	@include columns(lg, (4));
+}

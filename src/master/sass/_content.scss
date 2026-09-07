@@ -1,0 +1,274 @@
+@use "vars" as *;
+
+.content {
+	min-width: 0;
+	overflow-wrap: break-word;
+
+	section {
+		display: flow-root;
+	}
+
+	h2,
+	h3,
+	h4,
+	h5 {
+		clear: both;
+		overflow-wrap: anywhere;
+	}
+
+	h2 {
+		margin: 72px 0 24px;
+		font-size: 28px;
+		line-height: 1.15;
+
+		@include from($screen-sm) {
+			font-size: 32px;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			width: 40px;
+			height: 3px;
+			margin-bottom: 20px;
+			background-color: $primary;
+			border-radius: 2px;
+		}
+	}
+
+	h3 {
+		margin: 44px 0 16px;
+		font-size: 24px;
+	}
+
+	h4 {
+		margin: 32px 0 12px;
+		font-size: 19px;
+	}
+
+	h5 {
+		margin: 28px 0 12px;
+		font-size: 17px;
+	}
+
+	h2 + h3 {
+		margin-top: 28px;
+	}
+
+	h3 + h4 {
+		margin-top: 16px;
+	}
+
+	> section:first-child > h2:first-child,
+	> h2:first-child {
+		margin-top: 0;
+	}
+
+	&,
+	[id] {
+		scroll-margin-top: 24px;
+
+		@include below($screen-md) {
+			scroll-margin-top: $toc-bar-offset;
+		}
+	}
+
+	p {
+		margin-bottom: 24px;
+	}
+
+	ul,
+	ol,
+	dl,
+	figure,
+	.row,
+	.video {
+		margin-bottom: 28px;
+	}
+
+	ul,
+	ol {
+		padding-left: 28px;
+	}
+
+	li {
+		margin-bottom: 8px;
+
+		li {
+			margin-bottom: 4px;
+		}
+	}
+
+	ul ul,
+	ol ol,
+	ul ol,
+	ol ul {
+		margin-top: 8px;
+	}
+
+	dt {
+		margin-top: 16px;
+		font-family: $font-heading;
+		font-weight: 600;
+		color: $ink;
+	}
+
+	dd {
+		margin: 6px 0 0 24px;
+	}
+
+	strong,
+	b {
+		color: $ink;
+	}
+
+	img {
+		margin-bottom: 28px;
+		border: 1px solid $hairline;
+		border-radius: 6px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+	}
+
+	:is(p, li, figure, td) img {
+		margin-bottom: 0;
+	}
+
+	p > img {
+		margin-top: 12px;
+	}
+
+	li img + img {
+		margin-top: 16px;
+	}
+
+	figure {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	figcaption {
+		margin-top: 10px;
+		font-family: $font-heading;
+		font-size: 13px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		text-align: center;
+		color: $text;
+	}
+}
+
+code {
+	padding: 2px 6px;
+	font-size: 0.88em;
+	color: $ink;
+	background-color: $code-bg;
+	border-radius: 4px;
+	overflow-wrap: break-word;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+pre {
+	margin: 0 0 28px;
+	padding: 16px;
+	font-size: 14px;
+	line-height: 1.6;
+	color: $ink;
+	background-color: $code-bg;
+	border: 1px solid $hairline;
+	border-radius: 6px;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+
+	code {
+		padding: 0;
+		font-size: inherit;
+		color: inherit;
+		background-color: transparent;
+		border-radius: 0;
+	}
+}
+
+:not(kbd) > samp {
+	font-size: 0.92em;
+	color: $ink;
+}
+
+kbd {
+	display: inline;
+	padding: .1em .35em;
+	font-size: .85em;
+	color: $ink;
+	vertical-align: baseline;
+	overflow-wrap: break-word;
+	background: $code-bg;
+	border: 1px solid $hairline;
+	border-radius: 4px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+kbd kbd {
+	white-space: nowrap;
+}
+
+kbd samp {
+	font: inherit;
+}
+
+kbd:has(> kbd) {
+	display: inline;
+	padding: 0;
+	font: inherit;
+	color: inherit;
+	white-space: normal;
+	background: none;
+	border: 0;
+	border-radius: 0;
+}
+
+.video {
+	margin-bottom: 28px;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	background-color: $ink;
+	border-radius: 6px;
+
+	iframe {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.alignleft {
+	float: left;
+	margin: 6px 28px 16px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 6px 0 16px 28px;
+}
+
+.aligncenter,
+.center-block {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@include below($screen-lg) {
+	.alignleft,
+	.alignright {
+		display: block;
+		float: none;
+		margin: 0 0 24px;
+	}
+}
+
+@for $i from 0 through 12 {
+	.push-down-#{$i * 5} {
+		margin-bottom: 5px * $i;
+	}
+}
