@@ -4,9 +4,6 @@
 	{# Top Bar #}
 	{% part "content-includes/theme-header/top-bar" %}
 
-	{# Header Widgets #}
-	{% part "content-includes/theme-header/header-widgets" %}
-
 	{# Logo #}
 	{% part "content-includes/theme-header/logo" %}
 
@@ -15,8 +12,10 @@
 
 	<h3 id="header-widgets">Header Widgets</h3>
 	<p>
-		There are left and right header widget areas. Both areas can work with Buttons (Text widget), Icon Box, Social Icons, Skype Button or Search widget.
+		The Header Right widget area is always available. Header Left appears only when <b>Appearance &gt; Customize &gt; [PT] Theme Options &gt; Header &gt; Header layout</b> is set to <b>Logo in the center</b>. Both areas can work with Buttons (Text widget), Icon Box, Social Icons or Search widget.
 	</p>
+
+	{% part "content-includes/theme-header/header-widgets" %}
 
 	{# Main Menu #}
 	{% part "content-includes/theme-header/main-menu" %}

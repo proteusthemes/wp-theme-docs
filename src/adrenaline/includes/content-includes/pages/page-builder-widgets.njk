@@ -33,36 +33,20 @@ Birthday coming up? Get Rush&#xA0;gift card.
 	Portfolio Grid Widget will display your Portfolio pages (portfolio pages = activities in this theme) in a nice filterable grid. You can choose from two layouts: grid in multiple rows or a slider in a single row. You can also select which categories to display, enable a CTA, ... If you leave the <i>Label for all items</i> empty, there will be no "All" filter tab.
 </p>
 
-<h4 id="instagram-widget">Instagram Widget</h4>
-<p>
-	You will be able to display your Instagram images in a very nice responsive row and have an optional call-to-action box:
-	<img src="images/instagram-widget.png" alt="Instagram widget">
-</p>
-<p>
-	Just follow these instructions and get your <strong>access token</strong> from Instagram and you are good to go:
-</p>
+<h4 id="instagram-widget">Instagram Feed</h4>
+<p>The theme uses <strong>Smash Balloon Social Photo Feed</strong> for Instagram feeds. The former ProteusThemes Instagram widget is no longer included.</p>
 <ol>
-	<li><a href="https://apps.proteusthemes.com/instagram/get-access-token.php" target="_blank">Login and get your Instagram Access Token</a>,</li>
-	<li>Once you complete the authentication steps, copy the Access Token to the appropriate field in the widget settings.</li>
+	<li>Install and activate Smash Balloon Social Photo Feed from the theme's plugin installer.</li>
+	<li>Open <strong>Instagram Feed &gt; All Feeds &gt; Add New</strong>, choose <strong>User Timeline</strong>, and add a source. Follow the plugin's account connection prompts.</li>
+	<li>Customize and save the feed, then click <strong>Embed</strong> and copy its shortcode.</li>
+	<li>Paste the shortcode into a SiteOrigin Editor widget on your page and save the page.</li>
 </ol>
-<p>
-	Note: The instagram data is cached for 30 minutes, so if you add/remove images on your Instagram account and you do not see the changes on your site, that's because the cached data. You can wait for 30 minutes and the images will be displayed or you can reset the cache, by editing/updating the widget ( make a change in the widget. For example: change the widget image number and update the page, then change it back to the desired number and update the page again, that will reset the cache).
-</p>
+<p>For account requirements and connection help, follow <a href="https://smashballoon.com/doc/setting-up-the-free-instagram-feed-wordpress-plugin/" target="_blank">Smash Balloon's setup guide</a>. Configure the feed layout and refresh settings in the plugin.</p>
 
 <h4 id="weather-widget">Weather Widget</h4>
-<p>
-	Display weather forecasts on your site with our <strong>Weather widget</strong>.
-</p>
-<p>
-	All you have to do is follow the instructions in the widget settings and the widget will work perfectly. The first thing you will have to do is to <a href="https://darksky.net/dev/" target="_blank">register at darksky.net/dev and get your API key</a>. Once you do that, just paste the API key into the widget settings, configure the location coordinates and other settings of the widget.
-</p>
-<p>
-	Note: The weather widget data is cached for 30 minutes, so the weather data will change every 30 minutes. You can reset the cache, by editing/updating the widget (make a change in the widget. For example: change the number of days to forecast and update the page, then change it back to the desired number and update the page again, that will reset the cache).
-</p>
-<p>
-	This is how the <strong>Weather widget</strong> looks like in this theme:
-	<img src="images/weather-widget.png" class="center-block" alt="Weather widget">
-</p>
+<div class="info">
+	The built-in Weather widget is currently unavailable because it uses OpenWeather One Call 2.5, which <a href="https://openweather.co.uk/blog/post/upgrade-your-weather-data-experience-one-call-api-30" target="_blank">OpenWeather discontinued in June 2024</a>. A theme update is needed before this widget can retrieve forecasts again. Creating a new API key or changing the widget settings does not upgrade its API connection.
+</div>
 
 {# Twiter widget #}
 {% part "content-includes/pages/twiter-widget" %}

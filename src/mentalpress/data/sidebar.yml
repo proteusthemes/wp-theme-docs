@@ -7,7 +7,7 @@ items:
     - link: installation
       name: Installation
     - link: updates
-      name: Updates
+      name: Registration and Updates
     - link: customize-the-appearance
       name: Customize the Appearance
   - link: demo-content
@@ -55,8 +55,6 @@ items:
       name: Contact Form 7
     - link: woocommerce
       name: WooCommerce
-    - link: breadcrumbs
-      name: Breadcrumbs NavXT
     - link: ecwid
       name: Ecwid
   - link: footer

@@ -7,7 +7,7 @@ items:
     - link: installation
       name: Installation
     - link: updates
-      name: Updates
+      name: Registration and Updates
     - link: customize-the-appearance
       name: Customize the Appearance
   - link: demo-content
@@ -59,7 +59,7 @@ items:
     - link: woocommerce
       name: WooCommerce
     - link: breadcrumbs
-      name: Breadcrumbs NavXT
+      name: Breadcrumb NavXT
     - link: so-widgets-bundle
       name: SiteOrigin Widgets Bundle
   - link: footer

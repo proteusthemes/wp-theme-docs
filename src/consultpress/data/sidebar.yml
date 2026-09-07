@@ -7,7 +7,7 @@ items:
     - link: installation
       name: Installation
     - link: updates
-      name: Updates
+      name: Registration and Updates
     - link: customize-the-appearance
       name: Customize the Appearance
   - link: demo-content
@@ -54,12 +54,10 @@ items:
   - link: plugins
     name: Plugins
     subitems:
-    - link: caldera-forms
-      name: Caldera Forms
     - link: contact-form-7
       name: Contact Form 7
     - link: breadcrumbs
-      name: Breadcrumbs NavXT
+      name: Breadcrumb NavXT
   - link: footer
     name: Footer
     subitems:

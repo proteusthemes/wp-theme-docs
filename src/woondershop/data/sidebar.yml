@@ -9,7 +9,7 @@ items:
     - link: theme-onboarding-wizard
       name: Onboarding Wizard
     - link: updates
-      name: Updates
+      name: Registration and Updates
     - link: customize-the-appearance
       name: Customize the Appearance
   - link: demo-content
@@ -56,6 +56,8 @@ items:
       name: WoonderShop Custom Icons
     - link: urgency-countdown-shortcode
       name: Urgency Countdown
+    - link: woonder-product-shortcode
+      name: Featured Product Shortcode
     - link: time-left-shortcode
       name: Time Left
   - link: plugins
@@ -66,7 +68,7 @@ items:
     - link: woocommerce
       name: WooCommerce
     - link: breadcrumbs
-      name: Breadcrumbs NavXT
+      name: Breadcrumb NavXT
     - link: smart-search-plugin
       name: Smart Search
     - link: woocommerce-product-filter
