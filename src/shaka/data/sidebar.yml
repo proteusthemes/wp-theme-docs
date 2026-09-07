@@ -26,6 +26,8 @@ items:
       name: Header Widgets
     - link: main-menu
       name: Main Menu
+    - link: featured-page-in-navigation
+      name: Featured Page in Navigation
   - link: pages
     name: Pages
     subitems:
@@ -46,25 +48,18 @@ items:
       name: Buttons
     - link: icons-font-awesome
       name: Icons - Font Awesome
-  - link: widgets
-    name: Widgets
-    subitems:
-    - link: clients
-      name: Clients
   - link: plugins
     name: Plugins
     subitems:
-    - link: caldera-forms
-      name: Caldera Forms
     - link: contact-form-7
       name: Contact Form 7
+    - link: woocommerce
+      name: WooCommerce
     - link: breadcrumbs
       name: Breadcrumbs NavXT
   - link: footer
     name: Footer
     subitems:
-    - link: top-footer
-      name: Top Footer
     - link: footer-widgets
       name: Footer Widgets
     - link: bottom-footer
