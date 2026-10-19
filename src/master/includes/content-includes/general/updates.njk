@@ -11,6 +11,82 @@
 <p>
 	If an available update is not showing, open <strong>Dashboard &gt; Updates</strong> and click <strong>Check Again</strong>.
 </p>
+<h4 id="manual-updates">Updating manually</h4>
 <p>
-	<strong>Manual updates:</strong> Follow our <a href="https://www.proteusthemes.com/help/manually-update-wordpress-theme-newer-version/" target="_blank">manual theme update guide</a> to install a newer version yourself.
+	You can also install a new version yourself, for example when an update from the dashboard fails.{% if theme.updatefixversion %} If your site runs a version older than {{ theme.updatefixversion }}, read <a href="#updating-from-older-versions">Updating from versions older than {{ theme.updatefixversion }}</a> first.{% endif %}
 </p>
+<p>
+	<strong>Before you update:</strong>
+</p>
+<ul>
+	<li>Back up your site's files and database.</li>
+	<li>Check your PHP version in <strong>Tools &gt; Site Health &gt; Info &gt; Server</strong>. The latest version of {{ theme.themename }} needs PHP 8.2 or newer. If yours is lower, change it in your hosting control panel or ask your host to do it. WordPress won't install the theme on an older PHP version, and theme files copied in with FTP stop the whole site with a "Composer detected issues" error.</li>
+	<li>Your content, menus, widgets and Customizer settings are kept. Changes made directly to the theme's files are overwritten. Changes in a child theme are kept.</li>
+</ul>
+<p>
+	{% if theme.name == "woondershop" %}
+	<strong>Download the latest version</strong> from your <a href="https://www.proteusthemes.com/account/" target="_blank">ProteusThemes account</a>.
+	{% else %}
+	<strong>Download the latest version.</strong> If you bought the theme on ThemeForest, open your <a href="https://themeforest.net/downloads" target="_blank">ThemeForest downloads</a>, click <strong>Download</strong> next to the theme and choose <strong>Installable WordPress file only</strong>. The "All files &amp; documentation" package can't be installed as it is. If you bought it in our shop, download it from your <a href="https://www.proteusthemes.com/account/" target="_blank">ProteusThemes account</a>.
+	{% endif %}
+</p>
+<p>
+	<strong>Updating with Upload Theme:</strong>
+</p>
+<ol>
+	<li>Go to <strong>Appearance &gt; Themes &gt; Add Theme &gt; Upload Theme</strong>, choose the zip and click <strong>Install Now</strong>.</li>
+	<li>WordPress shows the installed and uploaded versions side by side. Click <strong>Replace installed with uploaded</strong>.</li>
+	<li>If the theme asks you to install or update plugins, follow its notice.</li>
+</ol>
+<p>
+	<strong>Updating with FTP or your host's file manager:</strong>
+</p>
+<ol>
+	<li>Unzip the theme zip on your computer. Inside is the theme folder, the one with <code>style.css</code> in it.</li>
+	<li>On your server, open <code>wp-content/themes/</code> and download a copy of the current theme folder as a backup.</li>
+	<li>Upload the new theme folder into <code>wp-content/themes/</code>, replacing the existing files. Many host file managers let you upload the zip, extract it there and overwrite all files.</li>
+</ol>
+{% if theme.updatefixversion %}
+<h4 id="updating-from-older-versions">Updating from versions older than {{ theme.updatefixversion }}</h4>
+<p>
+	In {{ theme.themename }} versions older than {{ theme.updatefixversion }}, the automatic update checker has a bug. When automatic updates are turned on and your server runs PHP 8, it can crash the dashboard when WordPress clears its saved update information. WordPress does that after every update attempt from <strong>Dashboard &gt; Updates</strong> or <strong>Upload Theme</strong>, including attempts that fail. The new version does not cause this error: it contains the fix.
+</p>
+<p>
+	The dashboard then shows "There has been a critical error on this website", WordPress emails you "Your Site is Experiencing a Technical Issue", and the error details say:
+</p>
+<pre>Uncaught Error: Attempt to modify property "response" on false in .../vendor/proteusthemes/theme-registration-and-updates/src/ThemeUpdates.php</pre>
+<p>
+	Depending on your PHP version, it may say <code>on bool</code> instead. Your site's pages keep working for visitors. Only the dashboard is affected.
+</p>
+<p>
+	To find your version, open <strong>Appearance &gt; Themes</strong> and click the theme. If you can't log in, open <code>style.css</code> in your theme folder under <code>wp-content/themes/</code> and look for the <code>Version:</code> line.
+</p>
+<p>
+	<strong>If your dashboard still works:</strong>
+</p>
+<ul>
+	<li>The safest way is to update with FTP or your host's file manager, as described above.</li>
+	<li>Without FTP access, update from <strong>Dashboard &gt; Updates</strong>. On these versions WordPress shows "There has been a critical error on this website" when the update finishes, even when it worked, and may email you about it. Open the dashboard again. If it loads and <strong>Appearance &gt; Themes</strong> shows the new version, the update is done. If it doesn't load, follow the steps below.</li>
+	<li>Don't use <strong>Upload Theme</strong> on these versions while automatic updates are turned on. It triggers the error before it can replace the theme.</li>
+</ul>
+<p>
+	<strong>If the error has locked you out:</strong>
+</p>
+<ol>
+	<li>Make sure your server runs PHP 8.2 or newer. The email from WordPress lists your PHP version. If it's lower, change it in your hosting control panel or ask your host first.</li>
+	<li>Open the recovery link in the email from WordPress and log in. WordPress pauses the theme, so the dashboard loads.</li>
+	<li>While you're in recovery mode, update with <strong>Upload Theme</strong> as described above. Then click <strong>Exit Recovery Mode</strong> in the top bar.</li>
+</ol>
+<p>
+	Update before you leave recovery mode. Without the update, the dashboard may work again for a while, but the next update attempt brings the error back. Each recovery link works once and expires after a day. WordPress sends a new one the next time the error happens, at most once a day. Without the email, update with FTP or your host's file manager instead. Don't restore the theme folder from a backup: it contains the same old code, so the error comes back.
+</p>
+<p>
+	<strong>If you can't switch to PHP 8.2 yet:</strong> with FTP or your host's file manager, open <code>vendor/proteusthemes/theme-registration-and-updates/src/ThemeUpdates.php</code> in your theme folder, find <code>public function theme_update_transient( $value ) {</code> and add these lines directly below it:
+</p>
+<pre>if ( ! is_object( $value ) ) {
+	return $value;
+}</pre>
+<p>
+	This stops the error, so the dashboard works and update attempts no longer crash it. Switch to PHP 8.2 or newer and update as soon as you can. The update replaces this file with the fixed version.
+</p>
+{% endif %}
