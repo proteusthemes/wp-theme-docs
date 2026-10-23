@@ -109,7 +109,8 @@
 		var anchor = document.createElement("a");
 		anchor.className = "heading-link";
 		anchor.href = "#" + heading.id;
-		anchor.setAttribute("aria-label", "Link to " + heading.textContent.trim());
+		anchor.tabIndex = -1;
+		anchor.setAttribute("aria-hidden", "true");
 		anchor.textContent = "#";
 		heading.appendChild(anchor);
 	});
