@@ -9,8 +9,9 @@
 
 		<title>{{ theme.themename }} WordPress Theme Documentation</title>
 
-		<link rel="preconnect" href="https://use.typekit.net" crossorigin>
-		<link rel="stylesheet" href="https://use.typekit.net/qco0ktp.css">
+		<meta name="theme-color" content="#0e1326">
+		<link rel="preload" href="fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/literata-latin.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="stylesheet" href="stylesheets/{{ assets[theme.name].css }}">
 		<script>document.documentElement.classList.add("js")</script>
 	</head>
@@ -20,7 +21,7 @@
 		<header class="site-header">
 			<div class="container  site-header__bar">
 				<a class="site-header__logo" href="https://www.proteusthemes.com/">
-					<img src="images/logo.png" alt="ProteusThemes" width="200" height="90">
+					<img src="images/logo-2x.png" alt="ProteusThemes" width="217" height="45">
 				</a>
 				<button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
 				<nav class="site-nav" id="site-nav" aria-label="ProteusThemes">
@@ -36,10 +37,21 @@
 			<div class="hero">
 				<div class="container  hero__inner">
 					<div class="hero__copy">
-						<h1 class="hero__title">{{ theme.themename }} Documentation</h1>
+						<h1 class="hero__title">{{ theme.themename }} <span class="hero__title-accent">Documentation</span></h1>
 						<p class="hero__text">{{ theme.themeheadertext }}</p>
 					</div>
-					<img class="hero__cover" src="images/header-cover.jpg" alt="{{ theme.themename }} Cover" width="880" height="660">
+					<div class="hero__visual">
+						<div aria-hidden="true">
+							<i class="hero__shape  hero__shape--stem"></i>
+							<i class="hero__shape  hero__shape--bowl"></i>
+							<i class="hero__shape  hero__shape--morph"></i>
+							<i class="hero__shape  hero__shape--dot"></i>
+							<i class="hero__shape  hero__shape--quarter"></i>
+							<i class="hero__shape  hero__shape--grid"></i>
+							<i class="hero__shape  hero__shape--ring"></i>
+						</div>
+						<img class="hero__cover" src="images/header-cover.jpg" alt="{{ theme.themename }} Cover" width="880" height="660">
+					</div>
 				</div>
 			</div>
 		</header>

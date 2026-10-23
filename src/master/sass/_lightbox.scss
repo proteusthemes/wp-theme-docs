@@ -1,0 +1,60 @@
+@use "vars" as *;
+
+.lightbox {
+	width: 100%;
+	max-width: none;
+	height: 100%;
+	max-height: none;
+	margin: 0;
+	padding: 72px $gutter $gutter;
+	overflow: auto;
+	overscroll-behavior: contain;
+	background: transparent;
+	border: 0;
+
+	&[open] {
+		display: flex;
+	}
+
+	&::backdrop {
+		background-color: rgba(14, 19, 38, 0.92);
+	}
+
+	:focus-visible {
+		outline-color: $sun;
+	}
+}
+
+html:has(.lightbox[open]) {
+	overflow: hidden;
+}
+
+.lightbox__image {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+	background-color: $white;
+	border-radius: $radius;
+	box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox__close {
+	position: fixed;
+	top: 16px;
+	right: 16px;
+	padding: 10px 20px;
+	font-family: $font-heading;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: $ink;
+	background-color: $white;
+	border-radius: $radius-pill;
+	transition: background-color 150ms ease;
+
+	&:hover {
+		background-color: $sun;
+	}
+}
