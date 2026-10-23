@@ -1,26 +1,26 @@
 @use "vars" as *;
 
 .site-footer {
-	margin-top: 96px;
-	padding: 48px 0;
+	margin-top: 112px;
+	padding: 40px 0;
 	font-family: $font-heading;
-	font-size: 15px;
-	font-weight: 600;
-	color: $muted-on-slate;
-	background-color: $slate;
+	font-size: 16px;
+	font-weight: 500;
+	color: $on-ink-muted;
+	background-color: $ink;
 
 	a {
-		color: $muted-on-slate;
+		color: $on-ink-muted;
 		text-decoration: none;
 		transition: color 150ms ease;
 
 		&:hover {
-			color: $white;
+			color: $sun;
 		}
 	}
 
 	:focus-visible {
-		outline-color: $white;
+		outline-color: $sun;
 	}
 }
 

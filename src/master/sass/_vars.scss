@@ -1,28 +1,38 @@
-$font-heading: "futura-pt", "Jost", "Helvetica Neue", Arial, sans-serif;
-$font-body: Merriweather, Georgia, serif;
+$font-heading: "Jost", Futura, "Century Gothic", "Helvetica Neue", Arial, sans-serif;
+$font-body: "Literata", Merriweather, Georgia, serif;
 $font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
 $font-size: 17px;
 $line-height: 1.7;
 
-$slate: #364253;
-$ink: #343745;
-$text: #636375;
+$ink: #0e1326;
+$text: #4b5168;
+$muted: #6b7189;
 $primary: #f03e41;
-$primary-text: #d7282c;
-$link: #25a9f6;
-$link-text: #0b76b8;
-$hairline: #e3e7eb;
-$code-bg: #f3f5f7;
+$primary-text: #dc2a31;
+$primary-hover: #c4222a;
+$sun: #ffc93c;
+$paper: #f4f5f9;
+$hairline: #e2e5ee;
+$code-bg: $paper;
 $white: #ffffff;
-$muted-on-slate: rgba(230, 242, 255, 0.74);
-$promo-green: #54a263;
-$promo-green-text: #2f7a3d;
+$on-ink-muted: #aab1c8;
+$info: #1c7fc0;
+$info-text: #0f4c73;
+$info-bg: #e9f4fc;
+$warning-text: #8f1d20;
+$warning-bg: #fdeced;
 
-$container: 1140px;
+$radius: 10px;
+$radius-pill: 999px;
+$ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+$ease-spring: cubic-bezier(0.2, 0.8, 0.2, 1.15);
+
+$container: 1180px;
 $gutter: 24px;
-$toc-width: 270px;
-$main-gap: 48px;
+$toc-width: 264px;
+$main-gap: 56px;
+$measure: 760px;
 $toc-bar-offset: 76px;
 
 $screen-sm: 768px;

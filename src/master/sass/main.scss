@@ -1,4 +1,5 @@
 @use "vars";
+@use "fonts";
 @use "base";
 @use "grid";
 @use "buttons";
@@ -9,5 +10,6 @@
 @use "toc";
 @use "content";
 @use "callouts";
+@use "lightbox";
 @use "footer";
 @use "theme";

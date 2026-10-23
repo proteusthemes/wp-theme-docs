@@ -101,4 +101,91 @@
 		window.addEventListener("load", spy);
 		spy();
 	}
+
+	var content = document.getElementById("content");
+	if (!content) return;
+
+	Array.prototype.forEach.call(content.querySelectorAll("h2[id], h3[id], h4[id]"), function (heading) {
+		var anchor = document.createElement("a");
+		anchor.className = "heading-link";
+		anchor.href = "#" + heading.id;
+		anchor.tabIndex = -1;
+		anchor.setAttribute("aria-hidden", "true");
+		anchor.textContent = "#";
+		heading.appendChild(anchor);
+	});
+
+	if (typeof HTMLDialogElement !== "function") return;
+
+	var images = Array.prototype.slice.call(content.querySelectorAll("img")).filter(function (img) {
+		return !img.closest("a");
+	});
+	var lightbox = null;
+	var opener = null;
+	var resized = 0;
+
+	function markZoomable(img) {
+		var zoomable = img.naturalWidth > img.clientWidth * 1.15;
+		img.classList.toggle("is-zoomable", zoomable);
+		if (zoomable) {
+			img.tabIndex = 0;
+			img.setAttribute("role", "button");
+			img.setAttribute("aria-label", "Enlarge image" + (img.alt ? ": " + img.alt : ""));
+		} else {
+			img.removeAttribute("tabindex");
+			img.removeAttribute("role");
+			img.removeAttribute("aria-label");
+		}
+	}
+
+	function openLightbox(img) {
+		if (!lightbox) {
+			lightbox = document.createElement("dialog");
+			lightbox.className = "lightbox";
+			lightbox.setAttribute("aria-label", "Enlarged image");
+			lightbox.innerHTML = '<button class="lightbox__close" type="button">Close</button><img class="lightbox__image" alt="">';
+			lightbox.querySelector(".lightbox__close").addEventListener("click", function () {
+				lightbox.close();
+			});
+			lightbox.addEventListener("click", function (event) {
+				if (event.target === lightbox) lightbox.close();
+			});
+			lightbox.addEventListener("close", function () {
+				if (opener) opener.focus();
+			});
+			document.body.appendChild(lightbox);
+		}
+		var full = lightbox.querySelector(".lightbox__image");
+		full.src = img.currentSrc || img.src;
+		full.alt = img.alt;
+		opener = img;
+		lightbox.showModal();
+		lightbox.scrollTop = 0;
+	}
+
+	images.forEach(function (img) {
+		if (img.complete) markZoomable(img);
+		img.addEventListener("load", function () {
+			markZoomable(img);
+		});
+	});
+
+	window.addEventListener("resize", function () {
+		clearTimeout(resized);
+		resized = setTimeout(function () {
+			images.forEach(markZoomable);
+		}, 150);
+	});
+
+	content.addEventListener("click", function (event) {
+		var img = event.target.closest("img.is-zoomable");
+		if (img) openLightbox(img);
+	});
+
+	content.addEventListener("keydown", function (event) {
+		if ((event.key === "Enter" || event.key === " ") && event.target.matches("img.is-zoomable")) {
+			event.preventDefault();
+			openLightbox(event.target);
+		}
+	});
 })();

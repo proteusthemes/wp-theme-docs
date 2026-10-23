@@ -5,31 +5,42 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	gap: 16px 36px;
-	padding: 18px $gutter;
+	gap: 12px 28px;
+	padding: 12px $gutter;
 	font-family: $font-heading;
 	font-weight: 600;
-	color: $white;
+	color: $ink;
 	text-align: center;
-	background-color: $promo-green;
+	background-color: $sun;
+
+	:focus-visible {
+		outline-color: $ink;
+	}
 
 	@include below(600px) {
 		flex-direction: column;
+		padding-top: 14px;
+		padding-bottom: 16px;
 	}
 }
 
 .banner__text {
 	margin: 0;
-	font-size: 24px;
+	font-size: 19px;
 	line-height: 1.3;
 }
 
 .banner__pill {
 	display: inline-block;
 	margin-left: 4px;
-	padding: 1px 14px 2px;
-	color: $promo-green-text;
+	padding: 2px 14px 3px;
+	color: $white;
 	white-space: nowrap;
-	background-color: $white;
-	border-radius: 999px;
+	background-color: $ink;
+	border-radius: $radius-pill;
+}
+
+.banner__button {
+	padding: 11px 20px;
+	font-size: 15px;
 }

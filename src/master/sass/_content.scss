@@ -17,42 +17,72 @@
 	}
 
 	h2 {
-		margin: 72px 0 24px;
-		font-size: 28px;
-		line-height: 1.15;
+		margin: 88px 0 24px;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		text-wrap: balance;
 
 		@include from($screen-sm) {
-			font-size: 32px;
+			font-size: 40px;
 		}
 
 		&::before {
 			content: "";
 			display: block;
-			width: 40px;
-			height: 3px;
-			margin-bottom: 20px;
+			width: 14px;
+			height: 28px;
+			margin-bottom: 18px;
 			background-color: $primary;
-			border-radius: 2px;
+			border-radius: 0 14px 14px 0;
 		}
 	}
 
 	h3 {
-		margin: 44px 0 16px;
-		font-size: 24px;
+		margin: 48px 0 16px;
+		font-size: 25px;
+		line-height: 1.2;
+		letter-spacing: -0.01em;
 	}
 
 	h4 {
 		margin: 32px 0 12px;
-		font-size: 19px;
+		font-size: 20px;
 	}
 
 	h5 {
 		margin: 28px 0 12px;
-		font-size: 17px;
+		font-size: 18px;
 	}
 
 	h2 + h3 {
 		margin-top: 28px;
+	}
+
+	.heading-link {
+		margin-left: 0.3em;
+		padding: 0 0.15em;
+		font-weight: 500;
+		color: $muted;
+		text-decoration: none;
+		transition: opacity 150ms ease, color 150ms ease;
+
+		@media (hover: hover) {
+			opacity: 0;
+		}
+
+		&:hover {
+			color: $primary-text;
+		}
+	}
+
+	:is(h2, h3, h4):hover > .heading-link {
+		opacity: 1;
+	}
+
+	img.is-zoomable {
+		cursor: zoom-in;
 	}
 
 	h3 + h4 {
@@ -109,6 +139,7 @@
 	dt {
 		margin-top: 16px;
 		font-family: $font-heading;
+		font-size: 18px;
 		font-weight: 600;
 		color: $ink;
 	}
@@ -125,8 +156,8 @@
 	img {
 		margin-bottom: 28px;
 		border: 1px solid $hairline;
-		border-radius: 6px;
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+		border-radius: $radius;
+		box-shadow: 0 1px 2px rgba(14, 19, 38, 0.04), 0 12px 28px -16px rgba(14, 19, 38, 0.25);
 	}
 
 	:is(p, li, figure, td) img {
@@ -147,22 +178,22 @@
 	}
 
 	figcaption {
-		margin-top: 10px;
+		margin-top: 12px;
 		font-family: $font-heading;
-		font-size: 13px;
-		font-weight: 600;
-		letter-spacing: 0.02em;
+		font-size: 14px;
+		font-weight: 500;
 		text-align: center;
-		color: $text;
+		color: $muted;
 	}
 }
 
 code {
 	padding: 2px 6px;
-	font-size: 0.88em;
+	font-size: 0.86em;
 	color: $ink;
 	background-color: $code-bg;
-	border-radius: 4px;
+	border: 1px solid $hairline;
+	border-radius: 6px;
 	overflow-wrap: break-word;
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
@@ -170,13 +201,13 @@ code {
 
 pre {
 	margin: 0 0 28px;
-	padding: 16px;
+	padding: 18px 20px;
 	font-size: 14px;
-	line-height: 1.6;
+	line-height: 1.65;
 	color: $ink;
 	background-color: $code-bg;
 	border: 1px solid $hairline;
-	border-radius: 6px;
+	border-radius: 14px;
 	white-space: pre-wrap;
 	overflow-wrap: anywhere;
 
@@ -185,6 +216,7 @@ pre {
 		font-size: inherit;
 		color: inherit;
 		background-color: transparent;
+		border: 0;
 		border-radius: 0;
 	}
 }
@@ -196,14 +228,17 @@ pre {
 
 kbd {
 	display: inline;
-	padding: .1em .35em;
-	font-size: .85em;
+	padding: 0.12em 0.5em;
+	font-family: $font-heading;
+	font-size: 0.9em;
+	font-weight: 500;
 	color: $ink;
 	vertical-align: baseline;
 	overflow-wrap: break-word;
-	background: $code-bg;
+	background: $white;
 	border: 1px solid $hairline;
-	border-radius: 4px;
+	border-bottom-width: 2px;
+	border-radius: 6px;
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
@@ -232,7 +267,7 @@ kbd:has(> kbd) {
 	aspect-ratio: 16 / 9;
 	overflow: hidden;
 	background-color: $ink;
-	border-radius: 6px;
+	border-radius: 14px;
 
 	iframe {
 		display: block;

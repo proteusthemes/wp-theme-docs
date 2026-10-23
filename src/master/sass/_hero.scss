@@ -1,49 +1,211 @@
 @use "vars" as *;
 
 .hero {
-	padding: 40px 0 56px;
+	padding: 28px 0 96px;
 
 	@include from($screen-md) {
-		padding: 64px 0 72px;
+		padding: 48px 0 128px;
 	}
 }
 
 .hero__inner {
 	@include from($screen-md) {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-		gap: 56px;
+		grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+		gap: 64px;
 		align-items: center;
 	}
 }
 
 .hero__title {
-	margin: 0 0 20px;
-	font-size: 36px;
-	line-height: 1.1;
+	margin: 0 0 22px;
+	font-size: min(40px, 11vw);
+	font-weight: 700;
+	line-height: 0.95;
+	letter-spacing: -0.035em;
 	color: $white;
+	overflow-wrap: anywhere;
+	text-wrap: balance;
+	animation: hero-rise 700ms $ease-out both;
 
 	@include from($screen-sm) {
-		font-size: 44px;
+		font-size: clamp(44px, 5.2vw, 72px);
 	}
 }
 
+.hero__title-accent {
+	display: block;
+	color: $primary;
+}
+
 .hero__text {
+	max-width: 52ch;
 	margin: 0;
-	font-size: 18px;
-	line-height: 1.7;
-	color: $muted-on-slate;
+	font-family: $font-heading;
+	font-size: 19px;
+	line-height: 1.6;
+	color: $on-ink-muted;
+	animation: hero-rise 700ms $ease-out 120ms both;
+
+	@include from($screen-sm) {
+		font-size: 20px;
+	}
+}
+
+.hero__visual {
+	--tile: 44px;
+	position: relative;
+	isolation: isolate;
+	margin: calc(var(--tile) * 1.6) 0 calc(var(--tile) * 0.4);
+
+	@include from($screen-sm) {
+		--tile: 56px;
+		margin-right: calc(var(--tile) * 0.6);
+		margin-left: calc(var(--tile) * 0.6);
+	}
+
+	@include from($screen-md) {
+		--tile: 60px;
+		margin: var(--tile) calc(var(--tile) * 0.6) calc(var(--tile) * 0.4) 0;
+	}
 }
 
 .hero__cover {
+	position: relative;
 	display: block;
 	width: 100%;
 	height: auto;
-	margin-top: 36px;
-	border-radius: 6px;
-	box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.06);
+	border-radius: 14px;
+	box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+	animation: hero-rise 800ms $ease-out 80ms both;
+}
 
-	@include from($screen-md) {
-		margin-top: 0;
+.hero__shape {
+	position: absolute;
+	z-index: -1;
+	animation: shape-in 800ms $ease-spring both;
+	animation-delay: calc(var(--i) * 70ms + 220ms);
+}
+
+.hero__shape--stem {
+	--i: 0;
+	top: calc(var(--tile) * -1);
+	right: calc(var(--tile) * 1.25 + 6px);
+	width: calc(var(--tile) * 0.55);
+	height: calc(var(--tile) * 2);
+	background-color: $primary;
+	border-radius: 6px;
+}
+
+.hero__shape--bowl {
+	--i: 1;
+	top: calc(var(--tile) * -1);
+	right: calc(var(--tile) * 0.25);
+	width: var(--tile);
+	height: calc(var(--tile) * 2);
+	background-color: $primary;
+	border-radius: 0 $radius-pill $radius-pill 0;
+}
+
+.hero__shape--morph {
+	--i: 2;
+	top: calc(var(--tile) * -0.9);
+	left: calc(var(--tile) * 0.35);
+	width: calc(var(--tile) * 0.7);
+	height: calc(var(--tile) * 0.7);
+	background-color: $sun;
+	border-radius: 6px;
+	animation: shape-in 800ms $ease-spring both, shape-morph 7s ease-in-out infinite;
+	animation-delay: calc(var(--i) * 70ms + 220ms), 1.8s;
+}
+
+.hero__shape--dot {
+	--i: 3;
+	top: calc(var(--tile) * -0.55);
+	left: calc(var(--tile) * 1.35);
+	width: calc(var(--tile) * 0.3);
+	height: calc(var(--tile) * 0.3);
+	background-color: $white;
+	border-radius: 50%;
+}
+
+.hero__shape--quarter {
+	--i: 4;
+	bottom: calc(var(--tile) * -0.6);
+	left: calc(var(--tile) * -0.6);
+	width: calc(var(--tile) * 1.6);
+	height: calc(var(--tile) * 1.6);
+	background-color: $sun;
+	border-radius: 100% 0 0;
+}
+
+.hero__shape--grid {
+	--i: 5;
+	right: calc(var(--tile) * -0.5);
+	bottom: calc(var(--tile) * -0.6);
+	width: calc(var(--tile) * 2.2);
+	height: calc(var(--tile) * 1.1);
+	background-image: radial-gradient(rgba(255, 255, 255, 0.55) 1.6px, transparent 1.8px);
+	background-size: 15px 15px;
+	border-radius: 6px;
+}
+
+.hero__shape--ring {
+	--i: 6;
+	top: 38%;
+	right: calc(var(--tile) * -0.45);
+	z-index: 1;
+	width: calc(var(--tile) * 0.9);
+	height: calc(var(--tile) * 0.9);
+	border: 3px solid rgba(255, 255, 255, 0.85);
+	border-radius: 50%;
+}
+
+@keyframes hero-rise {
+	from {
+		opacity: 0;
+		transform: translateY(24px);
+	}
+}
+
+@keyframes shape-in {
+	from {
+		opacity: 0;
+		transform: rotate(-90deg) scale(0.3);
+	}
+}
+
+@keyframes shape-morph {
+	0%,
+	18% {
+		border-radius: 6px;
+		transform: rotate(0);
+	}
+
+	30%,
+	48% {
+		border-radius: 50%;
+		transform: rotate(0);
+	}
+
+	60%,
+	78% {
+		border-radius: 100% 0 0;
+		transform: rotate(90deg);
+	}
+
+	90%,
+	100% {
+		border-radius: 6px;
+		transform: rotate(180deg);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero__title,
+	.hero__text,
+	.hero__cover,
+	.hero__shape {
+		animation: none;
 	}
 }

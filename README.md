@@ -24,7 +24,7 @@ All source files are in the `src` folder. In the `src` folder, there is a `maste
 
 A theme file wins over the master file with the same path, and that is resolved while the docs are being built. Everything ends up in the `build` folder, which will hold the final **index.html** file for each theme, together with its stylesheet, script, images and fonts.
 
-The stylesheet and the script are our own (no Bootstrap, no jQuery): the Sass partials in `src/master/sass` are compiled per theme, and `src/master/scripts/main.js` handles the table of contents and the mobile menus. The brand fonts (futura-pt and Merriweather) are loaded from the ProteusThemes Typekit kit, so they are not part of the build.
+The stylesheet and the script are our own (no Bootstrap, no jQuery): the Sass partials in `src/master/sass` are compiled per theme, and `src/master/scripts/main.js` handles the table of contents, the mobile menus, the section links next to headings and the enlarged view of screenshots that are shown smaller than their real size. The brand fonts (Jost for headings, Literata for text) are self-hosted from `src/master/fonts` and copied into every theme build, together with their OFL license files.
 
 ## How to edit documentation for a theme
 

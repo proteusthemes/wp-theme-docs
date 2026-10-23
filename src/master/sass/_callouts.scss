@@ -12,17 +12,16 @@ $warning-icon: icon("%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cline x1='12' y
 	position: relative;
 	clear: both;
 	margin: 0 0 32px;
-	padding: 20px 20px 20px 60px;
+	padding: 20px 22px 20px 62px;
 	font-size: 16px;
 	line-height: 1.65;
-	border-left: 4px solid;
-	border-radius: 0 6px 6px 0;
+	border-radius: 14px;
 
 	&::before {
 		content: "";
 		position: absolute;
 		top: 21px;
-		left: 20px;
+		left: 22px;
 		width: 24px;
 		height: 24px;
 		-webkit-mask: no-repeat center / contain;
@@ -31,6 +30,7 @@ $warning-icon: icon("%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cline x1='12' y
 
 	a {
 		color: inherit;
+		text-decoration-color: currentColor;
 	}
 
 	strong {
@@ -45,24 +45,22 @@ $warning-icon: icon("%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cline x1='12' y
 }
 
 .info {
-	color: #1f5f86;
-	background-color: #eaf6fe;
-	border-color: $link;
+	color: $info-text;
+	background-color: $info-bg;
 
 	&::before {
-		background-color: $link;
+		background-color: $info;
 		-webkit-mask-image: $info-icon;
 		mask-image: $info-icon;
 	}
 }
 
 .warning {
-	color: #8f1d20;
-	background-color: #fdecec;
-	border-color: $primary;
+	color: $warning-text;
+	background-color: $warning-bg;
 
 	&::before {
-		background-color: $primary;
+		background-color: $primary-text;
 		-webkit-mask-image: $warning-icon;
 		mask-image: $warning-icon;
 	}
