@@ -1,0 +1,70 @@
+items:
+  - link: general-and-installation
+    name: Introduction & Installation
+    subitems:
+    - link: few-words-on-start
+      name: Introduction
+    - link: installation
+      name: Installation
+    - link: updates
+      name: Registration and Updates
+    - link: customize-the-appearance
+      name: Customize the Appearance
+  - link: demo-content
+    name: Demo Content
+    subitems:
+    - link: one-click-demo-install
+      name: One Click Demo Install
+    - link: import-xml-file
+      name: Import XML File
+    - link: demo-photos
+      name: Demo Photos
+  - link: site-editor
+    name: Site Editor
+    subitems:
+    - link: templates
+      name: Templates
+    - link: header-and-footer
+      name: Header & Footer
+    - link: logo-and-site-icon
+      name: Logo & Site Icon
+    - link: main-menu
+      name: Navigation
+  - link: pages
+    name: Pages & Patterns
+    subitems:
+    - link: building-a-page
+      name: Building a Page
+    - link: page-patterns
+      name: Page Patterns
+    - link: section-patterns
+      name: Section Patterns
+    - link: page-links
+      name: Page Links
+  - link: styles
+    name: Styles
+    subitems:
+    - link: style-variations
+      name: Style Variations
+    - link: section-styles
+      name: Section Styles
+    - link: block-styles
+      name: Block Styles
+  - link: plugins
+    name: Plugins
+    subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
+    - link: contact-form-7
+      name: Contact Form 7
+  - link: translations
+    name: Translations
+  - link: extras
+    name: Extras
+    subitems:
+    - link: customizations
+      name: Customizations
+    - link: changelog
+      name: Changelog
+    - link: support
+      name: Support

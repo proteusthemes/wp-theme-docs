@@ -1,0 +1,33 @@
+<section>
+	<h2 id="plugins">Plugins</h2>
+
+	<h3 id="required-and-recommended-plugins">Required and Recommended Plugins</h3>
+	<p>
+		Install and activate these plugins in <strong>Appearance &gt; Install Plugins</strong>:
+	</p>
+	<ul>
+		<li><strong>ProteusThemes Support</strong> (required, bundled with the theme): creates the <a href="#support">site report</a> you send us when you need help.</li>
+		<li><a href="https://wordpress.org/plugins/one-click-demo-import/" target="_blank">One Click Demo Import</a> (recommended): imports the <a href="#demo-content">demo content</a>. You can deactivate it after the import.</li>
+		<li><a href="https://wordpress.org/plugins/contact-form-7/" target="_blank">Contact Form 7</a> (recommended): the booking form. VetPress styles its forms to match the theme.</li>
+		<li><a href="https://clevrbot.com/" target="_blank">ClevrBot</a> (recommended): an AI chat assistant that answers your visitors' questions from your site's content.</li>
+	</ul>
+
+	<h3 id="contact-form-7">Contact Form 7</h3>
+	<p>
+		The demo import adds the <strong>Book a visit</strong> form and places it on the Book a visit page. It sends each request to the email address in <strong>Settings &gt; General &gt; Administration Email Address</strong>. To send requests elsewhere, open <strong>Contact &gt; Contact Forms &gt; Book a visit</strong> and change <strong>To</strong> on the <strong>Mail</strong> tab.
+	</p>
+	<p>
+		If you imported the <a href="#import-xml-file">XML file</a> with the WordPress Importer instead, also change <strong>From</strong> on the <strong>Mail</strong> tab to an address on your own domain, such as <code>[_site_title] &lt;wordpress@yourdomain.com&gt;</code>. Mail sent from the demo's example.com address doesn't arrive.
+	</p>
+	<p>
+		To build a form yourself:
+	</p>
+	<ol>
+		<li>Go to <strong>Contact &gt; Add New</strong>, give the form a name and add the fields you need, such as your client's name, phone, email, pet's name and the reason for the visit.</li>
+		<li>On the <strong>Mail</strong> tab, set <strong>To</strong> to the address the requests should go to.</li>
+		<li>Open your Book a visit page, select the request card and add a <strong>Contact Form 7</strong> block, then choose your form.</li>
+	</ol>
+	<div class="info">
+		Test the form after setting it up. Many hosts don't send email from WordPress reliably, so if no email arrives, set up an SMTP plugin with your email provider's details.
+	</div>
+</section>
