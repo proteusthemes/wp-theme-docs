@@ -167,5 +167,12 @@
     "themeheadertext": "Your Ultimate WooCommerce Theme to Grow Any e-Commerce Business",
     "shutterstockurl": "https://www.shutterstock.com/",
     "updatefixversion": "4.0.3"
+  },
+  {
+    "name": "vetpress",
+    "themename": "VetPress",
+    "creationdate": "October 21, 2026",
+    "tfurl": "https://www.proteusthemes.com/wordpress-themes/vetpress/",
+    "themeheadertext": "VetPress is a bold, playful block theme for veterinary clinics, groomers and pet daycares. Every section is an editable pattern, and four style variations change the look of the whole site from the Site Editor."
   }
 ]
