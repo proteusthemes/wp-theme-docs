@@ -1,12 +1,12 @@
 <h3 id="updates">Registration and Updates</h3>
 <p>
-	Open <strong>Appearance &gt; Theme Registration</strong> after activating the theme. Use the license key from your <a href="https://www.proteusthemes.com/account/" target="_blank">ProteusThemes account</a>, or the purchase code from your ThemeForest download, according to the instructions on the registration page.
+	Open <strong>Appearance &gt; Theme Registration</strong> after activating the theme. Use the license key from your <a href="https://www.proteusthemes.com/account/" target="_blank">ProteusThemes account</a>{% if not theme.shoponly %}, or the purchase code from your ThemeForest download,{% endif %} according to the instructions on the registration page.
 </p>
 <p>
-	Register before using <strong>One Click Demo Import</strong>. In the ProteusThemes shop version, registration also unlocks the theme's Customizer options. The ThemeForest version does not apply that Customizer restriction, but still requires registration for demo import.
+	Register before using <strong>One Click Demo Import</strong>. {% if theme.shoponly %}Registration also unlocks the theme's Customizer options.{% else %}In the ProteusThemes shop version, registration also unlocks the theme's Customizer options. The ThemeForest version does not apply that Customizer restriction, but still requires registration for demo import.{% endif %}
 </p>
 <p>
-	<strong>Automatic updates:</strong> After registration, the theme can notify you when updates are available. For a ThemeForest purchase, also generate and verify the <strong>Envato token</strong> requested on the registration page to enable automatic updates. This is separate from your purchase code.
+	<strong>Automatic updates:</strong> After registration, the theme can notify you when updates are available.{% if not theme.shoponly %} For a ThemeForest purchase, also generate and verify the <strong>Envato token</strong> requested on the registration page to enable automatic updates. This is separate from your purchase code.{% endif %}
 </p>
 <p>
 	If an available update is not showing, open <strong>Dashboard &gt; Updates</strong> and click <strong>Check Again</strong>.
@@ -20,11 +20,11 @@
 </p>
 <ul>
 	<li>Back up your site's files and database.</li>
-	<li>Check your PHP version in <strong>Tools &gt; Site Health &gt; Info &gt; Server</strong>. The latest version of {{ theme.themename }} needs PHP 8.2 or newer. If yours is lower, change it in your hosting control panel or ask your host to do it. WordPress won't install the theme on an older PHP version, and theme files copied in with FTP stop the whole site with a "Composer detected issues" error.</li>
+	<li>Check your PHP version in <strong>Tools &gt; Site Health &gt; Info &gt; Server</strong>. The latest version of {{ theme.themename }} needs PHP {{ theme.phpversion }} or newer. If yours is lower, change it in your hosting control panel or ask your host to do it. WordPress won't install the theme on an older PHP version, and theme files copied in with FTP stop the whole site with a "Composer detected issues" error.</li>
 	<li>Your content, menus, widgets and Customizer settings are kept. Changes made directly to the theme's files are overwritten. Changes in a child theme are kept.</li>
 </ul>
 <p>
-	{% if theme.name == "woondershop" %}
+	{% if theme.shoponly %}
 	<strong>Download the latest version</strong> from your <a href="https://www.proteusthemes.com/account/" target="_blank">ProteusThemes account</a>.
 	{% else %}
 	<strong>Download the latest version.</strong> If you bought the theme on ThemeForest, open your <a href="https://themeforest.net/downloads" target="_blank">ThemeForest downloads</a>, click <strong>Download</strong> next to the theme and choose <strong>Installable WordPress file only</strong>. The "All files &amp; documentation" package can't be installed as it is. If you bought it in our shop, download it from your <a href="https://www.proteusthemes.com/account/" target="_blank">ProteusThemes account</a>.
@@ -73,7 +73,7 @@
 	<strong>If the error has locked you out:</strong>
 </p>
 <ol>
-	<li>Make sure your server runs PHP 8.2 or newer. The email from WordPress lists your PHP version. If it's lower, change it in your hosting control panel or ask your host first.</li>
+	<li>Make sure your server runs PHP {{ theme.phpversion }} or newer. The email from WordPress lists your PHP version. If it's lower, change it in your hosting control panel or ask your host first.</li>
 	<li>Open the recovery link in the email from WordPress and log in. WordPress pauses the theme, so the dashboard loads.</li>
 	<li>While you're in recovery mode, update with <strong>Upload Theme</strong> as described above. Then click <strong>Exit Recovery Mode</strong> in the top bar.</li>
 </ol>
@@ -81,12 +81,12 @@
 	Update before you leave recovery mode. Without the update, the dashboard may work again for a while, but the next update attempt brings the error back. Each recovery link works once and expires after a day. WordPress sends a new one the next time the error happens, at most once a day. Without the email, update with FTP or your host's file manager instead. Don't restore the theme folder from a backup: it contains the same old code, so the error comes back.
 </p>
 <p>
-	<strong>If you can't switch to PHP 8.2 yet:</strong> with FTP or your host's file manager, open <code>vendor/proteusthemes/theme-registration-and-updates/src/ThemeUpdates.php</code> in your theme folder, find <code>public function theme_update_transient( $value ) {</code> and add these lines directly below it:
+	<strong>If you can't switch to PHP {{ theme.phpversion }} yet:</strong> with FTP or your host's file manager, open <code>vendor/proteusthemes/theme-registration-and-updates/src/ThemeUpdates.php</code> in your theme folder, find <code>public function theme_update_transient( $value ) {</code> and add these lines directly below it:
 </p>
 <pre>if ( ! is_object( $value ) ) {
 	return $value;
 }</pre>
 <p>
-	This stops the error, so the dashboard works and update attempts no longer crash it. Switch to PHP 8.2 or newer and update as soon as you can. The update replaces this file with the fixed version.
+	This stops the error, so the dashboard works and update attempts no longer crash it. Switch to PHP {{ theme.phpversion }} or newer and update as soon as you can. The update replaces this file with the fixed version.
 </p>
 {% endif %}

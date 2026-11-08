@@ -21,7 +21,9 @@ items:
     name: Header
     subitems:
     - link: logo-and-favicon
-      name: Logo & Favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
     - link: header-widgets
       name: Header Widgets
     - link: main-menu
@@ -46,6 +48,8 @@ items:
       name: Buttons
     - link: icons-font-awesome
       name: Icons - Font Awesome
+    - link: tables
+      name: Tables
   - link: widgets
     name: Widgets
     subitems:
@@ -54,6 +58,8 @@ items:
   - link: plugins
     name: Plugins
     subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
     - link: contact-form-7
       name: Contact Form 7
     - link: woocommerce
@@ -61,7 +67,7 @@ items:
     - link: breadcrumbs
       name: Breadcrumb NavXT
     - link: so-widgets-bundle
-      name: SiteOrigin Widgets Bundle
+      name: Google Maps API Key
   - link: footer
     name: Footer
     subitems:

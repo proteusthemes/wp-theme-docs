@@ -1,0 +1,96 @@
+items:
+  - link: general-and-installation
+    name: Introduction & Installation
+    subitems:
+    - link: few-words-on-start
+      name: Introduction
+    - link: installation
+      name: Installation
+    - link: updates
+      name: Registration and Updates
+    - link: customize-the-appearance
+      name: Customize the Appearance
+  - link: demo-content
+    name: Demo Content
+    subitems:
+    - link: one-click-demo-install
+      name: One Click Demo Install
+    - link: import-xml-file
+      name: Import XML File
+  - link: header
+    name: Header
+    subitems:
+    - link: top-bar
+      name: Top Bar
+    - link: logo-and-favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
+    - link: header-widgets
+      name: Header Widgets
+    - link: main-menu
+      name: Main Menu
+    - link: navigation-widgets
+      name: Navigation Widgets
+  - link: pages
+    name: Pages
+    subitems:
+    - link: page-templates
+      name: Page Templates
+    - link: page-builder
+      name: Page Builder
+    - link: page-builder-widgets
+      name: Page Builder Widgets
+  - link: slider
+    name: Slider
+  - link: proteusthemes-options
+    name: ProteusThemes Options
+  - link: shortcodes
+    name: Shortcodes
+    subitems:
+    - link: buttons
+      name: Buttons
+    - link: icons-font-awesome
+      name: Icons - Font Awesome
+  - link: plugins
+    name: Plugins
+    subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
+    - link: contact-form-7
+      name: Contact Form 7
+    - link: woocommerce
+      name: WooCommerce
+    - link: breadcrumbs
+      name: Breadcrumb NavXT
+    - link: portfolio
+      name: Projects (Portfolio)
+    - link: so-widgets-bundle
+      name: Google Maps API Key
+  - link: footer
+    name: Footer
+    subitems:
+    - link: footer-widgets
+      name: Footer Widgets
+    - link: middle-footer
+      name: Middle Footer
+    - link: bottom-footer
+      name: Bottom Footer
+  - link: translations
+    name: Translations
+    subitems:
+    - link: manual-translation
+      name: Manual Translation
+    - link: wpml
+      name: WPML
+  - link: extras
+    name: Extras
+    subitems:
+    - link: demo-images
+      name: Demo Images
+    - link: customizations
+      name: Customizations
+    - link: changelog
+      name: Changelog
+    - link: support
+      name: Support

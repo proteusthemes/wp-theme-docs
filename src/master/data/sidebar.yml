@@ -21,7 +21,9 @@ items:
     name: Header
     subitems:
     - link: logo-and-favicon
-      name: Logo & Favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
     - link: header-widgets
       name: Header Widgets
     - link: main-menu

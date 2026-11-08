@@ -13,22 +13,26 @@
 	<p>
 		The import usually takes under a minute. It also sets the Home page as your homepage and the Journal page as your posts page in <strong>Settings &gt; Reading</strong>, and points the theme's buttons and links at the imported pages. If your site already had a page at one of the demo's addresses, such as <code>/book/</code>, the imported page gets a new address, such as <code>/book-2/</code>, and the links follow it.
 	</p>
+	<p>
+		The import also turns off comments and pingbacks for new posts. To allow them, go to <strong>Settings &gt; Discussion</strong>.
+	</p>
 	<div class="info">
 		<p>When setting up a content with your new theme, put special focus on the page speed optimization, especially on the <strong><a href="https://www.proteusthemes.com/blog/ultimate-guide-image-optimization-wordpress/">image optimization process</a></strong>. This way you can save on your bandwidth, reduce the bounce rate on your website, and make your users happy. Our themes are created with the speed in mind but large, non-optimized images can and will ruin this experience.</p>
 		<p><a href="https://www.proteusthemes.com/blog/ultimate-guide-image-optimization-wordpress/">Read more &rarr;</a></p>
 	</div>
 	<h3 id="import-xml-file">Import XML File</h3>
 	<p>
-		You can also import the demo content with the WordPress Importer. Download the XML file from <a href="https://artifacts.proteusthemes.com/xml-exports/{{ theme.name }}-latest.xml">https://artifacts.proteusthemes.com/xml-exports/{{ theme.name }}-latest.xml</a>, or find it in the <code>extras</code> folder of the <strong>All files &amp; documentation</strong> zip from ThemeForest. Activate Contact Form 7 first, then go to <strong>Tools &gt; Import</strong>, run the <strong>WordPress</strong> importer, upload the file and tick <strong>Download and import file attachments</strong>.
+		If the one-click import can't download the demo file, download it yourself and upload it to the same importer:
 	</p>
+	<ol>
+		<li>Download the XML file from <a href="https://artifacts.proteusthemes.com/xml-exports/{{ theme.name }}-latest.xml">https://artifacts.proteusthemes.com/xml-exports/{{ theme.name }}-latest.xml</a>, or find it in the <code>extras</code> folder of the <strong>All files &amp; documentation</strong> zip from ThemeForest.</li>
+		<li>Make sure <strong>One Click Demo Import</strong> and <strong>Contact Form 7</strong> are active and the theme is registered, as in the steps above. Without Contact Form 7, the import skips the booking form.</li>
+		<li>Go to <strong>Appearance &gt; Import Demo Data</strong> and click <strong>Switch to Manual Import</strong>.</li>
+		<li>Under <strong>Import Content</strong>, click <strong>Select a File</strong> and choose the XML file. Then click <strong>Continue &amp; Import</strong>.</li>
+	</ol>
 	<p>
-		The importer doesn't change your settings, so afterwards:
+		The manual import sets up your site the same way as the one-click import: it sets the homepage and posts page, and points the buttons, links and menu at the imported pages.
 	</p>
-	<ul>
-		<li>In <strong>Settings &gt; Reading</strong>, choose <strong>A static page</strong>, then select <strong>Home</strong> as the homepage and <strong>Journal</strong> as the posts page.</li>
-		<li>In <strong>Appearance &gt; Editor</strong>, open the header and check that its <strong>Navigation</strong> block shows the imported <strong>Main menu</strong>.</li>
-		<li>Change the booking form's sender, as described under <a href="#contact-form-7">Contact Form 7</a>.</li>
-	</ul>
 	<h3 id="demo-photos">Demo Photos</h3>
 	<p>
 		The photos on the demo site are for the preview only. The import downloads blurred copies of them, so you can see where photos go, and you replace them with your own. The theme's patterns show a placeholder in each photo spot instead. To replace a photo, select the image block and click <strong>Replace</strong> in its toolbar.

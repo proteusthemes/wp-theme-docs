@@ -23,7 +23,9 @@ items:
     - link: top-bar
       name: Top Bar
     - link: logo-and-favicon
-      name: Logo & Favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
     - link: header-widgets
       name: Slider Widgets
     - link: main-menu
@@ -55,6 +57,8 @@ items:
   - link: plugins
     name: Plugins
     subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
     - link: contact-form-7
       name: Contact Form 7
     - link: woocommerce
@@ -63,6 +67,10 @@ items:
       name: WPBakery Page Builder
     - link: breadcrumbs
       name: Breadcrumb NavXT
+    - link: portfolio
+      name: Projects (Portfolio)
+    - link: so-widgets-bundle
+      name: Google Maps API Key
   - link: footer
     name: Footer
     subitems:

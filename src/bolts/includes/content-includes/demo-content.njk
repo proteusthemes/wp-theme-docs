@@ -1,13 +1,12 @@
 <section>
 	<h2 id="demo-content">Demo Content</h2>
-	<p>Before importing, activate the required plugins and the plugins used by your chosen demo, then complete <a href="#updates">theme registration</a>.</p>
+	<p>Before importing, go to <strong>Appearance &gt; Install Plugins</strong> and install and activate <strong>One Click Demo Import</strong>, the other required plugins and the plugins used by your chosen demo, then complete <a href="#updates">theme registration</a>. The import skips demo content whose plugin isn't active, for example the contact forms without <strong>Contact Form 7</strong> and the shop products without <strong>WooCommerce</strong>.</p>
 	<h3 id="one-click-demo-install">One Click Demo Install</h3>
-	<img src="images/one-click-demo-import.png" alt="One Click Demo Import" width="940" height="384">
 	<div class="warning">
 		Don't forget to activate all required plugins before importing demo data.
 	</div>
 	<p>
-		You can import demo content from our demo site (with blurred licensed images) with a single click of a button. Go to <kbd><kbd><samp>wp-admin</samp></kbd>&nbsp;→ <kbd><samp>Appearance</samp></kbd>&nbsp;→ <kbd><samp>Import Demo Data</samp></kbd></kbd>, here you have to select which demo data you want to import! You can choose from our 4 demo pages:
+		You can import demo content from our demo site (with blurred licensed images) with a single click of a button. Go to <kbd><kbd><samp>wp-admin</samp></kbd>&nbsp;→ <kbd><samp>Appearance</samp></kbd>&nbsp;→ <kbd><samp>Import Demo Data</samp></kbd></kbd>. You can choose from our 4 demo pages:
 		<ul>
 			<li>Bolts Construction</li>
 			<li>Bolts Transport</li>
@@ -15,7 +14,7 @@
 			<li>Bolts Industry</li>
 		</ul>
 
-		Once you select which demo data you want to import, just click on the <strong>Import Demo Data</strong> button.
+		Click <strong>Import Demo</strong> under the demo you want. Review the plugins on the <strong>Before We Import Your Demo</strong> screen, then click <strong>Continue &amp; Import</strong>.
 	</p>
 	<p>
 		* If you choose the <strong>Bolts Factory</strong> demo you will have to complete some extra steps in order to have the same slider as in our demo page. Follow the steps below:
@@ -46,12 +45,13 @@
 	<p>
 		<b>Demo Widgets</b><br>After you import the demo content, you can also import widgets the old-fashioned way. The files for widget import are also located on our server:
 		<ul>
-			<li>Bolts Construction: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-construction.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-construction.json</a></li>
-			<li>Bolts Transport: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-transport.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-transport.json</a></li>
-			<li>Bolts Factory: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-factory.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-factory.json</a></li>
-			<li>Bolts Industry: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-industry.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-industry.json</a></li>
+			<li>Bolts Construction: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-construction-ptcs.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-construction-ptcs.json</a></li>
+			<li>Bolts Transport: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-transport-ptcs.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-transport-ptcs.json</a></li>
+			<li>Bolts Factory: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-factory-ptcs.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-factory-ptcs.json</a></li>
+			<li>Bolts Industry: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-industry-ptcs.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-industry-ptcs.json</a></li>
 		</ul>
-		Rename this file to <code>widgets.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <kbd><kbd><samp>Tools</samp></kbd>&nbsp;→ <kbd><samp>Widget Import/Export</samp></kbd></kbd> and import the file.
+		The widget files also fill the <b>Services</b> and <b>Extras</b> custom sidebars. Activating Custom Sidebars by ProteusThemes creates Services. Before you import, create Extras in <strong>Appearance &gt; Widgets</strong> with <strong>Create a new sidebar</strong>, or its widgets end up in Inactive Widgets.
+		Rename the file for your demo to <code>widgets.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <kbd><kbd><samp>Tools</samp></kbd>&nbsp;→ <kbd><samp>Widget Importer &amp; Exporter</samp></kbd></kbd> and import the file.
 	</p>
 	<p>
 		<b>Customizer settings</b><br>The last thing you have to import are the customizer settings. The files for that can also be found on our server:
