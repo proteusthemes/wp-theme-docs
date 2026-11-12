@@ -22,8 +22,12 @@ items:
   - link: header
     name: Header
     subitems:
+    - link: top-bar
+      name: Top Bar
     - link: logo-and-favicon
-      name: Logo & Favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
     - link: main-menu
       name: Main Menu
     - link: main-menu-mega-menu
@@ -32,6 +36,8 @@ items:
       name: Benefit Bar Widget Area
     - link: mobile-product-filter
       name: Mobile Products Filter
+    - link: header-widget-area
+      name: Header Widget Area
   - link: pages
     name: Pages
     subitems:
@@ -45,6 +51,9 @@ items:
     name: Slider
   - link: proteusthemes-options
     name: ProteusThemes Options
+    subitems:
+    - link: woondershop-skins
+      name: WoonderShop Skins
   - link: shortcodes
     name: Shortcodes
     subitems:
@@ -63,6 +72,8 @@ items:
   - link: plugins
     name: Plugins
     subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
     - link: contact-form-7
       name: Contact Form 7
     - link: woocommerce
@@ -73,6 +84,10 @@ items:
       name: Smart Search
     - link: woocommerce-product-filter
       name: WooCommerce Product Filters
+    - link: instagram-feed
+      name: Instagram Feed
+    - link: so-widgets-bundle
+      name: Google Maps API Key
   - link: footer
     name: Footer
     subitems:
@@ -80,6 +95,8 @@ items:
       name: Footer Widgets
     - link: bottom-footer
       name: Bottom Footer
+    - link: footer-extra-options
+      name: Footer Skin Options
   - link: translations
     name: Translations
     subitems:

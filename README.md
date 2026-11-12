@@ -53,6 +53,13 @@ In the root of this repos folder, there is a `themes.json` file which holds sett
 }
 ```
 
+Optional settings:
+
+* `phpversion`: the minimum PHP version of the theme's latest release (its `Requires PHP` header). Defaults to `8.2`.
+* `shoponly`: `true` for themes sold only in the ProteusThemes shop. Hides the ThemeForest steps.
+* `widgetsfile`: the name of the widget file on `artifacts.proteusthemes.com/json-widgets/` that the manual widget import links to, when it differs from the theme name.
+* `updatefixversion`: the first version with the fixed update checker. Shows the "Updating from versions older than…" section.
+
 The only other thing is to create a folder with theme name in the `src` folder (`src/theme_name_goes_here`).
 
 Now you can start copying files in the new folder to overwrite the master files. Keep in mind that the folder structure has to stay the same as in the master folder.

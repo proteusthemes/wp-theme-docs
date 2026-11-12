@@ -21,11 +21,15 @@ items:
     name: Header
     subitems:
     - link: logo-and-favicon
-      name: Logo & Favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
     - link: header-widgets
       name: Header Widgets
     - link: main-menu
       name: Main Menu
+    - link: navigation-widgets
+      name: Navigation Widgets
   - link: pages
     name: Pages
     subitems:
@@ -49,6 +53,8 @@ items:
   - link: plugins
     name: Plugins
     subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
     - link: contact-form-7
       name: Contact Form 7
     - link: woocommerce
@@ -57,6 +63,10 @@ items:
       name: WPBakery Page Builder
     - link: breadcrumbs
       name: Breadcrumb NavXT
+    - link: portfolio
+      name: Used Cars (Portfolio)
+    - link: so-widgets-bundle
+      name: Google Maps API Key
   - link: footer
     name: Footer
     subitems:

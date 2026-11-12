@@ -21,7 +21,9 @@ items:
     name: Header
     subitems:
     - link: logo-and-favicon
-      name: Logo & Favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
     - link: header-widgets
       name: Header Widgets
     - link: main-menu
@@ -54,6 +56,10 @@ items:
   - link: plugins
     name: Plugins
     subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
+    - link: lifterlms
+      name: LifterLMS
     - link: contact-form-7
       name: Contact Form 7
     - link: breadcrumbs

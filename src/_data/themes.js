@@ -8,6 +8,8 @@ export default function () {
   const themes = JSON.parse(readFileSync(path.join(ROOT, "themes.json"), "utf8"));
 
   return themes.map((theme) => ({
+    phpversion: "8.2",
+    widgetsfile: theme.name,
     ...theme,
     changelogUrl: `https://www.proteusthemes.com/wordpress-themes/${theme.name}/#go_changelog`,
     lastModified: lastModified(theme.name),

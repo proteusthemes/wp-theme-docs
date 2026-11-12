@@ -15,6 +15,8 @@ items:
     subitems:
     - link: one-click-demo-install
       name: One Click Demo Install
+    - link: elementor-demos
+      name: Elementor Demos
     - link: import-xml-file
       name: Import XML File
     - link: import-essential-grid-projects
@@ -25,7 +27,9 @@ items:
     - link: top-bar
       name: Top Bar
     - link: logo-and-favicon
-      name: Logo & Favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
     - link: header-widgets
       name: Header Widgets
     - link: main-menu
@@ -35,12 +39,17 @@ items:
     subitems:
     - link: page-templates
       name: Page Templates
-    - link: page-builder-2
+    - link: comming-soon-page
+      name: Coming Soon Page
+    - link: page-builder
       name: Page Builder
   - link: slider
     name: Slider
   - link: proteusthemes-options
     name: ProteusThemes Options
+    subitems:
+    - link: google-maps-api-key
+      name: Google Maps API Key
   - link: shortcodes
     name: Shortcodes
     subitems:
@@ -67,9 +76,15 @@ items:
       name: Brochure Box
     - link: featured-page-widget
       name: Featured Page
+    - link: mailchimp-subscribe
+      name: MailChimp Subscribe
+    - link: countdown
+      name: Countdown
   - link: plugins
     name: Plugins
     subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
     - link: contact-form-7
       name: Contact Form 7
     - link: woocommerce

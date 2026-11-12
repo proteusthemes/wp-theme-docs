@@ -1,17 +1,14 @@
-<h3 id="so-widgets-bundle">SiteOrigin Widgets Bundle</h3>
+<h3 id="so-widgets-bundle">Google Maps API Key</h3>
 
 <p>
-	SiteOrigin has many good widgets that you can use in the Page Builder editor or in the sidebars. Let's take a look at the widgets that need special setup.
+	The <strong>SiteOrigin Google Maps</strong> widget from the SiteOrigin Widgets Bundle plugin needs a Google Maps API key. Until you add one, its maps show an error, including the maps on imported demo pages. One key works for every map on your site.
 </p>
-
-<h4>SiteOrigin Google Maps</h4>
-
+<ol>
+	<li>Follow Google's <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">Maps API key guide</a> to create a project in Google Cloud and an API key. Google asks you to set up a billing account for Maps, even if your usage stays within its free monthly allowance.</li>
+	<li>In the same project, enable the <strong>Maps JavaScript API</strong> and the <strong>Geocoding API</strong>, which finds the map center from the address you enter. The address suggestions in the widget's <strong>Map center</strong> field also need the <strong>Places API</strong>. If you set a map's type to <strong>Static image</strong>, also enable the <strong>Maps Static API</strong>.</li>
+	<li>Restrict the key to your website's address, as the guide describes, so nobody else can use it.</li>
+	<li>In WordPress, go to <strong>Plugins &gt; SiteOrigin Widgets</strong>, find <strong>Google Maps</strong> and click <strong>Settings</strong>. Paste the key into <strong>API key</strong> and click <strong>Save</strong>.</li>
+</ol>
 <p>
-	This is a great Google Maps widget with many settings (you can set a custom marker, add information to the marker, use different styles of maps and much more). What bothers most users is the first setting that they have to set before the widget will work properly, that's the Google Maps API key.
-</p>
-<p>
-	Under the API input field you will find <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">this link to the Google Maps API key page</a>. Go to this page, login to your google account and generate the Google Maps API key. Copy the generated API key to the widget. Now you can start using the Google Maps widget and set other setting of the widget.
-</p>
-<p>
-	Note: If you are using a <b>Static image</b> map type, then you will need to input the static Google Maps API key, so <a href="https://developers.google.com/maps/documentation/static-maps/" target="_blank">go to this Static Google Maps page</a> and click on the <i>"Get a key"</i> button to generate a static Google Maps API key and use that key in the widget instead.
+	Older versions of the plugin had an API key field in each map widget. That field is gone: the key in the plugin settings is used for all maps.
 </p>

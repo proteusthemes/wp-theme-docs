@@ -21,14 +21,24 @@ items:
     name: Header
     subitems:
     - link: logo-and-favicon
-      name: Logo & Favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
     - link: main-menu
       name: Main Menu
+    - link: featured-link
+      name: Featured Link Button
+    - link: sticky-menu
+      name: Sticky Menu
   - link: pages
     name: Pages
     subitems:
     - link: page-templates
       name: Page Templates
+    - link: blog-and-single-post-sidebar
+      name: Blog and Single Post Sidebars
+    - link: page-options
+      name: Page Options
     - link: page-builder
       name: Page Builder
     - link: page-builder-widgets
@@ -44,6 +54,8 @@ items:
       name: Buttons
     - link: icons-font-awesome
       name: Icons - Font Awesome
+    - link: icons-growthpress
+      name: GrowthPress Icons in Shortcodes
   - link: growth-icons
     name: GrowthPress Icons
   - link: scroll-for-more
@@ -51,12 +63,14 @@ items:
   - link: plugins
     name: Plugins
     subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
     - link: contact-form-7
       name: Contact Form 7
-    - link: breadcrumbs
-      name: Breadcrumb NavXT
     - link: woocommerce
       name: WooCommerce
+    - link: breadcrumbs
+      name: Breadcrumb NavXT
   - link: footer
     name: Footer
     subitems:

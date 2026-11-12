@@ -20,8 +20,12 @@ items:
   - link: header
     name: Header
     subitems:
+    - link: top-bar
+      name: Top Bar
     - link: logo-and-favicon
-      name: Logo & Favicon
+      name: Logo
+    - link: favicon
+      name: Favicon
     - link: main-menu
       name: Main Menu
     - link: special-dropdown-menu
@@ -33,6 +37,8 @@ items:
       name: Page Templates
     - link: page-builder
       name: Page Builder
+    - link: page-options
+      name: Page Options
     - link: page-builder-widgets
       name: Page Builder Widgets
   - link: slider
@@ -46,17 +52,21 @@ items:
       name: Buttons
     - link: icons-font-awesome
       name: Icons - Font Awesome
+    - link: icons-medicpress
+      name: MedicPress Icons in Shortcodes
   - link: medic-icons
     name: MedicPress Icons
   - link: plugins
     name: Plugins
     subitems:
+    - link: required-and-recommended-plugins
+      name: Required & Recommended
     - link: contact-form-7
       name: Contact Form 7
-    - link: breadcrumbs
-      name: Breadcrumb NavXT
     - link: woocommerce
       name: WooCommerce
+    - link: breadcrumbs
+      name: Breadcrumb NavXT
   - link: footer
     name: Footer
     subitems:

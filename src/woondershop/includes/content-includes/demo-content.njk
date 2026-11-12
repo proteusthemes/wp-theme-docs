@@ -12,6 +12,9 @@
 		If for some reason, you skipped the demo content import in the theme onboarding wizard, when you first activated the theme, then you can import the demo content with the One Click Demo Import plugin.
 	</p>
 	<p>
+		Before you import a demo with One Click Demo Import or manually, select its skin under <strong>Appearance &gt; Customize &gt; General &gt; WoonderShop Skins</strong> and click <strong>Publish</strong>. Some widget areas, such as the top bar and the Haven middle bar, and some widgets exist only in their own skin, and the importer adds the demo's widgets before its skin settings. Without this step, those widgets are skipped or end up in <strong>Inactive Widgets</strong> under <strong>Appearance &gt; Widgets</strong>. For Haven, also install and activate <strong>Variation Swatches for WooCommerce</strong> after you switch. <strong>Appearance &gt; Install Plugins</strong> lists it only once Haven is the active skin.
+	</p>
+	<p>
 		You can import demo content from our demo site (with blurred licensed images) with a single click of a button. First install and activate the <a href="https://wordpress.org/plugins/one-click-demo-import/" target="_blank">One Click Demo Import</a> plugin, then go to <kbd><kbd><samp>Appearance</samp></kbd>&nbsp;→ <kbd><samp>Import Demo Data</samp></kbd></kbd> and click on the import button.
 	</p>
 	<div class="warning">
@@ -36,23 +39,23 @@
 		Don't forget to activate all required plugins before importing demo data. To import the demo data go to <kbd><kbd><samp>Tools</samp></kbd>&nbsp;→ <kbd><samp>Import</samp></kbd></kbd>, click on <i>WordPress</i> (install the <strong>WordPress Importer</strong> plugin if not already installed) and upload/import the previously saved xml file (don't forget to enable the <i>Download and import file attachments</i> checkbox to also import the images).
 	</p>
 	<p>
-		<b>Demo Widgets</b><br>After you import the demo content, you can also import widgets the old-fashioned way. The files for widget import are also located on our server:
-		<ul>
-			<li>WoonderShop Default: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}.json</a></li>
-			<li>WoonderShop Jungle: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-jungle.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-jungle.json</a></li>
-			<li>WoonderShop Fab: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-fab.json">Fab widgets JSON</a></li>
-			<li>WoonderShop Haven: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-haven.json">Haven widgets JSON</a></li>
-		</ul>
-		Rename this file to <code>widgets.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <kbd><kbd><samp>Tools</samp></kbd>&nbsp;→ <kbd><samp>Widget Import/Export</samp></kbd></kbd> and import the file.
-	</p>
-	<p>
-		<b>Customizer settings</b><br>The last thing you have to import are the customizer settings. The files for that can also be found on our server:
+		<b>Customizer settings</b><br>After you import the demo content, import the Customizer settings, before the widgets. They also set the demo's skin. The Default demo has no Customizer file, so skip this step for it. The files are also on our server:
 		<ul>
 			<li>WoonderShop Jungle: <a href="https://artifacts.proteusthemes.com/customizer-exports/{{ theme.name }}-jungle.dat">https://artifacts.proteusthemes.com/customizer-exports/{{ theme.name }}-jungle.dat</a></li>
 			<li>WoonderShop Fab: <a href="https://artifacts.proteusthemes.com/customizer-exports/{{ theme.name }}-fab.dat">Fab Customizer settings</a></li>
 			<li>WoonderShop Haven: <a href="https://artifacts.proteusthemes.com/customizer-exports/{{ theme.name }}-haven.dat">Haven Customizer settings</a></li>
 		</ul>
 		Install and activate the <a href="https://wordpress.org/plugins/customizer-export-import/" target="_blank">Customizer Export/Import</a>. Go to <kbd><kbd><samp>Appearance</samp></kbd>&nbsp;→ <kbd><samp>Customize</samp></kbd>&nbsp;→ <kbd><samp>Export/Import</samp></kbd></kbd> and import the file (also enable the <i>Download and import image files?</i> checkbox, to import pattern images).
+	</p>
+	<p>
+		<b>Demo Widgets</b><br>Import the widgets last. The files for widget import are also located on our server:
+		<ul>
+			<li>WoonderShop Default: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}.json</a></li>
+			<li>WoonderShop Jungle: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-jungle.json">https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-jungle.json</a></li>
+			<li>WoonderShop Fab: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-fab.json">Fab widgets JSON</a></li>
+			<li>WoonderShop Haven: <a href="https://artifacts.proteusthemes.com/json-widgets/{{ theme.name }}-haven.json">Haven widgets JSON</a></li>
+		</ul>
+		Rename this file to <code>widgets.wie</code> (mind the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <kbd><kbd><samp>Tools</samp></kbd>&nbsp;→ <kbd><samp>Widget Importer &amp; Exporter</samp></kbd></kbd> and import the file.
 	</p>
 	<p>
 		<b>After import setup</b><br>After you have imported the demo data and widgets, you should also setup these things:

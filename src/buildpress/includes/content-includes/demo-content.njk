@@ -1,6 +1,6 @@
 <section>
 	<h2 id="demo-content">Demo Content</h2>
-	<p>Before importing, activate the required plugins and the plugins used by your chosen demo, then complete <a href="#updates">theme registration</a>.</p>
+	<p>Before importing, go to <strong>Appearance &gt; Install Plugins</strong> and install and activate <strong>One Click Demo Import</strong>, the other required plugins and the plugins used by your chosen demo, then complete <a href="#updates">theme registration</a>. The import skips demo content whose plugin isn't active. The demo projects need <strong>Portfolio Post Type</strong>, the contact forms need <strong>Contact Form 7</strong> and the shop products need <strong>WooCommerce</strong>. These plugins are only recommended and the importer doesn't install them, so activate them first if you want those parts of the demo.</p>
 	<h3 id="one-click-demo-install">One Click Demo Install</h3>
 	<p>
 		You can import demo content from our demo site (with blurred licensed images) in two clicks.
@@ -17,11 +17,23 @@
 		<li>BuildPress Landscape</li>
 		<li>BuildPress RTL</li>
 	</ul>
-	<p>Then, choose whether you want to import the SiteOrigin or Elementor version.</p>
+	<p>Then, hover over the demo and choose whether you want to import the SiteOrigin or Elementor version by clicking its logo under <strong>Choose page builder</strong>.</p>
 	<p>
-		Finally, click on the <kbd>Import</kbd> button to begin the import process. Your site should be ready after a few minutes.
+		Finally, check the plugins the demo needs and click the <kbd>Continue &amp; Import</kbd> button to begin the import process. Your site should be ready after a few minutes.
 	</p>
-	<img src="images/one-click-demo-import.jpg" alt="The “Import Demo Data” page" width="940" height="505">
+
+	<h3 id="elementor-demos">Elementor Demos</h3>
+	<p>
+		The Elementor versions of the demos are built differently from the SiteOrigin versions, so some sections of these docs don't apply to them:
+	</p>
+	<ul>
+		<li>The header and footer are the <strong>Header</strong> and <strong>Footer</strong> templates of the Elementor Header &amp; Footer Builder plugin (shown as <strong>Ultimate Addons for Elementor</strong> on the Plugins screen). They replace the theme's header and footer on every page, so the logo, top bar, header widgets, footer widgets and footer text settings described in the <a href="#header">Header</a> and <a href="#footer">Footer</a> sections don't change your site. Edit the templates with Elementor in <strong>UAE &gt; Header &amp; Footer</strong>.</li>
+		<li>The front page slider is a <strong>Smart Slider 3</strong> slider. Edit it in the Smart Slider 3 plugin instead of the <a href="#slider">Front page slider</a> meta box.</li>
+		<li>The pages, including the coming soon pages, are built with Elementor. Open a page and click <strong>Edit with Elementor</strong> to change it.</li>
+	</ul>
+	<p>
+		One Click Demo Import also imports the Smart Slider 3 sliders and the Elementor global colors and fonts. A manual XML import doesn't, so use One Click Demo Import for the Elementor demos.
+	</p>
 
 	<h3 id="import-xml-file">Import XML File</h3>
 	<p>
@@ -59,7 +71,7 @@
 		<li><a href="https://artifacts.proteusthemes.com/json-widgets/buildpress-rtl-elementor.json">BuildPress RTL Elementor Widgets</a></li>
 	</ul>
 	<p>
-		Rename this file to <code>widgets.wie</code> (note the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <kbd><kbd><samp>Tools</samp></kbd>&nbsp;→ <kbd><samp>Widget Import/Export</samp></kbd></kbd> and import the file.
+		Rename this file to <code>widgets.wie</code> (note the file extension) and use it in the plugin <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a>. Go to <kbd><kbd><samp>Tools</samp></kbd>&nbsp;→ <kbd><samp>Widget Importer &amp; Exporter</samp></kbd></kbd> and import the file.
 	</p>
 	<h4>Customizer Settings</h4>
 	<p>
@@ -90,7 +102,8 @@
 	</p>
 	<ul>
 		<li>Deactivate the <samp>Elementor</samp> plugin.</li>
-		<li>Deactivate the <samp>Ultimate Addons for Elementor</samp> plugin.</li>
+		<li>Deactivate the <samp>Ultimate Addons for Elementor (UAE)</samp> plugin, called Elementor Header &amp; Footer Builder in the theme's plugin list.</li>
+		<li>Deactivate the <samp>ElementsKit Lite</samp> plugin.</li>
 	</ul>
 	<p>
 		If you ran One Click Demo Import with an Elementor version, go to <kbd><kbd><samp>wp-admin</samp></kbd>&nbsp;→ <kbd><samp>Plugins</samp></kbd></kbd> and:

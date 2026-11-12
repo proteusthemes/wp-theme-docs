@@ -4,7 +4,7 @@
     "themename": "HairPress",
     "creationdate": "February 26, 2013",
     "tfurl": "https://www.proteusthemes.com/wordpress-themes/hairpress/",
-    "themeheadertext": "HairPress is a premium Wordpress Theme for hair salons, beauty salons, wellness centers or any similar local business website. It is very easy to setup and use.",
+    "themeheadertext": "HairPress is a premium WordPress Theme for hair salons, beauty salons, wellness centers or any similar local business website. It is very easy to setup and use.",
     "shutterstockurl": "https://www.shutterstock.com/"
   },
   {
@@ -12,7 +12,7 @@
     "themename": "Carpress",
     "creationdate": "March 6, 2014",
     "tfurl": "https://www.proteusthemes.com/wordpress-themes/carpress/",
-    "themeheadertext": "Carpress is premium Wordpress Theme for mechanic workshops, car repairs, handymen or any similar local business website. It is very easy to setup and use.",
+    "themeheadertext": "Carpress is a premium WordPress Theme for mechanic workshops, car repairs, handymen or any similar local business website. It is very easy to setup and use.",
     "shutterstockurl": "https://www.shutterstock.com/"
   },
   {
@@ -20,7 +20,7 @@
     "themename": "BuildPress",
     "creationdate": "November 4, 2014",
     "tfurl": "https://www.proteusthemes.com/wordpress-themes/buildpress/",
-    "themeheadertext": "BuildPress is a premium WordPress Theme for any kind of construction businesses and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use with one click demo content import.",
+    "themeheadertext": "BuildPress is a premium WordPress Theme for any kind of construction businesses and companies. It is very easy to setup and use with one click demo content import.",
     "shutterstockurl": "https://www.shutterstock.com/",
     "updatefixversion": "5.8.0"
   },
@@ -29,7 +29,7 @@
     "themename": "MentalPress",
     "creationdate": "March 6, 2015",
     "tfurl": "https://www.proteusthemes.com/wordpress-themes/mentalpress/",
-    "themeheadertext": "MentalPress is a premium WordPress Theme for psychologists, therapists and counseling individuals and companies. It is our most advanced and sophisticated theme we built so far. It is very easy to setup and use, with one click demo content import.",
+    "themeheadertext": "MentalPress is a premium WordPress Theme for psychologists, therapists and counseling individuals and companies. It is very easy to setup and use, with one click demo content import.",
     "shutterstockurl": "https://www.shutterstock.com/",
     "updatefixversion": "1.11.12"
   },
@@ -47,7 +47,7 @@
     "themename": "LegalPress",
     "creationdate": "July 30, 2015",
     "tfurl": "https://www.proteusthemes.com/wordpress-themes/legalpress/",
-    "themeheadertext": "Introducing LegalPress. LegalPress is now available on our ProteusThemes shop, so read on to see why it’s perfect for your company’s WordPress website!",
+    "themeheadertext": "Introducing LegalPress, a premium WordPress theme for lawyers, consultants and financial firms. Read on to see why it’s perfect for your company’s WordPress website!",
     "shutterstockurl": "https://www.shutterstock.com/",
     "updatefixversion": "2.5.1"
   },
@@ -92,7 +92,7 @@
     "themename": "Hammer",
     "creationdate": "April 9, 2016",
     "tfurl": "https://www.proteusthemes.com/wordpress-themes/hammer/",
-    "themeheadertext": "If you know ProteusThemes, you know we make the best construction industry themes available anywhere. Hammer is our latest addition to this niche and we are sure you won't be disappointed. Whether you use it for traditional construction, or any of the surrounding industries - this is a beautifully designed, highly functional and easy-to-use WordPress theme.",
+    "themeheadertext": "If you know ProteusThemes, you know we make the best construction industry themes available anywhere. Hammer is one of them, and we are sure you won't be disappointed. Whether you use it for traditional construction, or any of the surrounding industries - this is a beautifully designed, highly functional and easy-to-use WordPress theme.",
     "shutterstockurl": "https://www.shutterstock.com/",
     "updatefixversion": "2.0.1"
   },
@@ -101,12 +101,13 @@
     "themename": "Bolts",
     "creationdate": "May 26, 2016",
     "tfurl": "https://www.proteusthemes.com/wordpress-themes/bolts/",
-    "themeheadertext": "Bolts is a new highly customizable WordPress theme perfect for construction, transport, factory, industry and all other simillar bussines.",
+    "themeheadertext": "Bolts is a highly customizable WordPress theme perfect for construction, transport, factory, industry and all other similar businesses.",
     "shutterstockurl": "https://www.shutterstock.com/",
     "updatefixversion": "2.0.1"
   },
   {
     "name": "shaka",
+    "widgetsfile": "shaka-ptcs",
     "themename": "Shaka",
     "creationdate": "July 5, 2016",
     "tfurl": "https://www.proteusthemes.com/wordpress-themes/shaka/",
@@ -161,6 +162,8 @@
   },
   {
     "name": "woondershop",
+    "shoponly": true,
+    "phpversion": "8.3",
     "themename": "WoonderShop",
     "creationdate": "March 15, 2018",
     "tfurl": "https://www.proteusthemes.com/wordpress-themes/woondershop/",
